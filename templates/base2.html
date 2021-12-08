@@ -1,0 +1,321 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zxx">
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head>
+    <meta charset="utf-8" />
+    <title>AxivaUniverse | {% block title %}{% endblock %}</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="description" content="smart pest" />
+    <meta name="keywords" content="solar system /sun & wind" />
+    <meta name="author" content="" />
+    <meta name="MobileOptimized" content="320" />
+    <!--start theme style -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/animate.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/materialize.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/meanmenu.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/slicknav.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/owl.carousel.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/magnific-popup.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'venobox/css/venobox.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/owl.theme.default.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/flaticon.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/fonts.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/camera.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style_2.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/responsive_2.css' %}" />
+    <!-- favicon link-->
+    <link rel="shortcut icon" type="image/icon" href="{% static 'images/favicon.png' %}" />
+    <script src='https://ssl.google-analytics.com/ga.js'></script>
+</head>
+
+<body>
+   
+
+    <div class="transparent-menu header-area hidden-menu-bar stick">
+
+        <div class="container">
+
+            <div class="bt_main_menu_wrapper">
+                <div class="main-menu-wrapper clear-fix">
+
+                    <div class="logo float-left">
+                        <a href="{% url 'web:index' %}"><img src="{% static 'images/axivalogo.png' %}" class="img-responsive" alt="logo"></a>
+                    </div>
+
+                </div>
+                <div class="sc_navigation hidden-sm hidden-xs">
+                    <nav id="primary-nav" class="dropdown nav_left_margin">
+                        <ul class="dropdown menu navigation cart_dropdown_wrapper">
+                            <li><a href="{% url 'web:index' %}" title="">Home</a></li>
+                                <li><a href="{% url 'web:about' %}" title="">about us</a></li>
+                                <li><a href="{% url 'web:service' %}" title="">services</a></li>
+                                <li><a href="{% url 'web:product' %}" title="">products</a></li>
+                                <li><a href="#" title="">projects</a>
+                                    <ul>
+                                        <li class="dropdown_hover"><a href="{% url 'web:project' %}" title="">Project</a></li>
+                                         <li class="dropdown_hover"><a href="{% url 'web:uproject' %}" title="">Upcoming Project</a></li>
+                                    </ul>
+                                </li>
+                               
+                                <li><a href="{% url 'web:blog' %}" title="">blog</a>
+                                   
+                                </li>
+                                
+                                <li><a href="{% url 'web:contact' %}" title="">Contact us</a>
+								 
+                                </li>
+                            <li class="caret_btn">
+                                <a href="#"><i class="fa fa-shopping-basket"></i><span>2</span></a>
+                                <ul>
+                                    <li>
+                                        <div class="cc_cart_wrapper1 menu-button">
+                                            <div class="cc_cart_img_wrapper">
+                                                <img src="{% static 'images/cart_1.png' %}" alt="cart_img" />
+                                            </div>
+                                            <div class="cc_cart_cont_wrapper">
+                                                <h4><a href="#">put a title here</a></h4>
+                                                <p>1 <span> $145 </span> </p>
+                                                <h5><i class="fa fa-times"></i></h5>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="cc_cart_wrapper1 menu-button">
+                                            <div class="cc_cart_img_wrapper">
+                                                <img src="{% static 'images/cart_2.png' %}" alt="cart_img" />
+                                            </div>
+                                            <div class="cc_cart_cont_wrapper">
+                                                <h4><a href="#">put a title here</a></h4>
+                                                <p>1 <span> $145 </span></p>
+                                                <h5><i class="fa fa-times"></i></h5>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="cc_cart_wrapper1 menu-button">
+                                            <div class="cc_cart_img_wrapper">
+                                                <img src="{% static 'images/cart_3.png' %}" alt="cart_img" />
+                                            </div>
+                                            <div class="cc_cart_cont_wrapper">
+                                                <h4><a href="#">put a title here</a></h4>
+                                                <p>1 <span> $145 </span></p>
+                                                <h5><i class="fa fa-times"></i></h5>
+                                            </div>
+                                        </div>
+                                        <div class="btm_cart_wrapper">
+                                            <h5>$450.00</h5>
+                                            <p>3 items</p>
+                                        </div>
+                                        <div class="cart_checkout_btn">
+
+                                            <a href="#!" class="waves-effect waves-light waves-ripple">checkout</a>
+
+                                        </div>
+                                    </li>
+
+                                </ul>
+                            </li>
+
+                            <!-- Menu -->
+                            <!--search -->
+                        </ul>
+                        <div class="header_right_inner_page">
+                            <div class="search-wrapper">
+                                <div class="et_navbar_search_wrapper hidden-xs">
+                                    <div class="et_search_bar" id="search_button">
+                                        <a href="#"><i class="fa fa-search waves-effect waves-light" aria-hidden="true"></i></a>
+                                    </div>
+                                    <div id="search_open" class="et_search_box">
+                                        <input type="text" placeholder="Search text...">
+                                        <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sw_icon_bar">
+                                <ul class="tc_login_btn_wrapper">
+                                    <li class="dropdown tc_login_btn">
+                                        <a class="dropdown-toggle hvr-float-shadow active waves-effect waves-light" data-toggle="dropdown" href="#"><i class="fa fa-ellipsis-v"></i></a>
+                                        <ul class="dropdown-menu tc_menu_fixed_border">
+                                            <li class="dropdown_hover"><a href="#">FAQ's</a></li>
+                                            <li class="dropdown_hover"><a href="#">Track Order</a></li>
+                                            <li class="dropdown_hover"><a href="#">Register</a></li>
+                                            <li class="dropdown_hover"><a href="#">Login</a></li>
+                                            <li class="dropdown_hover hidden-lg"><a href="#">Free Quote</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </nav>
+                </div>
+                <!-- /.main-menu-wrapper -->
+                <!-- mobile menu area start -->
+                <div class="mobile-menu-area visible-sm visible-xs">
+                    <div class="container header_container">
+                        <div class="row">
+
+                            <div class="col-xs-12 cc_menu_top_margin">
+                                <!-- mobile menu start -->
+                                <div class="mobile-menu">
+                                    <nav>
+                                        <ul class="nav">
+                                            <li><a href="index.html">Home</a>
+												 <ul>
+													 <li><a href="index.html" title=""> home 1</a></li>
+													  <li><a href="index_2.html" title=""> home 2</a></li>
+													  <li><a href="index_3.html" title=""> home 3</a></li>
+													  <li><a href="index_4.html" title=""> home 4</a></li>
+													  <li><a href="index_5.html" title=""> home 5</a></li>
+													    <li><a href="index_6.html" title=""> home 6</a></li>
+												</ul>
+                                                </li>
+                                                <li><a href="{% url 'web:about' %}">about us</a>
+                                                </li>
+                                                <li><a href="{% url 'web:service' %}">services</a>
+                                                </li>
+                                                <li><a href="project_2.html">projects</a>
+												 <ul>
+													<li><a href="project_2.html" title=""> project 2</a></li>
+													<li><a href="project_3.html" title=""> project 3</a></li>
+													<li><a href="project_4.html" title=""> project 4</a></li>
+													<li><a href="project_fullwidth.html" title="">project fullwidth</a></li>
+													<li><a href="project_single.html" title=""> project single</a></li>
+
+												</ul>
+                                                </li>
+                                                <li><a href="team.html">team</a>
+                                                    <ul>
+														<li><a href="team.html" title=""> team</a></li>
+														<li><a href="team_details.html" title="">team details</a></li>
+													</ul>
+                                                </li>
+                                                <li><a href="blog_single.html" title="">blog</a>
+                                                     <ul>
+														<li><a href="blog_categories.html" title=""> blog categories</a></li>
+														<li><a href="blog_category.html" title=""> blog category</a></li>
+														<li><a href="blog_single.html" title=""> blog single</a></li>
+													</ul>
+                                                </li>
+                                                <li><a href="shop_sidebar.html" title="">shop</a>
+                                                   <ul>
+														<li><a href="shop_sidebar.html" title="">shop sidebar</a></li>
+														<li><a href="shop_fullwidth.html" title=""> shop fullwidth</a></li>
+														<li><a href="shop_single.html" title=""> shop single</a></li>
+													</ul>
+                                                </li>
+                                                <li><a href="{% url 'web:contact' %}"> contact us</a>
+												 <ul>
+													  <li><a href="{% url 'web:contact' %}" title="">contact us</a></li>
+													  <li><a href="error.html" title=""> 404 error</a></li>
+												</ul>
+                                                </li>
+                                            <li class="caret_btn">
+                                                <a href="#"><i class="fa fa-shopping-basket"></i><span>2</span></a>
+                                                <ul>
+                                                    <li>
+                                                        <div class="cc_cart_wrapper1 menu-button">
+                                                            <div class="cc_cart_img_wrapper">
+                                                                <img src="{% static 'images/cart_1.png' %}" alt="cart_img" />
+                                                            </div>
+                                                            <div class="cc_cart_cont_wrapper">
+                                                                <h4><a href="#">put a title here</a></h4>
+                                                                <p>1 <span> $145 </span> </p>
+                                                                <h5><i class="fa fa-times"></i></h5>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="cc_cart_wrapper1 menu-button">
+                                                            <div class="cc_cart_img_wrapper">
+                                                                <img src="{% static 'images/cart_2.png' %}" alt="cart_img" />
+                                                            </div>
+                                                            <div class="cc_cart_cont_wrapper">
+                                                                <h4><a href="#">put a title here</a></h4>
+                                                                <p>1 <span> $145 </span></p>
+                                                                <h5><i class="fa fa-times"></i></h5>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="cc_cart_wrapper1 menu-button">
+                                                            <div class="cc_cart_img_wrapper">
+                                                                <img src="{% static 'images/cart_3.png' %}" alt="cart_img" />
+                                                            </div>
+                                                            <div class="cc_cart_cont_wrapper">
+                                                                <h4><a href="#">put a title here</a></h4>
+                                                                <p>1 <span> $145 </span></p>
+                                                                <h5><i class="fa fa-times"></i></h5>
+                                                            </div>
+                                                        </div>
+                                                        <div class="btm_cart_wrapper">
+                                                            <h5>$450.00</h5>
+                                                            <p>3 items</p>
+                                                        </div>
+                                                        <div class="cart_checkout_btn">
+
+                                                            <a href="#!" class="waves-effect waves-light waves-ripple">checkout</a>
+
+                                                        </div>
+                                                    </li>
+
+                                                </ul>
+                                            </li>
+
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <!-- mobile menu end -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- mobile menu area end -->
+
+                <!-- /.main-menu-wrapper -->
+            </div>
+        </div>
+
+        <div class="header_btn">
+            <ul>
+                <li>
+                    <a href="#!" class="waves-effect waves-light waves-ripple">free quote</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--sw header wrapper end-->
+    
+    {% block content %}
+
+    {% endblock %}
+
+    <!-- sw footer section start-->
+    {% include 'partials/footer2.html' %}
+    <!-- sw footer section end-->
+    <!--main js files-->
+
+    <script src="{% static 'js/jquery_min.js' %}"></script>
+    <script src="{% static 'js/materialize.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/jqu_menu.js' %}"></script>
+    <script src="{% static 'js/jqu_slickmenu.js' %}"></script>
+    <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'venobox/js/venobox.min.js' %}"></script>
+    <script src="{% static 'js/jquery.inview.min.js' %}"></script>
+    <script src="{% static 'js/jquery.mixitup.min.js' %}"></script>
+    <script src="{% static 'js/jquery.countTo.js' %}"></script>
+    <script src="{% static 'js/wow.min.js' %}"></script>
+    <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.js' %}"></script>
+    <script src="{% static 'js/camera.min.js' %}"></script>
+    <script src="{% static 'js/custom_2.js' %}"></script>
+    <script src="{% static 'js/mapbos.js' %}"></script>
+    <!--js code-->
+</body>
+
+</html>
