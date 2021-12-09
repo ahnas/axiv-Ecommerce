@@ -1,6 +1,6 @@
 {% extends 'base2.html' %}
 {% load static %}
-{% block title %}Title Product{% endblock %}
+{% block title %}{{product.name}}{% endblock %}
 
 {% block content %}
     <!-- page_title_section start -->
@@ -15,7 +15,7 @@
                             <ul class="sub_title">
                                 <li><a href="#"> Home </a></li>
                                 <li>shop</li>
-                                <li>shop single</li>
+                                <li>{{product.name}}</li>
                             </ul>
                         </div>
                     </div>
@@ -34,16 +34,16 @@
                         <div class="video_nav_img hidden-xs">
 
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <a class="button secondary url owl_nav" href="#zero"><img src="{% static 'images/ps_img_smll.jpg' %}" class="img-responsive" alt="nav_img"></a>
+                                <a class="button secondary url owl_nav" href="#zero"><img src="{{product.photo.url}}" class="img-responsive" alt="nav_img"></a>
                             </div>
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 cc_ps_tabs">
-                                <a class="button secondary url owl_nav" href="#one"><img src="{% static 'images/ps_img_smll.jpg' %}" class="img-responsive" alt="nav_img"></a>
+                                <a class="button secondary url owl_nav" href="#one"><img src="{{product.photoOne.url}}" class="img-responsive" alt="nav_img"></a>
                             </div>
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 cc_ps_tabs">
-                                <a class="button secondary url owl_nav" href="#two"><img src="{% static 'images/ps_img_smll.jpg' %}" class="img-responsive" alt="nav_img"></a>
+                                <a class="button secondary url owl_nav" href="#two"><img src="{{product.photoTwo.url}}" class="img-responsive" alt="nav_img"></a>
                             </div>
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 cc_ps_tabs">
-                                <a class="button secondary url owl_nav" href="#three"><img src="{% static 'images/ps_img_smll.jpg' %}" class="img-responsive" alt="nav_img"></a>
+                                <a class="button secondary url owl_nav" href="#three"><img src="{{product.photoThree.url}}" class="img-responsive" alt="nav_img"></a>
                             </div>
 
                         </div>
@@ -51,20 +51,20 @@
                             <div class="owl-carousel owl-theme">
                                 <div class="item" data-hash="zero">
 
-                                    <img class="small img-responsive" src="{% static 'images/ps_single_img.jpg' %}" alt="small_img" />
+                                    <img class="small img-responsive" src="{{product.photo.url}}" alt="small_img" />
 
                                 </div>
                                 <div class="item" data-hash="one">
 
-                                    <img class="small img-responsive" src="{% static 'images/ps_single_img.jpg' %}" alt="small_img" />
+                                    <img class="small img-responsive" src="{{product.photoOne.url}}" alt="small_img" />
 
                                 </div>
                                 <div class="item" data-hash="two">
 
-                                    <img class="small img-responsive" src="{% static 'images/ps_single_img.jpg' %}" alt="small_img" />
+                                    <img class="small img-responsive" src="{{product.photoTwo.url}}" alt="small_img" />
                                 </div>
                                 <div class="item" data-hash="three">
-                                    <img class="small img-responsive" src="{% static 'images/ps_single_img.jpg' %}" alt="small_img" />
+                                    <img class="small img-responsive" src="{{product.photoThree.url}}" alt="small_img" />
                                 </div>
                             </div>
                             <div class="row">
@@ -72,16 +72,16 @@
                                     <div class="video_nav_img visible-xs">
                                         <div class="row">
                                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-3 cc_ps_tabs">
-                                                <a class="button secondary url owl_nav" href="#zero"><img src="{% static 'images/ps_single_img.jpg' %}" alt="nav_img"></a>
+                                                <a class="button secondary url owl_nav" href="#zero"><img src="{{product.photo.url}}" alt="nav_img"></a>
                                             </div>
                                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-3 cc_ps_tabs">
-                                                <a class="button secondary url owl_nav" href="#one"><img src="{% static 'images/ps_single_img.jpg' %}" alt="nav_img"></a>
+                                                <a class="button secondary url owl_nav" href="#one"><img src="{{product.photoOne.url}}" alt="nav_img"></a>
                                             </div>
                                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-3 cc_ps_tabs">
-                                                <a class="button secondary url owl_nav" href="#two"><img src="{% static 'images/ps_single_img.jpg' %}" alt="nav_img"></a>
+                                                <a class="button secondary url owl_nav" href="#two"><img src="{{product.photoTwo.url}}" alt="nav_img"></a>
                                             </div>
                                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-3 cc_ps_tabs">
-                                                <a class="button secondary url owl_nav" href="#three"><img src="{% static 'images/ps_single_img.jpg' %}" alt="nav_img"></a>
+                                                <a class="button secondary url owl_nav" href="#three"><img src="{{product.photoThree.url}}" alt="nav_img"></a>
                                             </div>
 
                                         </div>
@@ -96,12 +96,12 @@
                         <div class="btc_shop_single_prod_right_section">
                             <div class="btc_shop_product_price_wrapper">
                                 <ul>
-                                    <li>$150</li>
-                                    <li><del>$250</del></li>
+                                    <li>₹{{product.price}}</li>
+                                    <li><del>₹250</del></li>
                                 </ul>
                                 <a href="#"><i class="fa fa-share-alt"></i></a>
                             </div>
-                            <h1>Solaris Panel V405</h1>
+                            <h1>{{product.name}}</h1>
                             <div class="btc_shop_sin_pro_icon_wrapper eeeree">
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
@@ -109,7 +109,7 @@
                                 <i class="fa fa-star-o"></i>
                                 <i class="fa fa-star-o"></i>
                                 <p>10 Reviews <span><a href="#">Add Your Review</a></span></p>
-                                <h5>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. aks Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet.</h5>
+                                <h5>{{product.details}}</h5>
 
                             </div>
                             <div class="btc_shop_prod_quanty_bar">
@@ -482,7 +482,7 @@
                                         <div class="sw_pdct_img">
                                             <img src="{% static 'images/line.png' %}" alt="img" />
                                         </div>
-                                        <h5>$ 156</h5>
+                                        <h5>₹ 156</h5>
                                         <h1><a href="#">SolarWorld 280</a></h1>
 
                                         <div class="cc_li_cont_wrapper">
@@ -516,7 +516,7 @@
                                         <div class="sw_pdct_img">
                                             <img src="{% static 'images/line.png' %}" alt="img" />
                                         </div>
-                                        <h5>$ 156</h5>
+                                        <h5>₹ 156</h5>
                                         <h1><a href="#">canadian solar 280</a></h1>
 
                                         <div class="cc_li_cont_wrapper">
@@ -550,7 +550,7 @@
                                         <div class="sw_pdct_img">
                                             <img src="{% static 'images/line.png' %}" alt="img" />
                                         </div>
-                                        <h5>$ 156</h5>
+                                        <h5>₹ 156</h5>
                                         <h1><a href="#">AIR sun 280</a></h1>
 
                                         <div class="cc_li_cont_wrapper">
@@ -584,7 +584,7 @@
                                         <div class="sw_pdct_img">
                                             <img src="{% static 'images/line.png' %}" alt="img" />
                                         </div>
-                                        <h5>$ 156</h5>
+                                        <h5>₹ 156</h5>
                                         <h1><a href="#">SolarWorld 280</a></h1>
 
                                         <div class="cc_li_cont_wrapper">
@@ -618,7 +618,7 @@
                                         <div class="sw_pdct_img">
                                             <img src="{% static 'images/line.png' %}" alt="img" />
                                         </div>
-                                        <h5>$ 156</h5>
+                                        <h5>₹ 156</h5>
                                         <h1><a href="#">SolarWorld 280</a></h1>
 
                                         <div class="cc_li_cont_wrapper">
@@ -685,18 +685,18 @@
     {% block javascript %}
     <script>
         function changeQty(increase) {
-            var qty = parseInt($('.select_number').find("input").val());
+            var qty = parseInt(₹('.select_number').find("input").val());
             if (!isNaN(qty)) {
                 qty = increase ? qty + 1 : (qty > 1 ? qty - 1 : 1);
-                $('.select_number').find("input").val(qty);
+                ₹('.select_number').find("input").val(qty);
             } else {
-                $('.select_number').find("input").val(1);
+                ₹('.select_number').find("input").val(1);
             }
         }
 
         function goToByScroll(id) {
-            $('html,body').animate({
-                scrollTop: $("#" + id).offset().top
+            ₹('html,body').animate({
+                scrollTop: ₹("#" + id).offset().top
             }, 'slow');
         }
     </script>

@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
 import json 
+from .models import ProductCategory,Product
 
 
 def index(request):
@@ -24,14 +25,20 @@ def service(request):
     return render(request, 'service.html',context)
 
 def product(request):
+    productcategory = ProductCategory.objects.all()
+    product = Product.objects.all()
     context = {
-        "is_product" : True 
+        "is_product" : True ,
+        "productcategory":productcategory,
+        "product":product,
     }
     return render(request, 'product.html',context)
 
-def productsingle(request):
+def productsingle(request,slug):
+    product = get_object_or_404(Product, slug=slug)
     context = {
-        "is_productsingle" : True
+        "is_productsingle" : True,
+        "product":product,
     }
     return render(request, 'productsingle.html',context)
 
