@@ -718,7 +718,7 @@
             <div class="row">
                 <div class="col-lg-6 col-md-12 col-xs-12 col-sm-12 col-lg-offset-3">
                     <div class="sw_left_heading_wraper sw_center_heading_wrapper">
-                        <h1>Why Choose Us solar Energy</h1>
+                        <h1>Why Choose Us Axiva</h1>
                         <img src="{% static 'images/heading_line.png' %}" alt="title">
                         <p>Donec quis magna sit amet risus vulputate maximus eget eget arcu. Praesent sed molestie tortor. </p>
                     </div>
@@ -860,7 +860,7 @@
             <div class="row">
                 <div class="col-lg-6 col-md-12 col-xs-12 col-sm-12 col-lg-offset-3">
                     <div class="sw_left_heading_wraper sw_dark_heading_wraper dark_heading_center">
-                        <h1>Why Choose Us solar Energy</h1>
+                        <h1>Why Choose Us Axiva</h1>
                         <img src="{% static 'images/hd_line_dark.png' %}" alt="title">
                         <p>Donec quis magna sit amet risus vulputate maximus eget eget arcu. Praesent sed molestie tortor. </p>
                     </div>
@@ -868,84 +868,33 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="sw_testimonials_slider">
                         <div class="owl-carousel owl-theme">
+                            {% for testimonial in testimonial %}
                             <div class="item">
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                         <div class="sw_testimonials_slider_box">
-                                            <img src="{% static 'images/testi_2.png' %}" alt="Testimonial">
+                                            <img src="{{testimonial.photo.crop.150x150}}" alt="Testimonial">
                                             <div class="sw_testimonials_slider_box_text">
-                                                <p>Donec quis magna sit amet risus vulputate set eget arcu Praesent sed molestie tortor ed ulla suscipit lectus. Lorem ipsum dolor sit amet.
-                                                </p>
-                                                <h4>Ajay S.</h4>
-                                                <h6>(CEO Gedexo Pvt Ltd.)</h6>
+                                                <p>{{testimonial.details}}</p>
+                                                <h4>{{testimonial.name}}</h4>
+                                                <h6>{{testimonial.role}}</h6>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 hidden-xs">
-                                        <div class="sw_testimonials_slider_box">
-                                            <img src="{% static 'images/testi_1.png' %}" alt="Testimonial">
-                                            <div class="sw_testimonials_slider_box_text">
-                                                <p>Donec quis magna sit amet risus vulputate set eget arcu Praesent sed molestie tortor ed ulla suscipit lectus. Lorem ipsum dolor sit amet.
-                                                </p>
-                                                <h4>Akshay H.</h4>
-                                                <h6>(COO Gedexo Pvt Ltd.)</h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 hidden-xs">
-                                        <div class="sw_testimonials_slider_box">
-                                            <img src="{% static 'images/testi_2.png' %}" alt="Testimonial">
-                                            <div class="sw_testimonials_slider_box_text">
-                                                <p>Donec quis magna sit amet risus vulputate set eget arcu Praesent sed molestie tortor ed ulla suscipit lectus. Lorem ipsum dolor sit amet.
-                                                </p>
-                                                <h4>Ajay S.</h4>
-                                                <h6>(CEO Gedexo Pvt Ltd.)</h6>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    </div>  
                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                         <div class="sw_testimonials_slider_box">
-                                            <img src="{% static 'images/testi_1.png' %}" alt="Testimonial">
+                                            <img src="{{testimonial.photo.crop.150x150}}" alt="Testimonial">
                                             <div class="sw_testimonials_slider_box_text">
-                                                <p>Donec quis magna sit amet risus vulputate set eget arcu Praesent sed molestie tortor ed ulla suscipit lectus. Lorem ipsum dolor sit amet.
-                                                </p>
-                                                <h4>Akshay H.</h4>
-                                                <h6>(COO Gedexo Pvt Ltd.)</h6>
+                                                <p>{{testimonial.details}}</p>
+                                                <h4>{{testimonial.name}}</h4>
+                                                <h6>{{testimonial.role}}</h6>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div>       
                                 </div>
                             </div>
-                            <div class="item">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12  hidden-xs">
-                                        <div class="sw_testimonials_slider_box">
-                                            <img src="{% static 'images/testi_2.png' %}" alt="Testimonial">
-                                            <div class="sw_testimonials_slider_box_text">
-                                                <p>Donec quis magna sit amet risus vulputate set eget arcu Praesent sed molestie tortor ed ulla suscipit lectus. Lorem ipsum dolor sit amet.
-                                                </p>
-                                                <h4>Ajay S.</h4>
-                                                <h6>(CEO Gedexo Pvt Ltd.)</h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                        <div class="sw_testimonials_slider_box">
-                                            <img src="{% static 'images/testi_1.png' %}" alt="Testimonial">
-                                            <div class="sw_testimonials_slider_box_text">
-                                                <p>Donec quis magna sit amet risus vulputate set eget arcu Praesent sed molestie tortor ed ulla suscipit lectus. Lorem ipsum dolor sit amet.
-                                                </p>
-                                                <h4>Akshay H.</h4>
-                                                <h6>(COO Gedexo Pvt Ltd.)</h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            {% endfor %}
+                            
 
                         </div>
                     </div>
@@ -973,19 +922,20 @@
                 <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 sw_spectrm_padding">
                     <div class="best_product_slider_wrapper">
                         <div class="owl-carousel owl-theme">
+                            {% for product in product %}
                             <div class="item">
                                 <div class="sw_product_box_wrapper">
                                     <div class="sw_product_indx_img_wrapper">
 
-                                        <img src="{% static 'images/prdct_1.jpg' %}" alt="shop_img" class="img-responsive" />
+                                        <img src="{{product.photo.crop.250x200}}" alt="shop_img" class="img-responsive" />
                                     </div>
 
                                     <div class="sw_product_indx_img_cont_wrapper">
                                         <div class="sw_pdct_img">
                                             <img src="{% static 'images/line.png' %}" alt="img" />
                                         </div>
-                                        <h5>₹ 156</h5>
-                                        <h1><a href="#">AIR 30 Turbine</a></h1>
+                                        <h5>₹ {{product.price}}</h5>
+                                        <h1><a href="{{product.get_absolute_url}}">{{product.name}}</a></h1>
 
                                         <div class="cc_li_cont_wrapper">
                                             <i class="fa fa-star"></i>
@@ -1007,142 +957,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="item">
-                                <div class="sw_product_box_wrapper">
-                                    <div class="sw_product_indx_img_wrapper">
-
-                                        <img src="{% static 'images/prdct_2.jpg' %}" alt="shop_img" class="img-responsive" />
-                                    </div>
-
-                                    <div class="sw_product_indx_img_cont_wrapper">
-                                        <div class="sw_pdct_img">
-                                            <img src="{% static 'images/line.png' %}" alt="img" />
-                                        </div>
-                                        <h5>₹ 156</h5>
-                                        <h1><a href="#">canadian 30 Turbine</a></h1>
-
-                                        <div class="cc_li_cont_wrapper">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                        </div>
-                                        <div class="cc_li_img_overlay">
-                                            <div class="cc_li_img_text">
-                                                <ul>
-                                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-
-                                                    <li><a href="#"><i class="fa fa-expand"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="sw_product_box_wrapper">
-                                    <div class="sw_product_indx_img_wrapper">
-
-                                        <img src="{% static 'images/prdct_3.jpg' %}" alt="shop_img" class="img-responsive" />
-                                    </div>
-
-                                    <div class="sw_product_indx_img_cont_wrapper">
-                                        <div class="sw_pdct_img">
-                                            <img src="{% static 'images/line.png' %}" alt="img" />
-                                        </div>
-                                        <h5>₹ 156</h5>
-                                        <h1><a href="#">AIR Turbine 40</a></h1>
-
-                                        <div class="cc_li_cont_wrapper">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                        </div>
-                                        <div class="cc_li_img_overlay">
-                                            <div class="cc_li_img_text">
-                                                <ul>
-                                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-
-                                                    <li><a href="#"><i class="fa fa-expand"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="sw_product_box_wrapper">
-                                    <div class="sw_product_indx_img_wrapper">
-
-                                        <img src="{% static 'images/prdct_4.png' %}" alt="shop_img" class="img-responsive" />
-                                    </div>
-
-                                    <div class="sw_product_indx_img_cont_wrapper">
-                                        <div class="sw_pdct_img">
-                                            <img src="{% static 'images/line.png' %}" alt="img" />
-                                        </div>
-                                        <h5>₹ 156</h5>
-                                        <h1><a href="#">Canadian Solar 255</a></h1>
-
-                                        <div class="cc_li_cont_wrapper">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                        </div>
-                                        <div class="cc_li_img_overlay">
-                                            <div class="cc_li_img_text">
-                                                <ul>
-                                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-
-                                                    <li><a href="#"><i class="fa fa-expand"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="sw_product_box_wrapper">
-                                    <div class="sw_product_indx_img_wrapper">
-
-                                        <img src="{% static 'images/prdct_2.jpg' %}" alt="shop_img" class="img-responsive" />
-                                    </div>
-
-                                    <div class="sw_product_indx_img_cont_wrapper">
-                                        <div class="sw_pdct_img">
-                                            <img src="{% static 'images/line.png' %}" alt="img" />
-                                        </div>
-                                        <h5>₹ 156</h5>
-                                        <h1><a href="#">SolarWorld 280</a></h1>
-
-                                        <div class="cc_li_cont_wrapper">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                        </div>
-                                        <div class="cc_li_img_overlay">
-                                            <div class="cc_li_img_text">
-                                                <ul>
-                                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-
-                                                    <li><a href="#"><i class="fa fa-expand"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            {% endfor %}
                         </div>
                     </div>
                 </div>
@@ -1189,7 +1004,7 @@
                                 <div class="panel panel-default">
                                     <div class="panel-heading horn">
                                         <h4 class="panel-title">
-                                            <a class="collapsed" data-toggle="collapse" data-parent="#accordionFifteenLeft" href="#collapseFifteenLeftTwo" aria-expanded="false">Why Solar Energy ?</a>
+                                            <a class="collapsed" data-toggle="collapse" data-parent="#accordionFifteenLeft" href="#collapseFifteenLeftTwo" aria-expanded="false">Why Axiva ?</a>
                                         </h4>
                                     </div>
                                     <div id="collapseFifteenLeftTwo" class="panel-collapse collapse" aria-expanded="false" role="tabpanel">
@@ -1435,37 +1250,15 @@
                 <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 sw_spectrm_padding">
                     <div class="partners_slider_wrapper">
                         <div class="owl-carousel owl-theme">
+
+                            {% for partner in partner %}
                             <div class="item">
                                 <div class="lr_prt_img_wrapper">
-                                    <img src="{% static 'images/partner_1.png' %}" alt="partner_img">
+                                    <img src="{{partner.photo.crop.130x65}}" alt="partner_img">
                                 </div>
                             </div>
+                            {% endfor %}
                             
-                            <div class="item">
-                                <div class="lr_prt_img_wrapper">
-                                    <img src="{% static 'images/partner_3.png' %}" alt="partner_img">
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="lr_prt_img_wrapper">
-                                    <img src="{% static 'images/partner_4.png' %}" alt="partner_img">
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="lr_prt_img_wrapper">
-                                    <img src="{% static 'images/partner_5.png' %}" alt="partner_img">
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="lr_prt_img_wrapper">
-                                    <img src="{% static 'images/partner_2.png' %}" alt="partner_img">
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="lr_prt_img_wrapper">
-                                    <img src="{% static 'images/partner_4.png' %}" alt="partner_img">
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>

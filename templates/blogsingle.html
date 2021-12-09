@@ -1,6 +1,6 @@
 {% extends 'base2.html' %}
 {% load static %}
-{% block title %}Title Blog{% endblock %}
+{% block title %}{{blog.name}}{% endblock %}
 
 {% block content %}
     <!-- page_title_section start -->
@@ -14,7 +14,7 @@
                         <div class="sub_title_section">
                             <ul class="sub_title">
                                 <li><a href="#"> Home </a></li>
-                                <li>blog single post</li>
+                                <li>{{blog.name}}</li>
                             </ul>
                         </div>
                     </div>
@@ -54,7 +54,7 @@
                 <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
                     <div class="lest_news_box_wrapper">
                         <div class="lest_news_img_wrapper">
-                            <img src="{% static 'images/pjct_single_bg.jpg' %}" alt="blog_img">
+                            <img src="{{blog.photo.url}}" alt="blog_img">
                        														   
 							<div class="fab-container hidden-xs">
 								  <a class="fab-buttons level waves-effect waves-light waves-ripple" href="#!">
@@ -77,8 +77,8 @@
 							</div>													   
                         </div>
                         <div class="lest_news_cont_wrapper">
-                            <div class="sc_blog_date">June 28, 2018</div>
-                            <h5><a href="#">Electricity is on track for what about decarbonising heat?</a></h5>
+                            <div class="sc_blog_date">{{blog.date}}</div>
+                            <h5><a href="#">{{blog.date}}</a></h5>
 							  <div class="lest_news_cont_bottom lest_news_cont_bottom_2">
                             <div class="lest_news_cont_bottom_left lest_news_cont_bottom_left_2 sc_left_btm sc_left_btm_2 sc_btn">
                                 <p><a href="#"><i class="fa fa-user"></i>by akshay  H.</a></p>
@@ -93,7 +93,7 @@
                                 <p><a href="#"><i class="fa fa-clone"></i>Energy</a></p>
                             </div>
                         </div>
-                            <p>It is a long established fact that a reader will be distracted by thee reale content of a page when looking at its layout. ar et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation iulputate cursus as Photoshop's veion of Lorem Ipsum. This is Photoshop'suis sed odio sit ametbh vulputate cursus a sit amet mauris.nisi elit at ipsum, nec sagitstracted by thee reale content of a page when looking at its layout. ar et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut pealiquip ex ea commodo consequat. Duis The point of usingc ullamco laboris nisi ut pealiquip ex ea commodo consequat. Duis The point of usingc Lorem Ipsum is that it has a more-or-less normal</p>
+                            <p>{{blog.details}}</p>
 
                         </div>
                         <div class="btc_blog_single_post_bottom_post_wrapper">

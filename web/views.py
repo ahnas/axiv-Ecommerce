@@ -3,12 +3,22 @@ from django.http import HttpResponse
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
 import json 
-from .models import ProductCategory,Product
-
+from .models import Partner, ProductCategory,Product,Blog,Testimonial
+from .forms import ContactForm
 
 def index(request):
+    product = Product.objects.filter(is_dashboard = True)
+    partner = Partner.objects.all()
+    class dualTestMonial:
+        def __init__(self):
+            self.test
+
+    testimonial = Testimonial.objects.all()
     context = {
-        "is_index" : True 
+        "is_index" : True,
+        "product":product, 
+        "partner":partner,
+        "testimonial":testimonial,
     }
     return render(request, 'index.html',context)
 
@@ -55,19 +65,41 @@ def uproject(request):
     return render(request, 'uproject.html',context) 
 
 def blog(request):
+    blog = Blog.objects.filter().order_by('-date')
     context = {
-        "is_blog" : True
+        "is_blog" : True,
+        "blog":blog,
     }
     return render(request, 'blog.html',context) 
 
-def blogsingle(request):
+def blogsingle(request,slug):
+    blog = get_object_or_404(Blog, slug=slug)
     context = {
-        "is_blogsingle" : True
+        "is_blogsingle" : True,
+        "blog":blog,
     }
     return render(request, 'blogsingle.html',context)
 
 def contact(request):
-    context = {
-        "is_contact" : True
-    }
+    form = ContactForm(request.POST or None)
+    if request.method == 'POST':
+        if form.is_valid():
+            form.save()
+            response_data = {
+                "status" : "true",
+                "title" : "Successfully Submitted",
+                "message" : "Message successfully updated"
+            }
+        else:
+            print (form.errors)
+            response_data = {
+                "status" : "false",
+                "title" : "Form validation error",
+            }
+        return HttpResponse(json.dumps(response_data), content_type='application/javascript')
+    else:
+        context = {
+            "is_contact" : True,
+            "form":form,
+        }
     return render(request, 'contact.html',context)

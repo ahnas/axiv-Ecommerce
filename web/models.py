@@ -19,26 +19,62 @@ class Product(models.Model):
     slug = models.SlugField(unique=True)
     price = models.CharField(max_length=128)
     details = models.TextField()
-
-    photo = VersatileImageField(blank=True,null=True,upload_to="Product/")
-
-    photoOne = VersatileImageField(ppoi_field='photoOne_ppoi',default='default.png',upload_to="Product/")
-    photoOne_ppoi = PPOIField()
-
-    photoTwo = VersatileImageField(ppoi_field='photoTwo_ppoi',default='default.png',upload_to="Product/")
-    photoTwo_ppoi = PPOIField()
-
-    photoThree = VersatileImageField(ppoi_field='photoThree_ppoi',default='default.png',upload_to="Product/")
-    photoThree_ppoi = PPOIField()
-
-    photoFour = VersatileImageField(ppoi_field='photoFour_ppoi',default='default.png',upload_to="Product/")
-    photoFour_ppoi = PPOIField()
-
+    is_dashboard = models.BooleanField(default=False)
+    photo = VersatileImageField(upload_to="Product/")
+    
+    photoOne = VersatileImageField(upload_to="Product/")
+    photoTwo = VersatileImageField(upload_to="Product/")
+    photoThree = VersatileImageField(upload_to="Product/")
+    
+    
 
     def get_absolute_url(self):
         return reverse('web:productsingle', kwargs={'slug': self.slug})
 
+    def __str__(self):
+        return str(self.name)
+
+
+
+class Blog(models.Model):
+    
+    name = models.CharField(max_length=128)
+    slug = models.SlugField(unique=True)
+    date = models.DateField()
+    photo = VersatileImageField(blank=True,null=True,upload_to="Blog/")
+    details = models.TextField()
+
+    def get_absolute_url(self):
+        return reverse('web:blogsingle', kwargs={'slug': self.slug})
 
     def __str__(self):
         return str(self.name)
+
+class Contact(models.Model):
+    name = models.CharField(max_length=120)
+    email = models.EmailField(blank=True,null=True)
+    subject = models.CharField(max_length=120,blank=True,null=True)
+    message = models.TextField()
+
+    def __str__(self):
+        return str(self.name)
+
+
+class Testimonial(models.Model):
+    name = models.CharField(max_length=120)
+    role = models.CharField(max_length=120)
+    photo = VersatileImageField(blank=True,null=True,upload_to="Testimonial/")
+    details = models.TextField()
+
+    def __str__(self):
+        return str(self.name)
+
+
+class Partner(models.Model):
+    name = models.CharField(max_length=120)
+    photo = VersatileImageField(blank=True,null=True,upload_to="Partner/")
+
+    def __str__(self):
+        return str(self.name)
+
 
