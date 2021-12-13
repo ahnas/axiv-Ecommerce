@@ -7,6 +7,14 @@ from django.urls import reverse
 
 
 
+class Slider(models.Model):
+    order = models.IntegerField()
+    name = models.CharField(max_length=120)
+    photo = VersatileImageField(upload_to="Slider/")
+
+    def __str__(self):
+        return str(self.name)
+
 class ProductCategory(models.Model):
     name = models.CharField(max_length=128)
     
@@ -16,11 +24,13 @@ class ProductCategory(models.Model):
 class Product(models.Model):
     productcategory = models.ForeignKey(ProductCategory,on_delete=models.CASCADE)
     name = models.CharField(max_length=128)
+    brochure = models.FileField(upload_to ='brochure/')
     slug = models.SlugField(unique=True)
     price = models.CharField(max_length=128)
     details = models.TextField()
     is_dashboard = models.BooleanField(default=False)
     photo = VersatileImageField(upload_to="Product/")
+
     
     photoOne = VersatileImageField(upload_to="Product/")
     photoTwo = VersatileImageField(upload_to="Product/")
@@ -41,7 +51,7 @@ class Blog(models.Model):
     name = models.CharField(max_length=128)
     slug = models.SlugField(unique=True)
     date = models.DateField()
-    photo = VersatileImageField(blank=True,null=True,upload_to="Blog/")
+    photo = VersatileImageField(upload_to="Blog/")
     details = models.TextField()
 
     def get_absolute_url(self):
@@ -63,7 +73,7 @@ class Contact(models.Model):
 class Testimonial(models.Model):
     name = models.CharField(max_length=120)
     role = models.CharField(max_length=120)
-    photo = VersatileImageField(blank=True,null=True,upload_to="Testimonial/")
+    photo = VersatileImageField(upload_to="Testimonial/")
     details = models.TextField()
 
     def __str__(self):
@@ -72,9 +82,33 @@ class Testimonial(models.Model):
 
 class Partner(models.Model):
     name = models.CharField(max_length=120)
-    photo = VersatileImageField(blank=True,null=True,upload_to="Partner/")
+    photo = VersatileImageField(upload_to="Partner/")
+
+    class Meta:
+        verbose_name = ('Sister Concern')
+        verbose_name_plural = ('Sister Concerns')
 
     def __str__(self):
         return str(self.name)
+
+class Project(models.Model):
+    name = models.CharField(max_length=120)
+    photo = VersatileImageField(upload_to="Project/")
+    details = models.TextField()
+
+    def __str__(self):
+        return str(self.name)
+
+
+class Director(models.Model):
+    name = models.CharField(max_length=120)
+    role = models.CharField(max_length=120)
+    photo = VersatileImageField(upload_to="Testimonial/")
+    
+
+    def __str__(self):
+        return str(self.name)
+
+
 
 

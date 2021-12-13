@@ -3,28 +3,28 @@ from django.http import HttpResponse
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
 import json 
-from .models import Partner, ProductCategory,Product,Blog,Testimonial
+from .models import Partner, ProductCategory,Product,Blog, Project,Testimonial,Slider,Director
 from .forms import ContactForm
 
 def index(request):
+    slider = Slider.objects.all()
     product = Product.objects.filter(is_dashboard = True)
     partner = Partner.objects.all()
-    class dualTestMonial:
-        def __init__(self):
-            self.test
-
     testimonial = Testimonial.objects.all()
     context = {
         "is_index" : True,
         "product":product, 
         "partner":partner,
         "testimonial":testimonial,
+        "slider":slider,
     }
     return render(request, 'index.html',context)
 
 def about(request): 
+    director = Director.objects.all()
     context = {
-        "is_about" : True
+        "is_about" : True,
+        "director":director,
     }
     return render(request, 'about.html',context)
 
@@ -59,8 +59,10 @@ def project(request):
     return render(request, 'project.html',context) 
 
 def uproject(request):
+    project = Project.objects.all()
     context = {
-        "is_uproject" : True
+        "is_uproject" : True,
+        "project":project,
     }
     return render(request, 'uproject.html',context) 
 

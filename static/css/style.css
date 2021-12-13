@@ -42,6 +42,10 @@ html {
 }
 
 
+.d-none{
+     display: none !important;
+}
+
 /*------------------custom css----------------*/
 
 a {
@@ -300,7 +304,7 @@ textarea:focus {
     left: 0;
     right: 0;
     z-index: 100;
-    background: #3d8cc4;
+    background: #005f69;
     box-shadow: 0 3px 10px 0 rgba(0, 0, 0, .2);
 }
 
@@ -1035,7 +1039,7 @@ nav ul li.active {
     left: 0%;
     right: 0%;
     bottom: 0%;
-    background: rgba(34, 163, 255, 0.65);
+    background: #005f69;
 }
 
 .sw_banner_bottom_shap_img_wrapper {
@@ -1334,7 +1338,7 @@ nav ul li.active {
 }
 
 .galery_hover_div:hover {
-    color: #3c90cd;
+    color: #005f69;
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.08);
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
@@ -1381,7 +1385,7 @@ nav ul li.active {
 
 .portfolio-nav ul li.is-checked {
     background: #fff;
-    color: #3c90cd;
+    color: #005f69;
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.08);
 }
 
@@ -1480,7 +1484,7 @@ nav ul li.active {
 .sw_news_letter_wrapper {
     float: left;
     width: 100%;
-    background: #328fd1;
+    background: #005f69;
     padding-top: 60px;
     padding-bottom: 60px;
 }
@@ -1650,7 +1654,7 @@ nav ul li.active {
     float: left;
     width: calc(100% - 150px);
     padding-left: 20px;
-    background-image: url(../images/quote.png);
+    
     background-size: 64px;
     background-repeat: no-repeat;
     background-position: 10px -10px;
@@ -1843,7 +1847,7 @@ nav ul li.active {
 
 .sw_product_indx_img_cont_wrapper h1 a {
     font-size: 18px;
-    color: #1d3571;
+    color: #005f69;
     line-height: 24px;
     display: inline-block;
     padding: 3px 0 3px 0;
@@ -1854,7 +1858,7 @@ nav ul li.active {
 .sw_product_indx_img_cont_wrapper h5 {
     font-size: 16px;
     color: #fff;
-    background: #1d3571;
+    background: #005f69;
     padding: 5px 30px;
     font-weight: 500;
     border-radius: 50px;
@@ -3157,7 +3161,7 @@ nav ul li.active {
         z-index: 1000;
     }
     .sc_navigation {
-        float: right;
+        /* float: right; */
         width: 80%;
     }
     nav {
@@ -3170,7 +3174,7 @@ nav ul li.active {
         list-style: outside none none;
         margin: 0;
         padding: 0;
-        width: calc(100% - 230px);
+        
     }
     nav>ul>li {
         color: #fff;
@@ -3197,11 +3201,14 @@ nav ul li.active {
     nav ul li {
         float: none;
     }
+    .float-right{
+        float: right !important;
+    }
     .main-menu-wrapper {
         float: left;
         width: 20%;
         padding-top: 18px;
-        padding-left: 30px;
+        padding-left: 15px;
         padding-bottom: 15px;
     }
     nav>ul>li:hover:before,
@@ -3382,7 +3389,7 @@ nav ul li.active {
     /*=============== Sticky Header  ===================*/
     .menu_fixed {
         position: fixed;
-        background: #3d8cc4;
+        background: #005f69;
         color: #1d3571;
         -webkit-box-shadow: 0px 2px 20px -6px #3c3c3c;
         -moz-box-shadow: 0px 2px 20px -6px #3c3c3c;
@@ -3516,7 +3523,7 @@ nav ul li.active {
 
 nav {
     height: auto;
-    float: right;
+    
 }
 
 .caret_btn ul:before {
@@ -3602,3 +3609,17 @@ nav ul li:nth-child(9)>ul {
     border: 0;
 }
 
+
+.blink{
+	text-decoration: blink;
+	-webkit-animation-name: blinker;
+	-webkit-animation-duration: .5s;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-timing-function:ease-in-out;
+	-webkit-animation-direction: alternate;
+}
+
+@-webkit-keyframes blinker {
+    from {opacity: 1.0;}
+    to {opacity: 0.0;}
+  }

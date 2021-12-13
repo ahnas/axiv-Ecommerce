@@ -55,53 +55,18 @@
             <div class="row">
                
                 <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
-                    
+                    {% for project in project %}
                     <div class="row projj">
                         <div class="col-lg-4">
-                            <img width="100%" src="{% static 'images/news_1.jpg' %}" alt="">
+                            <img width="100%" src="{{project.photo.crop.340x260}}" alt="">
                         </div>
                         <div class="col-lg-8">
-                            <h1>Heading</h1>
+                            <h1>{{project.name}}</h1>
                             <img src="{% static 'images/heading_line.png' %}" alt="title">
-                            <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimnim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-                                esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat esse cillum dolore eu fugiat nulla .</p>
+                            <p>{{project.details}}</p>
                         </div>
                     </div>
-                    <div class="row projj">
-                        <div class="col-lg-4">
-                            <img width="100%" src="{% static 'images/news_1.jpg' %}" alt="">
-                        </div>
-                        <div class="col-lg-8">
-                            <h1>Heading</h1>
-                            <img src="{% static 'images/heading_line.png' %}" alt="title">
-                            <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimnim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-                                esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat esse cillum dolore eu fugiat nulla .</p>
-                        </div>
-                    </div>
-
-                    <div class="row projj">
-                        <div class="col-lg-4">
-                            <img width="100%" src="{% static 'images/news_1.jpg' %}" alt="">
-                        </div>
-                        <div class="col-lg-8">
-                            <h1>Heading</h1>
-                            <img src="{% static 'images/heading_line.png' %}" alt="title">
-                            <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimnim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-                                esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat esse cillum dolore eu fugiat nulla .</p>
-                        </div>
-                    </div>
-                    <div class="row projj">
-                        <div class="col-lg-4">
-                            <img width="100%" src="{% static 'images/news_1.jpg' %}" alt="">
-                        </div>
-                        <div class="col-lg-8">
-                            <h1>Heading</h1>
-                            <img src="{% static 'images/heading_line.png' %}" alt="title">
-                            <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimnim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-                                esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat esse cillum dolore eu fugiat nulla .</p>
-                        </div>
-                    </div>
-
+                    {% endfor %}
                 </div>
 
                 

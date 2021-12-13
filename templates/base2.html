@@ -36,16 +36,22 @@
 
     <div class="transparent-menu header-area hidden-menu-bar stick">
 
-        <div class="container">
+        <div class="container-fluid p-cus">
 
             <div class="bt_main_menu_wrapper">
-                <div class="main-menu-wrapper clear-fix">
 
+                <div class="main-menu-wrapper clear-fix blink">
                     <div class="logo float-left">
+                        <a href="{% url 'web:index' %}"><img src="{% static 'images/since_black.png' %}" class="img-responsive" alt="logo"></a>
+                    </div>
+                </div>
+
+                <div class="main-menu-wrapper clear-fix" style="float: right;">
+                    <div class="logo float-right">
                         <a href="{% url 'web:index' %}"><img src="{% static 'images/axivalogo.png' %}" class="img-responsive" alt="logo"></a>
                     </div>
-
                 </div>
+
                 <div class="sc_navigation hidden-sm hidden-xs">
                     <nav id="primary-nav" class="dropdown nav_left_margin">
                         <ul class="dropdown menu navigation cart_dropdown_wrapper">
@@ -53,11 +59,8 @@
                                 <li><a href="{% url 'web:about' %}" title="">about us</a></li>
                                 <li><a href="{% url 'web:service' %}" title="">services</a></li>
                                 <li><a href="{% url 'web:product' %}" title="">products</a></li>
-                                <li><a href="#" title="">projects</a>
-                                    <ul>
-                                        <li class="dropdown_hover"><a href="{% url 'web:project' %}" title="">Project</a></li>
-                                         <li class="dropdown_hover"><a href="{% url 'web:uproject' %}" title="">Upcoming Project</a></li>
-                                    </ul>
+                                <li><a href="{% url 'web:uproject' %}" title="">projects</a>
+                                    
                                 </li>
                                
                                 <li><a href="{% url 'web:blog' %}" title="">blog</a>
@@ -122,34 +125,7 @@
                             <!-- Menu -->
                             <!--search -->
                         </ul>
-                        <div class="header_right_inner_page">
-                            <div class="search-wrapper">
-                                <div class="et_navbar_search_wrapper hidden-xs">
-                                    <div class="et_search_bar" id="search_button">
-                                        <a href="#"><i class="fa fa-search waves-effect waves-light" aria-hidden="true"></i></a>
-                                    </div>
-                                    <div id="search_open" class="et_search_box">
-                                        <input type="text" placeholder="Search text...">
-                                        <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="sw_icon_bar">
-                                <ul class="tc_login_btn_wrapper">
-                                    <li class="dropdown tc_login_btn">
-                                        <a class="dropdown-toggle hvr-float-shadow active waves-effect waves-light" data-toggle="dropdown" href="#"><i class="fa fa-ellipsis-v"></i></a>
-                                        <ul class="dropdown-menu tc_menu_fixed_border">
-                                            <li class="dropdown_hover"><a href="#">FAQ's</a></li>
-                                            <li class="dropdown_hover"><a href="#">Track Order</a></li>
-                                            <li class="dropdown_hover"><a href="#">Register</a></li>
-                                            <li class="dropdown_hover"><a href="#">Login</a></li>
-                                            <li class="dropdown_hover hidden-lg"><a href="#">Free Quote</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
-
-                        </div>
+                        
 
                     </nav>
                 </div>
@@ -164,54 +140,54 @@
                                 <div class="mobile-menu">
                                     <nav>
                                         <ul class="nav">
-                                            <li><a href="index.html">Home</a>
+                                            <li><a href="{% url 'web:index' %}">Home</a>
 												 <ul>
-													 <li><a href="index.html" title=""> home 1</a></li>
-													  <li><a href="index_2.html" title=""> home 2</a></li>
-													  <li><a href="index_3.html" title=""> home 3</a></li>
-													  <li><a href="index_4.html" title=""> home 4</a></li>
-													  <li><a href="index_5.html" title=""> home 5</a></li>
-													    <li><a href="index_6.html" title=""> home 6</a></li>
+													 <li><a href="{% url 'web:index' %}" title=""> home 1</a></li>
+													  <li><a href="{% url 'web:index' %}" title=""> home 2</a></li>
+													  <li><a href="{% url 'web:index' %}" title=""> home 3</a></li>
+													  <li><a href="{% url 'web:index' %}" title=""> home 4</a></li>
+													  <li><a href="{% url 'web:index' %}" title=""> home 5</a></li>
+													    <li><a href="{% url 'web:index' %}" title=""> home 6</a></li>
 												</ul>
                                                 </li>
                                                 <li><a href="{% url 'web:about' %}">about us</a>
                                                 </li>
                                                 <li><a href="{% url 'web:service' %}">services</a>
                                                 </li>
-                                                <li><a href="project_2.html">projects</a>
+                                                <li><a href="project_2' %}">projects</a>
 												 <ul>
-													<li><a href="project_2.html" title=""> project 2</a></li>
-													<li><a href="project_3.html" title=""> project 3</a></li>
-													<li><a href="project_4.html" title=""> project 4</a></li>
-													<li><a href="project_fullwidth.html" title="">project fullwidth</a></li>
-													<li><a href="project_single.html" title=""> project single</a></li>
+													<li><a href="project_2' %}" title=""> project 2</a></li>
+													<li><a href="project_3' %}" title=""> project 3</a></li>
+													<li><a href="project_4' %}" title=""> project 4</a></li>
+													<li><a href="project_fullwidth' %}" title="">project fullwidth</a></li>
+													<li><a href="project_single' %}" title=""> project single</a></li>
 
 												</ul>
                                                 </li>
-                                                <li><a href="team.html">team</a>
+                                                <li><a href="team' %}">team</a>
                                                     <ul>
-														<li><a href="team.html" title=""> team</a></li>
-														<li><a href="team_details.html" title="">team details</a></li>
+														<li><a href="team' %}" title=""> team</a></li>
+														<li><a href="team_details' %}" title="">team details</a></li>
 													</ul>
                                                 </li>
-                                                <li><a href="blog_single.html" title="">blog</a>
+                                                <li><a href="blog_single' %}" title="">blog</a>
                                                      <ul>
-														<li><a href="blog_categories.html" title=""> blog categories</a></li>
-														<li><a href="blog_category.html" title=""> blog category</a></li>
-														<li><a href="blog_single.html" title=""> blog single</a></li>
+														<li><a href="blog_categories' %}" title=""> blog categories</a></li>
+														<li><a href="blog_category' %}" title=""> blog category</a></li>
+														<li><a href="blog_single' %}" title=""> blog single</a></li>
 													</ul>
                                                 </li>
-                                                <li><a href="shop_sidebar.html" title="">shop</a>
+                                                <li><a href="shop_sidebar' %}" title="">shop</a>
                                                    <ul>
-														<li><a href="shop_sidebar.html" title="">shop sidebar</a></li>
-														<li><a href="shop_fullwidth.html" title=""> shop fullwidth</a></li>
-														<li><a href="shop_single.html" title=""> shop single</a></li>
+														<li><a href="shop_sidebar' %}" title="">shop sidebar</a></li>
+														<li><a href="shop_fullwidth' %}" title=""> shop fullwidth</a></li>
+														<li><a href="shop_single' %}" title=""> shop single</a></li>
 													</ul>
                                                 </li>
                                                 <li><a href="{% url 'web:contact' %}"> contact us</a>
 												 <ul>
 													  <li><a href="{% url 'web:contact' %}" title="">contact us</a></li>
-													  <li><a href="error.html" title=""> 404 error</a></li>
+													  <li><a href="error' %}" title=""> 404 error</a></li>
 												</ul>
                                                 </li>
                                             <li class="caret_btn">
@@ -280,7 +256,7 @@
             </div>
         </div>
 
-        <div class="header_btn">
+        <div class="header_btn d-none">
             <ul>
                 <li>
                     <a href="#!" class="waves-effect waves-light waves-ripple">free quote</a>

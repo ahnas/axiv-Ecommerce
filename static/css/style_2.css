@@ -42,16 +42,20 @@ html {
 }
 
 
+.d-none{
+    display: none !important;
+}
+
 /*------------------custom css----------------*/
 
 a {
-    color: #1d3571;
+    color: #005f69;
     text-decoration: none;
 }
 
 a:hover,
 a:focus {
-    color: #1d3571;
+    color: #005f69;
     text-decoration: none;
 }
 
@@ -73,7 +77,7 @@ h6,
 .h6 {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
-    color: #1d3571;
+    color: #005f69;
     line-height: 26px;
     font-weight: 400;
     margin: 0;
@@ -164,7 +168,7 @@ textarea:focus {
     right: 0;
     left: 0;
     margin: 0px auto;
-    color: #1d3571;
+    color: #005f69;
     text-transform: uppercase;
     background: #fff;
     width: 120px;
@@ -197,7 +201,7 @@ textarea:focus {
 }
 
 #return-to-top i {
-    color: #1d3571;
+    color: #005f69;
     margin: 0;
     left: 0;
     position: relative;
@@ -268,7 +272,7 @@ textarea:focus {
     right: 0;
     top: 0;
     height: 97px;
-    color: #1d3571 !important;
+    color: #005f69 !important;
 }
 
 .header-area.stick .mainmenu ul li a,
@@ -367,7 +371,7 @@ nav ul li.active {
 
 .caret_btn a i:before {
     font-size: 16px;
-    color: #1d3571;
+    color: #005f69;
 }
 
 .cc_cart_wrapper1 {
@@ -404,7 +408,7 @@ nav ul li.active {
 }
 
 .cc_cart_cont_wrapper h4 a {
-    color: #1d3571 !important;
+    color: #005f69 !important;
     font-size: 16px;
     font-weight: 500;
     padding: 0 !important;
@@ -416,7 +420,7 @@ nav ul li.active {
 }
 
 .cc_cart_cont_wrapper p {
-    color: #1d3571;
+    color: #005f69;
     margin-top: 15px;
     background: #e8f5ff;
     width: 24px;
@@ -445,13 +449,13 @@ nav ul li.active {
 .btm_cart_wrapper h5 {
     font-size: 20px;
     font-weight: 600;
-    color: #338fd1;
+    color: #005f69;
     font-family: 'Roboto', sans-serif;
 }
 
 .btm_cart_wrapper p {
     font-size: 14px;
-    color: #1d3571;
+    color: #005f69;
     font-weight: 400;
     line-height: 18px;
 }
@@ -463,7 +467,7 @@ nav ul li.active {
     float: right;
     width: auto;
     text-align: center;
-    color: #1d3571;
+    color: #005f69;
     font-size: 16px;
     cursor: pointer;
 }
@@ -522,7 +526,7 @@ nav ul li.active {
     border: 0;
     text-align: center;
     background: transparent;
-    color: #1d3571;
+    color: #005f69;
     margin-top: 6px;
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
@@ -536,7 +540,7 @@ nav ul li.active {
 }
 
 .et_search_box a:hover {
-    color: #1d3571;
+    color: #005f69;
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
     -ms-transition: all 0.5s;
@@ -595,7 +599,7 @@ nav ul li.active {
     line-height: 35px;
     border-radius: 30px;
     font-size: 16px;
-    color: #1d3571;
+    color: #005f69;
     text-align: center;
 }
 
@@ -610,7 +614,7 @@ nav ul li.active {
 
 .tc_login_btn_wrapper .dropdown-menu>li>a:hover,
 .dropdown-menu>li>a:focus {
-    background: #328fd1;
+    background: #005f69;
     color: #ffffff;
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
@@ -641,7 +645,7 @@ nav ul li.active {
     height: 45px;
     float: left;
     color: #fff;
-    background: #1d3571;
+    background: #005f69;
     text-align: center;
     line-height: 45px;
     font-size: 16px;
@@ -673,9 +677,9 @@ nav ul li.active {
 .page_title_section {
     float: left;
     width: 100%;
-    background: #338fd1;
+    background: #005f69;
     position: relative;
-    margin-top: -23px;
+    margin-top: 0px;
 }
 
 .page_header {
@@ -867,7 +871,7 @@ nav ul li.active {
     width: 30px;
     height: 50px;
     margin-left: -15px;
-    border: 2px solid #1d3571;
+    border: 2px solid #005f69;
     z-index: 1;
     border-radius: 50px;
     box-sizing: border-box;
@@ -882,7 +886,7 @@ nav ul li.active {
     height: 6px;
     margin-left: -3px;
     z-index: 1;
-    background-color: #1d3571;
+    background-color: #005f69;
     border-radius: 100%;
     -webkit-animation: sdb10 2s infinite;
     animation: sdb10 2s infinite;
@@ -934,7 +938,7 @@ nav ul li.active {
 .sw_about_top_wrapper {
     float: left;
     width: 100%;
-    background: #2c86c7;
+    background: #005f69;
 }
 
 .sw_about_top_img {
@@ -953,7 +957,7 @@ nav ul li.active {
 
 .sw_left_heading_wraper h1 {
     margin: 0px 0px 0px 0px;
-    color: #1d3571;
+    color: #005f69;
     font-size: 32px;
     font-weight: 500;
     margin-bottom: 3px;
@@ -1019,7 +1023,7 @@ nav ul li.active {
 
 .sw_left_heading_wraper h1 {
     margin: 0px 0px 0px 0px;
-    color: #1d3571;
+    color: #005f69;
     line-height: 28px;
     font-size: 32px;
     font-weight: 400;
@@ -1057,7 +1061,7 @@ nav ul li.active {
 }
 
 .spectrum_slider_wrapper .owl-theme .owl-nav .owl-prev {
-    color: #1d3571;
+    color: #005f69;
     font-size: 16px;
     margin: 5px;
     width: 45px;
@@ -1070,7 +1074,7 @@ nav ul li.active {
 }
 
 .spectrum_slider_wrapper .owl-theme .owl-nav .owl-next {
-    color: #1d3571;
+    color: #005f69;
     font-size: 16px;
     margin: 5px;
     width: 45px;
@@ -1084,7 +1088,7 @@ nav ul li.active {
 
 .spectrum_slider_wrapper .owl-theme .owl-nav .owl-next:hover {
     background: #fff;
-    color: #1d3571;
+    color: #005f69;
     box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.08);
     -webkit-transition: all .5s;
     -moz-transition: all .5s;
@@ -1095,7 +1099,7 @@ nav ul li.active {
 
 .spectrum_slider_wrapper .owl-theme .owl-nav .owl-prev:hover {
     background: #fff;
-    color: #1d3571;
+    color: #005f69;
     box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.08);
     -webkit-transition: all .5s;
     -moz-transition: all .5s;
@@ -1155,7 +1159,7 @@ nav ul li.active {
     text-align: center;
     font-size: 18px;
     font-weight: 500;
-    color: #1d3571;
+    color: #005f69;
     text-transform: capitalize;
 }
 
@@ -1205,7 +1209,7 @@ nav ul li.active {
     display: block;
     background: transparent;
     padding-bottom: 15px;
-    color: #1d3571;
+    color: #005f69;
     font-size: 18px;
     font-weight: 500;
     border: 0;
@@ -1213,7 +1217,7 @@ nav ul li.active {
 }
 
 .sw_leads_accordian .panel .panel-heading a.collapsed {
-    color: #1d3571;
+    color: #005f69;
     background-color: transparent;
     display: block;
     padding-bottom: 15px;
@@ -1267,14 +1271,14 @@ nav ul li.active {
 
 .sw_leads_accordian .panel .panel-heading a:after {
     content: "\2212";
-    color: #328fd1;
+    color: #005f69;
     float: left;
     font-size: 34px;
 }
 
 .sw_leads_accordian .panel .panel-heading a.collapsed:after {
     content: "\2b";
-    color: #328fd1;
+    color: #005f69;
     float: left;
     font-size: 34px;
 }
@@ -1337,7 +1341,7 @@ nav ul li.active {
 }
 
 .best_product_slider_wrapper .owl-theme .owl-nav .owl-prev {
-    color: #1d3571;
+    color: #005f69;
     font-size: 16px;
     margin: 5px;
     width: 45px;
@@ -1350,7 +1354,7 @@ nav ul li.active {
 }
 
 .best_product_slider_wrapper .owl-theme .owl-nav .owl-next {
-    color: #1d3571;
+    color: #005f69;
     font-size: 16px;
     margin: 5px;
     width: 45px;
@@ -1364,7 +1368,7 @@ nav ul li.active {
 
 .best_product_slider_wrapper .owl-theme .owl-nav .owl-next:hover {
     background: #fff;
-    color: #1d3571;
+    color: #005f69;
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.08);
     -webkit-transition: all .5s;
     -moz-transition: all .5s;
@@ -1375,7 +1379,7 @@ nav ul li.active {
 
 .best_product_slider_wrapper .owl-theme .owl-nav .owl-prev:hover {
     background: #fff;
-    color: #1d3571;
+    color: #005f69;
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.08);
     -webkit-transition: all .5s;
     -moz-transition: all .5s;
@@ -1438,7 +1442,7 @@ nav ul li.active {
 }
 
 .sw_product_box_wrapper:hover .sw_product_indx_img_cont_wrapper {
-    background: #338fd1;
+    background: #005f69;
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
     -ms-transition: all 0.5s;
@@ -1447,7 +1451,7 @@ nav ul li.active {
 }
 
 .sw_product_box_wrapper:hover .sw_product_indx_img_cont_wrapper_2 {
-    background: #338fd1 !important;
+    background: #005f69 !important;
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
     -ms-transition: all 0.5s;
@@ -1471,7 +1475,7 @@ nav ul li.active {
 
 .sw_product_indx_img_cont_wrapper h1 a {
     font-size: 20px;
-    color: #1d3571;
+    color: #005f69;
     line-height: 24px;
     display: inline-block;
     padding: 3px 0 3px 0;
@@ -1481,7 +1485,7 @@ nav ul li.active {
 
 .sw_product_indx_img_cont_wrapper h5 {
     font-size: 16px;
-    color: #328fd1;
+    color: #005f69;
     font-weight: 400;
     display: inline-block;
     font-family: 'Roboto', sans-serif;
@@ -1517,7 +1521,7 @@ nav ul li.active {
 }
 
 .sw_product_box_wrapper:hover .sw_prdct_11 {
-    background: #328fd1 !important;
+    background: #005f69 !important;
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
     -ms-transition: all 0.5s;
@@ -1584,7 +1588,7 @@ nav ul li.active {
     text-align: center;
     line-height: 52px;
     background: #fff;
-    color: #1d3571;
+    color: #005f69;
     margin-left: 15px;
     -webkit-border-radius: 100px;
     -moz-border-radius: 100px;
@@ -1597,7 +1601,7 @@ nav ul li.active {
 }
 
 .abt_img_btn_wrapper li a:hover {
-    background: #338fd1;
+    background: #005f69;
     color: #fff;
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
@@ -1621,13 +1625,13 @@ nav ul li.active {
 .sw_news_letter_wrapper {
     float: left;
     width: 100%;
-    background: #328fd1;
+    background: #005f69;
     padding-top: 80px;
     padding-bottom: 80px;
 }
 
 .sw_new_letter_index {
-    background: #1d3571;
+    background: #005f69;
 }
 
 .sw_nl_heading_wrapper {
@@ -1658,11 +1662,11 @@ nav ul li.active {
 }
 
 .sw_our_news_txt h2 {
-    color: #1d3571;
+    color: #005f69;
 }
 
 .sw_our_news_txt i {
-    color: #328fd1;
+    color: #005f69;
 }
 
 .disc_btn {
@@ -1681,7 +1685,7 @@ nav ul li.active {
     width: 155px;
     height: 50px;
     float: left;
-    color: #1d3571;
+    color: #005f69;
     background: #fff;
     text-align: center;
     line-height: 51px;
@@ -1789,7 +1793,7 @@ nav ul li.active {
 }
 
 .chose_icon_wrapper_list h4 a {
-    color: #1d3571;
+    color: #005f69;
     font-size: 20px;
     font-weight: 500;
 }
@@ -1830,7 +1834,7 @@ nav ul li.active {
 
 .sw_our_news_txt h6 {
     font-style: italic;
-    color: #328fd1;
+    color: #005f69;
     font-size: 14px;
     font-weight: 500;
 }
@@ -1863,7 +1867,7 @@ nav ul li.active {
     float: left;
     font-weight: 500;
     margin-left: -100px;
-    background-color: #328fd1;
+    background-color: #005f69;
     color: #fff;
     border: 0px;
     font-family: 'Montserrat', sans-serif;
@@ -1938,7 +1942,7 @@ nav ul li.active {
 }
 
 .partners_slider_wrapper .owl-theme .owl-nav .owl-prev {
-    color: #1d3571;
+    color: #005f69;
     font-size: 16px;
     margin: 5px;
     width: 45px;
@@ -1951,7 +1955,7 @@ nav ul li.active {
 }
 
 .partners_slider_wrapper .owl-theme .owl-nav .owl-next {
-    color: #1d3571;
+    color: #005f69;
     font-size: 16px;
     margin: 5px;
     width: 45px;
@@ -1965,7 +1969,7 @@ nav ul li.active {
 
 .partners_slider_wrapper .owl-theme .owl-nav .owl-next:hover {
     background: #e9f5ff;
-    color: #1d3571;
+    color: #005f69;
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.06);
     -webkit-transition: all .5s;
     -moz-transition: all .5s;
@@ -1976,7 +1980,7 @@ nav ul li.active {
 
 .partners_slider_wrapper .owl-theme .owl-nav .owl-prev:hover {
     background: #e9f5ff;
-    color: #1d3571;
+    color: #005f69;
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.06);
     -webkit-transition: all .5s;
     -moz-transition: all .5s;
@@ -2024,12 +2028,12 @@ nav ul li.active {
 .sw_footer_main_wrapper {
     float: left;
     width: 100%;
-    background: #338fd1;
+    background: #005f69;
     position: relative;
 }
 
 .sw_footer_index_wrapper {
-    background: #1d3571;
+    background: #005f69;
 }
 
 .footer_wrapper {
@@ -2235,7 +2239,7 @@ nav ul li.active {
 
 .abotus_content li a:hover {
     background: #fff;
-    color: #1d3571;
+    color: #005f69;
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
     -ms-transition: all 0.5s;
@@ -2342,7 +2346,7 @@ nav ul li.active {
     font-size: 18px;
     font-weight: 500;
     text-transform: capitalize;
-    color: #1d3571;
+    color: #005f69;
     line-height: 22px;
 }
 
@@ -2464,7 +2468,7 @@ nav ul li.active {
 
 .sw_disc_head_text h5 a {
     font-size: 18px;
-    color: #1d3571;
+    color: #005f69;
     font-weight: 500;
     -webkit-transition: all .5s;
     -moz-transition: all .5s;
@@ -2504,7 +2508,7 @@ nav ul li.active {
     width: 155px;
     height: 50px;
     float: left;
-    color: #1d3571;
+    color: #005f69;
     background: #fff;
     text-align: center;
     line-height: 51px;
@@ -2543,7 +2547,7 @@ nav ul li.active {
     padding-top: 60px;
     padding-bottom: 60px;
     overflow: hidden;
-    background: #338fd1;
+    background: #005f69;
 }
 
 .counter_section .count-description span {
@@ -2586,7 +2590,7 @@ nav ul li.active {
     background: #fff;
     display: inline-block;
     font-size: 30px;
-    color: #1d3571;
+    color: #005f69;
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
     -ms-transition: all 0.5s;
@@ -2599,7 +2603,7 @@ nav ul li.active {
 }
 
 .counter_hover:hover .icon i {
-    background-color: #1d3571;
+    background-color: #005f69;
     color: #fff;
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
@@ -2699,7 +2703,7 @@ nav ul li.active {
 }
 
 .box1_blue {
-    background: #328fd1;
+    background: #005f69;
     padding-top: 120px;
     margin-top: -20px;
 }
@@ -2777,19 +2781,19 @@ nav ul li.active {
 }
 
 .txt_clr_oange p {
-    color: #1d3571;
+    color: #005f69;
     font-size: 20px;
     font-weight: 500;
 }
 
 .txt_clr_blue p {
-    color: #1d3571;
+    color: #005f69;
     font-size: 20px;
     font-weight: 500;
 }
 
 .txt_clr_green p {
-    color: #1d3571;
+    color: #005f69;
     font-size: 20px;
     font-weight: 500;
 }
@@ -2829,7 +2833,7 @@ nav ul li.active {
 
 .jp_pricing_label_blue:after {
     content: '';
-    border-bottom: 8px solid #328fd1 !important;
+    border-bottom: 8px solid #005f69 !important;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     position: absolute;
@@ -2865,7 +2869,7 @@ nav ul li.active {
 }
 
 .pricing_box1_wrapper:hover .txt_clr_blue p {
-    color: #328fd1;
+    color: #005f69;
     transition: all 0.5s;
 }
 
@@ -2919,11 +2923,11 @@ nav ul li.active {
     width: 100%;
     padding-bottom: 140px;
     padding-top: 100px;
-    background: #338fd1;
+    background: #005f69;
 }
 
 .sw_contact_index {
-    background: #1d3571;
+    background: #005f69;
 }
 
 .contact_left_wrapper {
@@ -3010,7 +3014,7 @@ nav ul li.active {
     width: 180px;
     height: 50px;
     float: left;
-    color: #1d3571;
+    color: #005f69;
     text-transform: capitalize;
     background: #fff;
     text-align: center;
@@ -3120,7 +3124,7 @@ nav ul li.active {
 }
 
 .sw_center_heading_wrapper h1 {
-    color: #1d3571;
+    color: #005f69;
 }
 
 .sw_center_heading_wrapper p {
@@ -3160,7 +3164,7 @@ nav ul li.active {
 
 .tab_img_overlay a {
     font-size: 18px;
-    color: #1d3571;
+    color: #005f69;
     text-align: center;
     opacity: 0;
     -webkit-filter: blur(70px);
@@ -3226,9 +3230,9 @@ nav ul li.active {
     left: 0;
     right: 0;
     bottom: 0;
-    background: -moz-linear-gradient(top, rgba(0, 0, 0, .6) 1%, #1d3571 100%);
-    background: -webkit-linear-gradient(top, rgba(0, 0, 0, .6) 1%, #1d3571 100%);
-    background: linear-gradient(to bottom, rgba(0, 0, 0, .6) 1%, #1d3571 100%);
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, .6) 1%, #005f69 100%);
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, .6) 1%, #005f69 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .6) 1%, #005f69 100%);
     opacity: 1;
     -webkit-transition: all 0.7s;
     -o-transition: all 0.7s;
@@ -3238,7 +3242,7 @@ nav ul li.active {
 }
 
 .gallery-area .portfolio-nav ul li {
-    color: #1d3571;
+    color: #005f69;
     font-weight: 600;
     font-size: 14px;
     cursor: pointer;
@@ -3250,7 +3254,7 @@ nav ul li.active {
 }
 
 .galery_hover_div:hover {
-    color: #3c90cd;
+    color: #005f69;
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.08);
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
@@ -3297,7 +3301,7 @@ nav ul li.active {
 
 .portfolio-nav ul li.is-checked {
     background: #fff;
-    color: #3c90cd;
+    color: #005f69;
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.08);
 }
 
@@ -3465,14 +3469,14 @@ nav ul li.active {
     text-transform: uppercase;
     font-size: 16px;
     font-weight: 600;
-    color: #1d3571;
+    color: #005f69;
 }
 
 .sw_testimonials_slider_box_text h6 {
     font-size: 14px;
     text-transform: capitalize;
     font-weight: 400;
-    color: #3c90cd;
+    color: #005f69;
     padding-left: 5px;
 }
 
@@ -3480,7 +3484,7 @@ nav ul li.active {
     float: left;
     width: 100%;
     font-size: 16px;
-    color: #1d3571;
+    color: #005f69;
     font-style: italic;
     font-weight: 300;
     margin-bottom: 10px;
@@ -3514,7 +3518,7 @@ nav ul li.active {
 
 .sw_testimonials_slider .owl-theme .owl-dots .owl-dot.active span,
 .sw_testimonials_slider .owl-theme .owl-dots .owl-dot:hover span {
-    background-color: #1d3571;
+    background-color: #005f69;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
     -ms-transition: all 0.5s;
@@ -3553,7 +3557,7 @@ nav ul li.active {
     height: 50px;
     line-height: 53px;
     font-size: 16px;
-    color: #1d3571;
+    color: #005f69;
     text-shadow: none;
     filter: alpha(opacity=100);
     opacity: 1;
@@ -3571,7 +3575,7 @@ nav ul li.active {
 #blog_section_slider .carousel-control:focus,
 #blog_section_slider .carousel-control:hover {
     background: #e9f5ff;
-    color: #1d3571;
+    color: #005f69;
     box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.06);
     -webkit-transition: all .5s;
     -moz-transition: all .5s;
@@ -3668,7 +3672,7 @@ nav ul li.active {
 .tb_btm_link_left li {
     float: left;
     margin-right: 8px;
-    color: #1d3571;
+    color: #005f69;
     font-size: 16px;
     font-weight: 500;
     font-family: 'Montserrat', sans-serif;
@@ -3683,11 +3687,11 @@ nav ul li.active {
 }
 
 .tb_btm_link_left li span i {
-    color: #328fd1;
+    color: #005f69;
 }
 
 .tb_btm_link_left li a:hover {
-    color: #1d3571;
+    color: #005f69;
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
     -ms-transition: all 0.5s;
@@ -3702,7 +3706,7 @@ nav ul li.active {
 .tb_btm_link_right li {
     float: left;
     margin-right: 10px;
-    color: #1d3571;
+    color: #005f69;
     font-size: 16px;
     font-weight: 500;
     font-family: 'Montserrat', sans-serif;
@@ -3722,7 +3726,7 @@ nav ul li.active {
 
 .tb_btm_link_right li a:hover {
     color: #fff;
-    background: #328fd1;
+    background: #005f69;
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
     -ms-transition: all 0.5s;
@@ -3753,19 +3757,19 @@ nav ul li.active {
     text-transform: capitalize;
     font-size: 16px;
     font-weight: 500;
-    color: #1d3571;
+    color: #005f69;
 }
 
 .blog_prjct_teeext p {
     text-transform: capitalize;
     font-size: 16px;
     font-weight: 400;
-    color: #328fd1;
+    color: #005f69;
 }
 
 .prjct_single_heading {
     margin: 0px 0px 0px 0px;
-    color: #1d3571;
+    color: #005f69;
     line-height: 28px;
     font-size: 32px;
     font-weight: 400;
@@ -3814,7 +3818,7 @@ nav ul li.active {
 }
 
 .sw_pre_wrapper a i {
-    color: #1d3571;
+    color: #005f69;
     font-size: 20px;
 }
 
@@ -3826,7 +3830,7 @@ nav ul li.active {
 
 .sw_next_wrapper a i {
     float: right;
-    color: #1d3571;
+    color: #005f69;
     font-size: 20px;
     line-height: 47px;
 }
@@ -3838,7 +3842,7 @@ nav ul li.active {
 
 .sw_pre_wrapper a h4,
 .sw_next_wrapper a h4 {
-    color: #1d3571;
+    color: #005f69;
     font-size: 18px;
     font-weight: 500;
 }
@@ -3851,7 +3855,7 @@ nav ul li.active {
 }
 
 .sw_pre_wrapper:hover {
-    background: #328fd1;
+    background: #005f69;
     box-shadow: 0;
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
@@ -3872,7 +3876,7 @@ nav ul li.active {
 }
 
 .sw_next_wrapper:hover {
-    background: #328fd1;
+    background: #005f69;
     box-shadow: 0;
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
@@ -3924,7 +3928,7 @@ nav ul li.active {
 
 .main_wrapper_three_content span {
     font-size: 200px;
-    color: #338fd1;
+    color: #005f69;
     font-weight: 200;
     font-family: 'Roboto', sans-serif;
 }
@@ -3936,7 +3940,7 @@ nav ul li.active {
 }
 
 .main_wrapper_three_content h2 span:nth-child(2) {
-    color: #1d3571;
+    color: #005f69;
     margin-left: -26px;
     z-index: 1;
     position: relative;
@@ -3950,7 +3954,7 @@ nav ul li.active {
 
 .main_wrapper_three_content h3 {
     font-size: 30px;
-    color: #1d3571;
+    color: #005f69;
     font-weight: 500;
     line-height: 30px;
     padding-top: 30px;
@@ -4053,7 +4057,7 @@ nav ul li.active {
 
 .cntct_2_btn_inner button {
     color: #fff;
-    background: #338fd1;
+    background: #005f69;
 }
 
 .contact-section .holder form textarea {
@@ -4083,13 +4087,13 @@ nav ul li.active {
 }
 
 .team_detail_icon_wrapper li a {
-    color: #1d3571;
+    color: #005f69;
     background: #fff;
 }
 
 .team_detail_icon_wrapper li a:hover {
     color: #fff;
-    background: #338fd1;
+    background: #005f69;
 }
 
 .contact-section .holder form input::-webkit-input-placeholder {
@@ -4139,7 +4143,7 @@ nav ul li.active {
 .contact-box {
     float: left;
     width: 100%;
-    background: #328fd1;
+    background: #005f69;
     padding: 40px 25px 40px 41px;
     position: relative;
     left: 2px;
@@ -4203,14 +4207,14 @@ nav ul li.active {
 
 .sc_cart_quality_itm h2 {
     font-weight: 500;
-    color: #1d3571;
+    color: #005f69;
     text-transform: capitalize;
 }
 
 .sc_cart_quality_itm_list ul li {
     list-style: none;
     text-transform: capitalize;
-    color: #338fd1;
+    color: #005f69;
 }
 
 .sc_cart_quality_itm_list ul {
@@ -4234,7 +4238,7 @@ nav ul li.active {
 }
 
 .lest_news_box_wrapper:hover .btc_blog_indx_date_wrapper a {
-    background: #338fd1;
+    background: #005f69;
     color: #fff;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
     -webkit-transition: all 0.5s;
@@ -4250,7 +4254,7 @@ nav ul li.active {
     background: #fff;
     text-align: center;
     font-size: 18px;
-    color: #1d3571;
+    color: #005f69;
     line-height: 52px;
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
@@ -4288,7 +4292,7 @@ nav ul li.active {
 .lest_news_cont_wrapper h5 a {
     font-size: 20px;
     text-transform: capitalize;
-    color: #1d3571;
+    color: #005f69;
     font-weight: 500;
     line-height: 28px;
     padding-top: 10px;
@@ -4365,7 +4369,7 @@ nav ul li.active {
     position: absolute;
     text-align: center;
     background: #fff;
-    color: #1d3571;
+    color: #005f69;
     width: 40px;
     height: 40px;
     text-align: center;
@@ -4387,7 +4391,7 @@ nav ul li.active {
     position: absolute;
     text-align: center;
     background: #fff;
-    color: #1d3571;
+    color: #005f69;
     width: 40px;
     height: 40px;
     text-align: center;
@@ -4397,7 +4401,7 @@ nav ul li.active {
 
 .hs_blog_box1_img_wrapper .owl-theme .owl-nav .owl-prev:hover,
 .hs_blog_box1_img_wrapper .owl-theme .owl-nav .owl-next:hover {
-    color: #338fd1;
+    color: #005f69;
     background-color: #fff;
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
@@ -4447,7 +4451,7 @@ nav ul li.active {
 .lest_news_cont_bottom_right p i,
 .lest_news_cont_bottom_center p i,
 .lest_news_cont_bottom_last p i {
-    color: #328fd1;
+    color: #005f69;
     margin-right: 15px;
 }
 
@@ -4505,7 +4509,7 @@ nav ul li.active {
 
 .lest_news_box_wrapper:hover .lest_news_cont_wrapper h5 a,
 .lest_news_box_wrapper:hover .lest_news_cont_wrapper h4 a {
-    color: #1d3571;
+    color: #005f69;
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
     -ms-transition: all 0.5s;
@@ -4558,7 +4562,7 @@ nav ul li.active {
     text-align: center;
     border-radius: 50px;
     margin-right: 20px;
-    color: #1d3571;
+    color: #005f69;
     background: #fff;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
 }
@@ -4571,7 +4575,7 @@ nav ul li.active {
     border-radius: 50px;
     margin-right: 20px;
     color: #fff;
-    background: #328fd1;
+    background: #005f69;
 }
 
 .pagination>li:first-child:hover>a {
@@ -4595,7 +4599,7 @@ nav ul li.active {
 
 .pagination .third_pagger a {
     color: #fff;
-    background: #328fd1;
+    background: #005f69;
 }
 
 .gc_blog_pagination {
@@ -4626,7 +4630,7 @@ sidebar start
 }
 
 .sidebar_widget h4 {
-    color: #1d3571;
+    color: #005f69;
     font-weight: 500;
     font-size: 22px;
     text-transform: capitalize;
@@ -4776,7 +4780,7 @@ textarea:focus.materialize-textarea {
 }
 
 .sc_blog_text h5 a {
-    color: #1d3571;
+    color: #005f69;
     -webkit-transition: all .5s;
     -moz-transition: all .5s;
     -ms-transition: all .5s;
@@ -4830,7 +4834,7 @@ textarea:focus.materialize-textarea {
     border-radius: 20px;
     padding-left: 13px;
     padding-right: 13px;
-    color: #1d3571;
+    color: #005f69;
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
     -ms-transition: all 0.5s;
@@ -4840,7 +4844,7 @@ textarea:focus.materialize-textarea {
 
 .gc_blog_cloud_side_menu li a:hover {
     color: #fff !important;
-    background: #338fd1;
+    background: #005f69;
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
     -ms-transition: all 0.5s;
@@ -4869,24 +4873,24 @@ textarea:focus.materialize-textarea {
 }
 
 .archives_wrapper ul li a {
-    color: #1d3571;
+    color: #005f69;
     font-weight: 400;
     text-transform: capitalize;
 }
 
 .archives_wrapper span {
-    color: #338fd1;
+    color: #005f69;
     float: right;
 }
 
 .archives_wrapper ul li i {
     margin-right: 20px;
-    color: #1d3571;
+    color: #005f69;
 }
 
 .archives_wrapper ul li:hover a,
 .archives_wrapper ul li:hover i {
-    color: #338fd1;
+    color: #005f69;
 }
 
 .btc_blog_single_post_bottom_post_wrapper {
@@ -4910,7 +4914,7 @@ textarea:focus.materialize-textarea {
 .btc_blog_post_admin_main_wrapper {
     float: left;
     width: 100%;
-    background: #338fd1;
+    background: #005f69;
     overflow: hidden;
     padding: 30px;
 }
@@ -4971,7 +4975,7 @@ textarea:focus.materialize-textarea {
 }
 
 .btc_blog_single_post_admin_img_cont li a:hover {
-    color: #1d3571;
+    color: #005f69;
     background: #fff;
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
@@ -5111,7 +5115,7 @@ textarea:focus.materialize-textarea {
     background: #fff;
     text-align: center;
     font-size: 18px;
-    color: #1d3571;
+    color: #005f69;
     line-height: 52px;
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
@@ -5130,7 +5134,7 @@ textarea:focus.materialize-textarea {
 
 .btc_blog_indx_cont_wrapper h5 {
     font-size: 18px;
-    color: #1d3571;
+    color: #005f69;
     font-weight: 500;
     line-height: 24px;
 }
@@ -5165,7 +5169,7 @@ textarea:focus.materialize-textarea {
 
 .btc_blog_indx_cont_bottom_left p i,
 .btc_blog_indx_cont_bottom_right p i {
-    color: #328fd1;
+    color: #005f69;
 }
 
 .btc_blog_indx_cont_bottom_right {
@@ -5189,7 +5193,7 @@ textarea:focus.materialize-textarea {
 
 .btc_blog_indx_cont_bottom_left p a:hover,
 .btc_blog_indx_cont_bottom_right p a:hover {
-    color: #328fd1;
+    color: #005f69;
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
     -ms-transition: all 0.5s;
@@ -5220,7 +5224,7 @@ textarea:focus.materialize-textarea {
 }
 
 .blog_single_slider_wrapper .owl-theme .owl-nav .owl-prev {
-    color: #1d3571;
+    color: #005f69;
     font-size: 16px;
     margin: 5px;
     width: 45px;
@@ -5239,7 +5243,7 @@ textarea:focus.materialize-textarea {
 }
 
 .blog_single_slider_wrapper .owl-theme .owl-nav .owl-next {
-    color: #1d3571;
+    color: #005f69;
     font-size: 16px;
     margin: 5px;
     width: 45px;
@@ -5253,7 +5257,7 @@ textarea:focus.materialize-textarea {
 
 .blog_single_slider_wrapper .owl-theme .owl-nav .owl-next:hover {
     background: #e9f5ff;
-    color: #1d3571;
+    color: #005f69;
     box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.06);
     -webkit-transition: all .5s;
     -moz-transition: all .5s;
@@ -5264,7 +5268,7 @@ textarea:focus.materialize-textarea {
 
 .blog_single_slider_wrapper .owl-theme .owl-nav .owl-prev:hover {
     background: #e9f5ff;
-    color: #1d3571;
+    color: #005f69;
     box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.06);
     -webkit-transition: all .5s;
     -moz-transition: all .5s;
@@ -5309,14 +5313,14 @@ textarea:focus.materialize-textarea {
 
 .blog_comment1_cont h3 {
     font-size: 18px;
-    color: #1d3571;
+    color: #005f69;
     font-weight: 600;
     text-transform: capitalize;
     margin-bottom: 5px;
 }
 
 .blog_comment1_cont p span {
-    color: #328fd1;
+    color: #005f69;
     font-size: 14px;
 }
 
@@ -5331,7 +5335,7 @@ textarea:focus.materialize-textarea {
 }
 
 .blog_comment1_wrapper:hover {
-    background: #328fd1;
+    background: #005f69;
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
     -ms-transition: all 0.5s;
@@ -5388,7 +5392,7 @@ textarea:focus.materialize-textarea {
 }
 
 .box_1_heading p {
-    color: #1d3571;
+    color: #005f69;
     text-align: center;
     padding: 10px;
     width: 100%;
@@ -5422,7 +5426,7 @@ textarea:focus.materialize-textarea {
     margin-top: -30px;
     border: 0;
     border-radius: 50%;
-    color: #1d3571;
+    color: #005f69;
     padding-left: 4px;
     background: #fff;
     font-size: 20px;
@@ -5444,7 +5448,7 @@ textarea:focus.materialize-textarea {
 
 .price-range .range span {
     padding-right: 5px;
-    color: #1d3571;
+    color: #005f69;
 }
 
 .lest_news_cont_bottom_tags {
@@ -5453,11 +5457,11 @@ textarea:focus.materialize-textarea {
 
 .lest_news_cont_bottom_tags span i {
     margin-right: 5px;
-    color: #338fd1;
+    color: #005f69;
 }
 
 .lest_news_cont_bottom_tags span {
-    color: #1d3571;
+    color: #005f69;
     margin-right: 10px;
 }
 
@@ -5467,7 +5471,7 @@ textarea:focus.materialize-textarea {
     height: 30px;
     display: inline-block;
     border: none;
-    color: #1d3571;
+    color: #005f69;
     font-weight: 600;
 }
 
@@ -5484,7 +5488,7 @@ textarea:focus.materialize-textarea {
     float: left;
     color: #fff;
     text-transform: capitalize;
-    background: #328fd1;
+    background: #005f69;
     text-align: center;
     line-height: 40px;
     border-radius: 5px;
@@ -5508,7 +5512,7 @@ textarea:focus.materialize-textarea {
 }
 
 .price-range .ui-widget-content .ui-state-default {
-    background: #328fd1;
+    background: #005f69;
     border-radius: 100%;
     cursor: pointer;
     border: none;
@@ -5520,7 +5524,7 @@ textarea:focus.materialize-textarea {
 }
 
 .price-range .ui-widget-content .ui-state-default:last-child {
-    background: #328fd1;
+    background: #005f69;
     border: none;
 }
 
@@ -5565,7 +5569,7 @@ textarea:focus.materialize-textarea {
 .sw_next_wrapper_2 a p {
     text-transform: capitalize;
     font-weight: 500;
-    color: #1d3571;
+    color: #005f69;
     text-align: center;
 }
 
@@ -5598,7 +5602,7 @@ textarea:focus.materialize-textarea {
     border: 0;
     background: #fff;
     padding: 0 15px;
-    color: #1d3571;
+    color: #005f69;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
     font-size: 14px;
     float: right;
@@ -5625,7 +5629,7 @@ textarea:focus.materialize-textarea {
 
 .filter-area .list-grid ul li a {
     display: block;
-    color: #338fd1;
+    color: #005f69;
     background: transparent;
     font-size: 18px;
     height: 50px;
@@ -5638,7 +5642,7 @@ textarea:focus.materialize-textarea {
 .nav-pills>li.active>a,
 .nav-pills>li.active>a:focus,
 .nav-pills>li.active>a:hover {
-    color: #338fd1;
+    color: #005f69;
     background-color: #fff;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
     -moz-transition: all 0.3s ease 0.2s;
@@ -5654,7 +5658,7 @@ textarea:focus.materialize-textarea {
 .filter-area .list-grid ul li a:active,
 .filter-area .list-grid ul li a:focus {
     background: #fff;
-    color: #338fd1;
+    color: #005f69;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
     -webkit-transition: all 0.3s ease 0.2s;
     -moz-transition: all 0.3s ease 0.2s;
@@ -5682,7 +5686,7 @@ textarea:focus.materialize-textarea {
 
 .filter-area .showpro p {
     margin-top: 5px;
-    color: #1d3571;
+    color: #005f69;
     font-weight: 400;
 }
 
@@ -5721,7 +5725,7 @@ textarea:focus.materialize-textarea {
 
 .sw_product_indx_img_cont_wrapper h1 a {
     font-size: 18px;
-    color: #1d3571;
+    color: #005f69;
     line-height: 24px;
     display: inline-block;
     padding: 3px 0 3px 0;
@@ -5732,7 +5736,7 @@ textarea:focus.materialize-textarea {
 .sw_product_indx_img_cont_wrapper h5 {
     font-size: 16px;
     color: #fff;
-    background: #1d3571;
+    background: #005f69;
     padding: 5px 30px;
     font-weight: 500;
     border-radius: 50px;
@@ -5743,7 +5747,7 @@ textarea:focus.materialize-textarea {
 
 .iner_team_detl_box h5 {
     background: #fff;
-    color: #338fd1;
+    color: #005f69;
     font-weight: 400;
     margin: 0;
     padding: 0;
@@ -5805,7 +5809,7 @@ textarea:focus.materialize-textarea {
 }
 
 .sw_product_box_wrapper:hover .sw_product_indx_img_cont_wrapper_2 h1 a {
-    color: #328fd1 !important;
+    color: #005f69 !important;
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
     -ms-transition: all 0.5s;
@@ -5814,7 +5818,7 @@ textarea:focus.materialize-textarea {
 }
 
 .sw_product_box_wrapper:hover .sw_product_indx_img_cont_wrapper h5 {
-    background: #328fd1;
+    background: #005f69;
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
     -ms-transition: all 0.5s;
@@ -5851,7 +5855,7 @@ textarea:focus.materialize-textarea {
 }
 
 .btc_shop_list_img_cont_wrapper h1 a {
-    color: #1d3571;
+    color: #005f69;
     font-weight: 500;
     font-size: 22px;
     padding-bottom: 5px;
@@ -5863,7 +5867,7 @@ textarea:focus.materialize-textarea {
     float: left;
     font-size: 24px;
     font-weight: 600;
-    color: #1d3571;
+    color: #005f69;
     margin-top: 10px;
 }
 
@@ -5891,7 +5895,7 @@ textarea:focus.materialize-textarea {
 }
 
 .btc_shop_sin_pro_icon_wrapper i {
-    color: #338fd1;
+    color: #005f69;
     font-size: 16px;
 }
 
@@ -5941,7 +5945,7 @@ textarea:focus.materialize-textarea {
 }
 
 .btc_shop_list_bottom_social_wrapper li a:hover {
-    background: #328fd1;
+    background: #005f69;
     color: #ffffff;
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
@@ -5999,7 +6003,7 @@ textarea:focus.materialize-textarea {
     line-height: 50px;
     background: #ffffff;
     text-align: center;
-    color: #1d3571;
+    color: #005f69;
     border-top: 1px solid #e9f5ff;
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
@@ -6010,7 +6014,7 @@ textarea:focus.materialize-textarea {
 
 .cc_li_img_text li a:hover {
     color: #ffffff;
-    background: #328fd1;
+    background: #005f69;
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
     -ms-transition: all 0.5s;
@@ -6097,7 +6101,7 @@ textarea:focus.materialize-textarea {
 
 .btc_shop_single_prod_right_section h1 {
     font-size: 22px;
-    color: #1d3571;
+    color: #005f69;
     font-weight: 600;
     text-transform: capitalize;
     line-height: 22px;
@@ -6172,7 +6176,7 @@ textarea:focus.materialize-textarea {
 }
 
 .blog_prjct_icon i {
-    color: #3c90cd;
+    color: #005f69;
 }
 
 .btc_shop_single_prod_right_section li i {
@@ -6196,7 +6200,7 @@ textarea:focus.materialize-textarea {
     margin-top: 25px;
     text-transform: lowercase;
     font-weight: 400;
-    color: #1d3571;
+    color: #005f69;
 }
 
 .shop_product_single_head h1 {
@@ -6241,7 +6245,7 @@ textarea:focus.materialize-textarea {
     position: absolute;
     left: 139px;
     bottom: 0px;
-    background: #338fd1;
+    background: #005f69;
     border: 1px solid #e9f5ff;
     height: 50px;
     width: 40px;
@@ -6266,7 +6270,7 @@ textarea:focus.materialize-textarea {
 }
 
 button:focus {
-    background: #338fd1;
+    background: #005f69;
 }
 
 .cc_ps_second_border_Wrapper,
@@ -6297,7 +6301,7 @@ button:focus {
     margin-left: 0;
     font-size: 16px;
     font-weight: bold;
-    background: #1d3571;
+    background: #005f69;
     color: #fff;
     padding: 3px 18px 3px 18px;
     border-radius: 40px;
@@ -6328,14 +6332,14 @@ button:focus {
 .btc_shop_product_price_wrapper a i {
     float: right;
     font-size: 20px;
-    color: #338fd1;
+    color: #005f69;
 }
 
 .cc_ps_cart_btn li:first-child a {
     float: left;
     width: 160px;
     height: 50px;
-    background: #338fd1;
+    background: #005f69;
     color: #ffffff;
     font-weight: 400;
     margin-right: 15px;
@@ -6372,7 +6376,7 @@ button:focus {
 }
 
 .sw_price_rang_txt p {
-    color: #1d3571;
+    color: #005f69;
     margin-bottom: 0;
 }
 
@@ -6382,7 +6386,7 @@ button:focus {
 
 .cc_ps_cart_btn li:first-child a:hover {
     background: #f6fbff;
-    color: #1d3571;
+    color: #005f69;
     box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.06);
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
@@ -6426,7 +6430,7 @@ button:focus {
     width: 160px;
     height: 50px;
     background: #f6fbff;
-    color: #1d3571;
+    color: #005f69;
     font-weight: 400;
     text-transform: capitalize;
     text-align: center;
@@ -6454,7 +6458,7 @@ button:focus {
 }
 
 .cc_ps_cart_btn li:last-child a:hover {
-    background: #338fd1;
+    background: #005f69;
     color: #ffffff;
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
@@ -6495,7 +6499,7 @@ button:focus {
 .accordion_section .panel .panel-heading a {
     display: block;
     padding: 13px 32px;
-    background: #338fd1;
+    background: #005f69;
     color: #fff;
     font-size: 16px;
     text-transform: capitalize;
@@ -6504,7 +6508,7 @@ button:focus {
 }
 
 .accordian_list_item i {
-    color: #338fd1;
+    color: #005f69;
     margin-right: 5px;
 }
 
@@ -6514,7 +6518,7 @@ button:focus {
     font-weight: 500;
     margin-bottom: 12px;
     background: #fff;
-    color: #1d3571;
+    color: #005f69;
     border-radius: 30px;
 }
 
@@ -6538,7 +6542,7 @@ button:focus {
     padding: 25px 30px 30px 35px;
     background: #fff;
     border-radius: 20px;
-    color: #1d3571;
+    color: #005f69;
     margin-bottom: 15px;
     box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.06);
 }
@@ -6558,7 +6562,7 @@ button:focus {
     height: 47px;
     line-height: 50px;
     text-align: center;
-    background: #338fd1;
+    background: #005f69;
     color: #fff;
     float: left;
     margin-left: -14px;
@@ -6577,7 +6581,7 @@ button:focus {
 
 .accordion_section .panel .panel-heading a.collapsed:after {
     content: "\2b";
-    color: #338fd1;
+    color: #005f69;
     background: #fff;
 }
 
@@ -6592,7 +6596,7 @@ button:focus {
     text-align: center;
     background: #fff;
     border: 1px solid #ecf3f9;
-    color: #1d3571;
+    color: #005f69;
     margin-bottom: 20px;
     border-radius: 20px;
 }
@@ -6618,9 +6622,9 @@ button:focus {
 
 .tag_cloud_wrapper ul li a:hover,
 .tag_cloud_wrapper ul li.active a {
-    background: #338fd1;
+    background: #005f69;
     color: #fff;
-    border: 1px solid #338fd1;
+    border: 1px solid #005f69;
     border-radius: 20px;
 }
 
@@ -6852,7 +6856,7 @@ a.level {
 
 .fab-buttons i,
 .fab-buttons span i {
-    color: #1d3571;
+    color: #005f69;
     transition: .3s;
 }
 
@@ -6877,8 +6881,8 @@ a.level {
         z-index: 1000;
     }
     .sc_navigation {
-        float: right;
-        width: 80%;
+        
+       
     }
     nav {
         display: inline-block;
@@ -6893,7 +6897,7 @@ a.level {
         width: calc(100% -75px);
     }
     nav>ul>li {
-        color: #1d3571;
+        color: #005f69;
         display: inline-block;
         text-transform: capitalize;
         position: relative;
@@ -6904,7 +6908,7 @@ a.level {
         color: inherit;
         float: left;
         font-weight: 500;
-        color: #1d3571;
+        color: #005f69;
         line-height: 2;
         font-size: 14px;
         font-family: 'Montserrat', sans-serif;
@@ -6934,7 +6938,7 @@ a.level {
     }
     nav>ul>li a:hover,
     nav>ul>li a.active {
-        color: #1d3571;
+        color: #005f69;
         -webkit-transition: all 0.5s;
         -o-transition: all 0.5s;
         -ms-transition: all 0.5s;
@@ -6945,7 +6949,7 @@ a.level {
         content: '[';
         position: absolute;
         right: 50%;
-        color: #1d3571;
+        color: #005f69;
         font-size: 20px;
         font-weight: 400;
         opacity: 0;
@@ -6960,7 +6964,7 @@ a.level {
         content: '[';
         position: absolute;
         right: 88%;
-        color: #1d3571;
+        color: #005f69;
         font-size: 20px;
         font-weight: 400;
         opacity: 1;
@@ -6975,7 +6979,7 @@ a.level {
         content: ']';
         position: absolute;
         left: 50%;
-        color: #1d3571;
+        color: #005f69;
         font-size: 20px;
         font-weight: 400;
         opacity: 0;
@@ -6990,7 +6994,7 @@ a.level {
         content: ']';
         position: absolute;
         left: 88%;
-        color: #1d3571;
+        color: #005f69;
         font-size: 20px;
         opacity: 1;
         top: 13px;
@@ -7014,7 +7018,7 @@ a.level {
     }
     .dropdown_hover a:hover {
         color: #fff;
-        background: #328fd1;
+        background: #005f69;
         -webkit-transition: all 0.5s;
         -o-transition: all 0.5s;
         -ms-transition: all 0.5s;
@@ -7106,7 +7110,7 @@ a.level {
     .menu_fixed {
         position: fixed;
         background: #fff;
-        color: #1d3571;
+        color: #005f69;
         -webkit-box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.06);
         -moz-box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.06);
         -o-box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.06);
@@ -7241,7 +7245,12 @@ a.level {
 
 nav {
     height: auto;
-    float: right;
+    
+}
+
+.p-cus{
+    padding-right: 40px;
+    padding-left: 40px;
 }
 
 .caret_btn ul:before {
@@ -7254,7 +7263,7 @@ nav {
 }
 
 .caret_btn .cc_cart_cont_wrapper span {
-    color: #338fd1;
+    color: #005f69;
     text-align: center;
     font-size: 16px;
     float: left;
@@ -7275,7 +7284,7 @@ nav {
     height: 50px;
     float: left;
     color: #fff;
-    background: #338fd1;
+    background: #005f69;
     text-align: center;
     line-height: 28px;
     font-size: 16px;
@@ -7338,3 +7347,17 @@ nav ul li:nth-child(9)>ul {
     box-shadow: 0 0 8px grey;
     margin: 15px;
 }
+
+.blink{
+	text-decoration: blink;
+	-webkit-animation-name: blinker;
+	-webkit-animation-duration: .5s;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-timing-function:ease-in-out;
+	-webkit-animation-direction: alternate;
+}
+
+@-webkit-keyframes blinker {
+    from {opacity: 1.0;}
+    to {opacity: 0.0;}
+  }

@@ -3280,7 +3280,7 @@ nav ul li.active {
 }
 
 .galery_hover_div:hover {
-    color: #3c90cd;
+    color: #005f69;
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.08);
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
@@ -3327,7 +3327,7 @@ nav ul li.active {
 
 .portfolio-nav ul li.is-checked {
     background: #fff;
-    color: #3c90cd;
+    color: #005f69;
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.08);
 }
 
@@ -3502,7 +3502,7 @@ nav ul li.active {
     font-size: 14px;
     text-transform: capitalize;
     font-weight: 400;
-    color: #3c90cd;
+    color: #005f69;
     padding-left: 5px;
 }
 
@@ -6202,7 +6202,7 @@ textarea:focus.materialize-textarea {
 }
 
 .blog_prjct_icon i {
-    color: #3c90cd;
+    color: #005f69;
 }
 
 .btc_shop_single_prod_right_section li i {
