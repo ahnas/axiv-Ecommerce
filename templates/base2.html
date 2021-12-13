@@ -46,8 +46,8 @@
                     </div>
                 </div>
 
-                <div class="main-menu-wrapper clear-fix" style="float: right;">
-                    <div class="logo float-right">
+                <div class="main-menu-wrapper clear-fix clear-float" style="float: right;">
+                    <div class="logo float-right ">
                         <a href="{% url 'web:index' %}"><img src="{% static 'images/axivalogo.png' %}" class="img-responsive" alt="logo"></a>
                     </div>
                 </div>
@@ -141,55 +141,19 @@
                                     <nav>
                                         <ul class="nav">
                                             <li><a href="{% url 'web:index' %}">Home</a>
-												 <ul>
-													 <li><a href="{% url 'web:index' %}" title=""> home 1</a></li>
-													  <li><a href="{% url 'web:index' %}" title=""> home 2</a></li>
-													  <li><a href="{% url 'web:index' %}" title=""> home 3</a></li>
-													  <li><a href="{% url 'web:index' %}" title=""> home 4</a></li>
-													  <li><a href="{% url 'web:index' %}" title=""> home 5</a></li>
-													    <li><a href="{% url 'web:index' %}" title=""> home 6</a></li>
-												</ul>
+												 
                                                 </li>
                                                 <li><a href="{% url 'web:about' %}">about us</a>
                                                 </li>
                                                 <li><a href="{% url 'web:service' %}">services</a>
                                                 </li>
-                                                <li><a href="project_2' %}">projects</a>
-												 <ul>
-													<li><a href="project_2' %}" title=""> project 2</a></li>
-													<li><a href="project_3' %}" title=""> project 3</a></li>
-													<li><a href="project_4' %}" title=""> project 4</a></li>
-													<li><a href="project_fullwidth' %}" title="">project fullwidth</a></li>
-													<li><a href="project_single' %}" title=""> project single</a></li>
-
-												</ul>
+                                                <li><a href="{% url 'web:product' %}">product</a></li>
+                                                <li><a href="{% url 'web:uproject' %}">project</a>
+                                                    
                                                 </li>
-                                                <li><a href="team' %}">team</a>
-                                                    <ul>
-														<li><a href="team' %}" title=""> team</a></li>
-														<li><a href="team_details' %}" title="">team details</a></li>
-													</ul>
-                                                </li>
-                                                <li><a href="blog_single' %}" title="">blog</a>
-                                                     <ul>
-														<li><a href="blog_categories' %}" title=""> blog categories</a></li>
-														<li><a href="blog_category' %}" title=""> blog category</a></li>
-														<li><a href="blog_single' %}" title=""> blog single</a></li>
-													</ul>
-                                                </li>
-                                                <li><a href="shop_sidebar' %}" title="">shop</a>
-                                                   <ul>
-														<li><a href="shop_sidebar' %}" title="">shop sidebar</a></li>
-														<li><a href="shop_fullwidth' %}" title=""> shop fullwidth</a></li>
-														<li><a href="shop_single' %}" title=""> shop single</a></li>
-													</ul>
-                                                </li>
-                                                <li><a href="{% url 'web:contact' %}"> contact us</a>
-												 <ul>
-													  <li><a href="{% url 'web:contact' %}" title="">contact us</a></li>
-													  <li><a href="error' %}" title=""> 404 error</a></li>
-												</ul>
-                                                </li>
+                                                <li><a href="{% url 'web:blog' %}" title="">blog</a></li>
+                                               
+                                                <li><a href="{% url 'web:contact' %}"> contact us</a></li>
                                             <li class="caret_btn">
                                                 <a href="#"><i class="fa fa-shopping-basket"></i><span>2</span></a>
                                                 <ul>

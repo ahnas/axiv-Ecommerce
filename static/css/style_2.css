@@ -7348,7 +7348,7 @@ nav ul li:nth-child(9)>ul {
     box-shadow: 0 0 8px grey;
     margin: 15px;
 }
-.pro
+
 
 .blink{
 	text-decoration: blink;
@@ -7363,3 +7363,5 @@ nav ul li:nth-child(9)>ul {
     from {opacity: 1.0;}
     to {opacity: 0.0;}
   }
+
+ 

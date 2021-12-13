@@ -315,6 +315,15 @@
 
 @media (max-width: 767px) {
 
+    .sm-btnn{
+        background-color: #0e6774 !important;
+        top: 150px;
+    }
+
+    .sm-btnn a{
+        color: white !important;
+    }
+
     .sec_off_img {
         display: block !important;
         margin: 42% 0px 0px -112% !important;
@@ -558,46 +567,7 @@
 
 /*********----------321 & 480 responsive css-------**********/
 
-@media (min-width: 321px) and (max-width: 480px) {
-    .tp-bullets,
-    .tp-tabs,
-    .tp-thumbs {
-        top: 87% !important;
-    }
-    .section3_copyright p {
-        font-size: 14px;
-    }
-    .spectrum_slider_cntnt {
-        float: none;
-        display: inline-block;
-        width: 222px !important;
-    }
-    .spectrum_slider_wrapper .owl-theme .owl-nav {
-        top: -70px;
-    }
-    .sw_left_heading_wraper h1 {
-        font-size: 22px;
-    }
-    .wrapper_second_useful_2 li h1 {
-        font-size: 30px;
-    }
-    .sw_leads_accordian .panel .panel-heading a {
-        font-size: 16px;
-    }
-    .sw_nl_heading_wrapper h2 {
-        float: left;
-        margin-top: 20px;
-    }
-    .section3_copyright {
-        font-size: 14px;
-    }
-    .cc_cart_cont_wrapper h5 i {
-        margin-top: -25px !important;
-    }
-    .cc_cart_cont_wrapper p {
-        margin-left: 32% !important;
-    }
-}
+
 
 @media (max-width: 320px) {
     .tp-bullets,
@@ -698,5 +668,63 @@
     .tp-tabs,
     .tp-thumbs {
         top: 70% !important;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 480px) {
+    .sm-bott{
+        top: -60px !important;
+        
+    }
+    .sec_off_img {
+        display: block !important;
+        margin: 0% 0px 0px -20% !important;
+        top: -115px;
+    }
+    .sec_off_img img {
+        width: 280px !important;
+        height: 325px !important;
+    }
+    .sm-btnn {
+        background-color: #0e6774 !important;
+        top: 90px;
+    }
+    .tp-bullets,
+    .tp-tabs,
+    .tp-thumbs {
+        top: 87% !important;
+    }
+    .section3_copyright p {
+        font-size: 14px;
+    }
+    .spectrum_slider_cntnt {
+        float: none;
+        display: inline-block;
+        width: 222px !important;
+    }
+    .spectrum_slider_wrapper .owl-theme .owl-nav {
+        top: -70px;
+    }
+    .sw_left_heading_wraper h1 {
+        font-size: 22px;
+    }
+    .wrapper_second_useful_2 li h1 {
+        font-size: 30px;
+    }
+    .sw_leads_accordian .panel .panel-heading a {
+        font-size: 16px;
+    }
+    .sw_nl_heading_wrapper h2 {
+        float: left;
+        margin-top: 20px;
+    }
+    .section3_copyright {
+        font-size: 14px;
+    }
+    .cc_cart_cont_wrapper h5 i {
+        margin-top: -25px !important;
+    }
+    .cc_cart_cont_wrapper p {
+        margin-left: 32% !important;
     }
 }
