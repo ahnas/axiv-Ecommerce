@@ -130,6 +130,14 @@
 /*********----------991 responsive css-------**********/
 
 @media (max-width: 991px) {
+
+    .blink{
+        display: none;
+    }
+    .clear-float{
+        float: none;
+    }
+
     .main-menu-wrapper {
         padding-top: 10px;
     }
@@ -306,11 +314,25 @@
 /*********----------767 responsive css-------**********/
 
 @media (max-width: 767px) {
+
+    .sec_off_img {
+        display: block !important;
+        margin: 42% 0px 0px -112% !important;
+    }
+
+    .sec_off_img img{
+        width: 300px !important;
+        height: 350px !important;
+    }
+
+    .d-sm-hide{
+        display: block;
+    }
     .tp-bullets,
     .tp-tabs,
     .tp-thumbs {
         left: 50% !important;
-        top: 75% !important;
+        top: 85% !important;
     }
     .circle {
         margin-top: 27px;
@@ -662,8 +684,16 @@
         height: 750px !important;
     }
     .sec_off_img {
-        display: none !important;
+        display: block !important;
+        margin: -30px 0px 0px !important;
     }
+
+    .sec_off_img img {
+        width: 330px !important;
+        height: 400px !important;
+    }
+
+    
     .tp-bullets,
     .tp-tabs,
     .tp-thumbs {

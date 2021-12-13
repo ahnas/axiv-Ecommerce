@@ -24,7 +24,7 @@
                         </div>
                     </div>
 
-                    <div class="main-menu-wrapper clear-fix float-right">
+                    <div class="main-menu-wrapper clear-fix float-right clear-float">
                         <div class="logo">
                             <a href="{% url 'web:index' %}"><img src="{% static 'images/axiv.png' %}" class="img-responsive" alt="logo"></a>
                         </div>
@@ -253,13 +253,14 @@
                             data-param10="" data-description="">
                             <!-- MAIN IMAGE -->
                             <img src="{% static 'images/slider_bg.jpg' %}" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+
                             <!-- LAYERS -->
 
                             <!-- LAYER NR. 2 -->
-                            <div class="tp-caption   tp-resizeme sec_off_img hidden-xs" id="slide-2938-layer-2" data-x="['left','left','center','center']" data-hoffset="['728','465','570','60']" data-y="['top','top','top','bottom']" data-voffset="['70','0','0','0']" data-width="none"
+                            <div class="tp-caption tp-resizeme sec_off_img hidden-xs" id="slide-2938-layer-2" data-x="['left','left','center','center']" data-hoffset="['728','465','570','60']" data-y="['top','top','top','bottom']" data-voffset="['70','0','0','0']" data-width="none"
                                 data-height="none" data-whitespace="nowrap" data-type="image" data-responsive_offset="on" data-frames='[{"from":"z:0;rX:0deg;rY:0;rZ:0;sX:1.5;sY:1.5;skX:0;skY:0;opacity:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":2350,"ease":"Power3.easeOut"},{"delay":"wait","speed":1500,"to":"opacity:0;","ease":"Power4.easeIn"}]'
                                 data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-margintop="[0,-150,-100,-100]" data-marginright="[0,0,0,0]"
-                                data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" style="z-index:6;border-width:0px;"><img src="{{slider.photo.crop.600x620}}" alt="" data-ww="['653px','653px','330px','230px']" data-hh="['908px','908px','906px','944px']" data-no-retina> </div>
+                                data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" style="z-index:6;border-width:0px;"><img src="{{slider.photo.crop.400x450}}" alt="" data-ww="['653px','653px','330px','230px']" data-hh="['908px','908px','906px','944px']" data-no-retina> </div>
 
                             <!-- LAYER NR. 7 -->
                             <div class="tp-caption WebProduct-Title   tp-resizeme sec_off_heading_background" id="slide-2938-layer-3" data-x="['left','left','center','center']" data-hoffset="['105','90','0','0']" data-y="['middle','middle','top','top']" data-voffset="['-50','-180','130','200']"
@@ -854,9 +855,9 @@
                         <div class="owl-carousel owl-theme">
                             {% for testimonial in testimonial %}
                             <div class="item">
-                                <div class="row">
+                                <div class="row text-align-webkit-center">
                                     
-                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="float: none;">
                                         <div class="sw_testimonials_slider_box">
                                             <img src="{{testimonial.photo.crop.150x150}}" alt="Testimonial">
                                             <div class="sw_testimonials_slider_box_text">
@@ -866,16 +867,7 @@
                                             </div>
                                         </div>
                                     </div>  
-                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                        <div class="sw_testimonials_slider_box">
-                                            <img src="{{testimonial.photo.crop.150x150}}" alt="Testimonial">
-                                            <div class="sw_testimonials_slider_box_text">
-                                                <p>{{testimonial.details}}</p>
-                                                <h4>{{testimonial.name}}</h4>
-                                                <h6>{{testimonial.role}}</h6>
-                                            </div>
-                                        </div>
-                                    </div>  
+                                      
                                     
                                 </div>
                             </div>
@@ -1240,7 +1232,7 @@
                             {% for partner in partner %}
                             <div class="item">
                                 <div class="lr_prt_img_wrapper">
-                                    <img src="{{partner.photo.crop.130x65}}" alt="partner_img">
+                                    <img src="{{partner.photo.url}}" alt="partner_img">
                                 </div>
                             </div>
                             {% endfor %}

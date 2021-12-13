@@ -7337,7 +7337,8 @@ nav ul li:nth-child(9)>ul {
 }
 
 .projj h1{
-    font-size: 35px;
+    font-size: 20px;
+    text-align: left;
 }
 
 
@@ -7347,6 +7348,7 @@ nav ul li:nth-child(9)>ul {
     box-shadow: 0 0 8px grey;
     margin: 15px;
 }
+.pro
 
 .blink{
 	text-decoration: blink;

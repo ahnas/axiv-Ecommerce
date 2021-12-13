@@ -757,6 +757,7 @@ nav ul li.active {
 #section10 {
     position: absolute;
     left: 19%;
+    display: none;
 }
 
 #section10 span {
@@ -1662,6 +1663,7 @@ nav ul li.active {
 
 .sw_testimonials_slider_box_text h4 {
     float: left;
+    text-align: left;
     width: 100%;
     text-transform: uppercase;
     font-size: 16px;
@@ -1670,6 +1672,7 @@ nav ul li.active {
 }
 
 .sw_testimonials_slider_box_text h6 {
+    text-align: left;
     font-size: 14px;
     text-transform: capitalize;
     font-weight: 200;
@@ -1678,6 +1681,7 @@ nav ul li.active {
 }
 
 .sw_testimonials_slider_box_text p {
+    text-align: left;
     float: left;
     width: 100%;
     font-size: 16px;
@@ -3622,4 +3626,13 @@ nav ul li:nth-child(9)>ul {
 @-webkit-keyframes blinker {
     from {opacity: 1.0;}
     to {opacity: 0.0;}
+  }
+
+
+  .text-align-webkit-center{
+      text-align: -webkit-center;
+  }
+
+  .d-sm-hide{
+      display: none;
   }

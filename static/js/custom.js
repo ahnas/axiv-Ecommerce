@@ -248,7 +248,7 @@ jsFileLocation:"revolution/js/",
 				navText : ['<i class="fa fa-long-arrow-left"></i>','<i class="fa fa-long-arrow-right"></i>'],
                 responsive: {
                   0: {
-                    items: 1,
+                    items: 2,
                     nav: true
                   },
                   600: {
@@ -278,7 +278,7 @@ jsFileLocation:"revolution/js/",
 				navText : ['<i class="fa fa-long-arrow-left"></i>','<i class="fa fa-long-arrow-right"></i>'],
                 responsive: {
                   0: {
-                    items: 1,
+                    items: 2,
                     nav: true
                   },
                   600: {
