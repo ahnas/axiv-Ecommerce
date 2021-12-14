@@ -53,7 +53,7 @@
             <div class="row">
                 <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
                     <div class="sw_road_leads_img">
-                        <img src="{% static 'images/leads.gif' %}" alt="img">
+                        <img src="{% static 'images/vi.gif' %}" alt="img">
 
                     </div>
                 </div>
@@ -86,34 +86,11 @@
                 <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 sw_spectrm_padding">
                     <div class="spectrum_slider_wrapper">
                         <div class="owl-carousel owl-theme">
-                            <div class="item">
-                                <div class="spectrum_slider_cntnt">
-                                    <div class="spectrum_slider_shadow">
-                                        <img src="{% static 'images/spec_1.png' %}" alt="title" class="img-responsive">
-                                        <h2><a href="#">solar system</a></h2>
-                                    </div>
-                                </div>
-                            </div>
+
                             <div class="item">
                                 <div class="spectrum_slider_cntnt">
                                     <div class="spectrum_slider_shadow">
                                         <img src="{% static 'images/spec_2.png' %}" alt="title">
-                                        <h2><a href="#">solar pv systems</a></h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="spectrum_slider_cntnt">
-                                    <div class="spectrum_slider_shadow">
-                                        <img src="{% static 'images/spec_3.png' %}" alt="title" class="img-responsive">
-                                        <h2><a href="#">Wind Generators</a></h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="spectrum_slider_cntnt">
-                                    <div class="spectrum_slider_shadow">
-                                        <img src="{% static 'images/spec_4.png' %}" alt="title" class="img-responsive">
                                         <h2><a href="#">Alternative Energy</a></h2>
                                     </div>
                                 </div>
@@ -121,11 +98,36 @@
                             <div class="item">
                                 <div class="spectrum_slider_cntnt">
                                     <div class="spectrum_slider_shadow">
-                                        <img src="{% static 'images/spec_2.png' %}" alt="title" class="img-responsive">
-                                        <h2><a href="#">Wind Generators</a></h2>
+                                        <img src="{% static 'images/sp1.png' %}" alt="title">
+                                        <h2><a href="#">Axiva Lightings</a></h2>
                                     </div>
                                 </div>
                             </div>
+                            <div class="item">
+                                <div class="spectrum_slider_cntnt">
+                                    <div class="spectrum_slider_shadow">
+                                        <img src="{% static 'images/sp2.png' %}" alt="title">
+                                        <h2><a href="#">Axiva Protection</a></h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="spectrum_slider_cntnt">
+                                    <div class="spectrum_slider_shadow">
+                                        <img src="{% static 'images/sp3.png' %}" alt="title">
+                                        <h2><a href="#">Electrical appliances</a></h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="spectrum_slider_cntnt">
+                                    <div class="spectrum_slider_shadow">
+                                        <img src="{% static 'images/sp4.png' %}" alt="title">
+                                        <h2><a href="#">Security System</a></h2>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -303,7 +305,7 @@
                 <div class="disc_btn ltr_btn">
                     <ul>
                         <li>
-                            <a href="#!" class="waves-effect waves-light waves-ripple">ask a question</a>
+                            <a href="{% url 'web:contact' %}" class="waves-effect waves-light waves-ripple">ask a question</a>
                         </li>
                     </ul>
 

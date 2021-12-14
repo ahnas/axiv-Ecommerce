@@ -7364,4 +7364,12 @@ nav ul li:nth-child(9)>ul {
     to {opacity: 0.0;}
   }
 
+ .mt-2{
+      margin-top: 15px;
+  }
+
+  .float-web-center{
+    float: none;
+    text-align: -webkit-center;
+  }
  

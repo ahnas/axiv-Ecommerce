@@ -6,9 +6,8 @@ from versatileimagefield.fields import VersatileImageField,PPOIField
 from django.urls import reverse
 
 
-
 class Slider(models.Model):
-    order = models.IntegerField()
+    order = models.IntegerField(unique=True)
     name = models.CharField(max_length=120)
     photo = VersatileImageField(upload_to="Slider/")
 

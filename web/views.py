@@ -8,6 +8,20 @@ from .forms import ContactForm
 
 def index(request):
     slider = Slider.objects.all()
+
+
+    class slide:
+        def __init__(self,id,order,name,photo) :
+            self.id = id
+            self.order = order
+            self.photo = photo
+            self.name = name.split(' ')
+    sliders = []
+    for s in slider:
+        sliders.append(slide(s.id,s.order,s.name,s.photo))
+        
+
+    blog = Blog.objects.filter().order_by('-id')[:3]
     product = Product.objects.filter(is_dashboard = True)
     partner = Partner.objects.all()
     testimonial = Testimonial.objects.all()
@@ -16,7 +30,8 @@ def index(request):
         "product":product, 
         "partner":partner,
         "testimonial":testimonial,
-        "slider":slider,
+        "sliders":sliders,
+        "blog":blog,
     }
     return render(request, 'index.html',context)
 

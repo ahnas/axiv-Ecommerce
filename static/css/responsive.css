@@ -330,6 +330,7 @@
     }
 
     .sec_off_img img{
+        opacity: 55%;
         width: 300px !important;
         height: 350px !important;
     }
@@ -672,6 +673,7 @@
 }
 
 @media (min-width: 321px) and (max-width: 480px) {
+    
     .sm-bott{
         top: -60px !important;
         
@@ -684,6 +686,7 @@
     .sec_off_img img {
         width: 280px !important;
         height: 325px !important;
+        opacity: 55%;
     }
     .sm-btnn {
         background-color: #0e6774 !important;
@@ -731,9 +734,16 @@
 
 
 @media (max-width: 400px){
+    .tp-bullets, .tp-tabs, .tp-thumbs {
+        top: 97% !important;
+    }
     .sec_off_img {
         display: block !important;
         margin: 0% 0px 0px -15% !important;
-        top: -40px;
+        top: -10px;
+    }
+    .sm-btnn {
+        background-color: #0e6774 !important;
+        top: 140px;
     }
 }
