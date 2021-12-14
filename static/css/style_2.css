@@ -5724,12 +5724,12 @@ textarea:focus.materialize-textarea {
 }
 
 .sw_product_indx_img_cont_wrapper h1 a {
-    font-size: 18px;
+    font-size: 15px;
     color: #005f69;
     line-height: 24px;
     display: inline-block;
     padding: 3px 0 3px 0;
-    font-weight: 600;
+    font-weight: 500;
     text-transform: capitalize;
 }
 
@@ -6100,7 +6100,7 @@ textarea:focus.materialize-textarea {
 }
 
 .btc_shop_single_prod_right_section h1 {
-    font-size: 22px;
+    font-size: 20px;
     color: #005f69;
     font-weight: 600;
     text-transform: capitalize;
@@ -6308,7 +6308,7 @@ button:focus {
 }
 
 .btc_shop_product_price_wrapper li:last-child {
-    color: #8a9faf;
+    color: white;
 }
 
 .cc_ps_cart_btn {
@@ -7373,3 +7373,25 @@ nav ul li:nth-child(9)>ul {
     text-align: -webkit-center;
   }
  
+  .d-nonee{
+      display: none;
+  }
+
+  .contect_sel select{
+    
+        width: 100%;
+        height: 50px;
+        margin-top: 20px;
+        padding-left: 20px;
+        margin-bottom: 10px;
+        border: 0;
+        color: #7191c5;
+        background: white;
+        -webkit-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        transition: all 0.5s;
+        border-radius: 50px;
+
+  }

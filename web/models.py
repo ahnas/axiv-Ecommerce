@@ -5,6 +5,8 @@ from uuid import uuid4
 from versatileimagefield.fields import VersatileImageField,PPOIField
 from django.urls import reverse
 
+from django.template.defaultfilters import slugify
+
 
 class Slider(models.Model):
     order = models.IntegerField(unique=True)
@@ -28,14 +30,19 @@ class Product(models.Model):
     brochure = models.FileField(upload_to ='brochure/')
     slug = models.SlugField(unique=True)
     price = models.CharField(max_length=128)
+
+    mrp = models.CharField(blank=True,null=True,max_length=128)
+
     details = models.TextField()
+    addDetails = models.TextField(blank=True,null=True,max_length=128)
+
     is_dashboard = models.BooleanField(default=False)
     photo = VersatileImageField(upload_to="Product/")
 
     
-    photoOne = VersatileImageField(upload_to="Product/")
-    photoTwo = VersatileImageField(upload_to="Product/")
-    photoThree = VersatileImageField(upload_to="Product/")
+    photoOne = VersatileImageField(blank=True,upload_to="Product/")
+    photoTwo = VersatileImageField(blank=True,upload_to="Product/")
+    photoThree = VersatileImageField(blank=True,upload_to="Product/")
     
     
 
@@ -92,6 +99,8 @@ class Partner(models.Model):
     def __str__(self):
         return str(self.name)
 
+
+
 class Project(models.Model):
     name = models.CharField(max_length=120)
     photo = VersatileImageField(upload_to="Project/")
@@ -111,5 +120,45 @@ class Director(models.Model):
         return str(self.name)
 
 
+class ServiceEnquiry(models.Model):
+
+    COUNTRY_CHOICES = (('italy', 'italy'),('france', 'france'),('UK', 'UK'),('india', 'india'))
+
+    intrestedProduct = models.CharField(max_length=120)
+    firstname = models.CharField(max_length=120,blank=True,null=True)
+    lastname = models.CharField(max_length=120,blank=True,null=True)
+    email = models.EmailField(blank=True,null=True)
+    number = models.CharField(max_length=120,blank=True,null=True)
+    jobTitile = models.CharField(max_length=120,blank=True,null=True)
+    companyName = models.CharField(max_length=120,blank=True,null=True)
+    country = models.CharField(max_length=120,choices=COUNTRY_CHOICES,default="india")
+    industry = models.CharField(max_length=120,blank=True,null=True)
+    jobFunction = models.CharField(max_length=120,blank=True,null=True)
+    corporateLevel = models.CharField(max_length=120,blank=True,null=True)
+    natureOfInquiry = models.CharField(max_length=120,blank=True,null=True)
+    
+
+    def __str__(self):
+        return str(self.firstname)
 
 
+
+class ProjectCategory(models.Model):
+    name = models.CharField(max_length=128)
+    is_active = models.BooleanField(default =True)
+
+    def __str__(self):
+        return str(self.name)
+
+
+class CompletedProject(models.Model):
+    category = models.ForeignKey(ProjectCategory, on_delete=models.CASCADE)
+    is_active = models.BooleanField(default =True)
+    
+    name = models.CharField(max_length=120)
+    subname = models.CharField(max_length=120)
+    photo = VersatileImageField(upload_to="CompletedProject/")
+
+
+    def __str__(self):
+        return str(self.name)

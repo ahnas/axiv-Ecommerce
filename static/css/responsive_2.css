@@ -167,7 +167,7 @@
         z-index: 100;
         position: relative;
         float: left;
-        width: 180px;
+        width: 150px;
         top: 0px;
     }
     .circle {
@@ -456,6 +456,11 @@
 /*********----------767 responsive css-------**********/
 
 @media (max-width: 767px) {
+
+    .d-nonee{
+        display: block;
+    }
+
 	 .tp-bullets,
     .tp-tabs,
     .tp-thumbs {
@@ -659,7 +664,7 @@
     .spectrum_slider_cntnt {
         float: none;
         display: inline-block;
-        width: 300px;
+        width: 230px;
     }
     .sw_spectrum_wrapper {
         padding-bottom: 60px;
@@ -695,7 +700,14 @@
     .spectrum_slider_cntnt {
         float: none;
         display: inline-block;
-        width: 222px !important;
+        width: 170px !important;
+    }
+    .spectrum_slider_cntnt h2 a {
+        text-align: center;
+        font-size: 16px;
+        font-weight: 500;
+        color: #005f69;
+        text-transform: capitalize;
     }
     .spectrum_slider_wrapper .owl-theme .owl-nav {
         top: -70px;

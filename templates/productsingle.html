@@ -37,13 +37,19 @@
                                 <a class="button secondary url owl_nav" href="#zero"><img src="{{product.photo.url}}" class="img-responsive" alt="nav_img"></a>
                             </div>
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 cc_ps_tabs">
+                                                            {% if product.photoOne %}
                                 <a class="button secondary url owl_nav" href="#one"><img src="{{product.photoOne.url}}" class="img-responsive" alt="nav_img"></a>
+                                                            {% endif %}
                             </div>
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 cc_ps_tabs">
+                                {% if product.photoTwo %}
                                 <a class="button secondary url owl_nav" href="#two"><img src="{{product.photoTwo.url}}" class="img-responsive" alt="nav_img"></a>
+                                {% endif %}
                             </div>
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 cc_ps_tabs">
+                                {% if product.photoThree %}
                                 <a class="button secondary url owl_nav" href="#three"><img src="{{product.photoThree.url}}" class="img-responsive" alt="nav_img"></a>
+                                {% endif %}
                             </div>
 
                         </div>
@@ -55,16 +61,19 @@
 
                                 </div>
                                 <div class="item" data-hash="one">
-
+                                    {% if product.photoOne %}
                                     <img class="small img-responsive" src="{{product.photoOne.url}}" alt="small_img" />
-
+                                    {% endif %}
                                 </div>
                                 <div class="item" data-hash="two">
-
+                                    {% if product.photoTwo %}
                                     <img class="small img-responsive" src="{{product.photoTwo.url}}" alt="small_img" />
+                                    {% endif %}
                                 </div>
                                 <div class="item" data-hash="three">
+                                    {% if product.photoThree %}
                                     <img class="small img-responsive" src="{{product.photoThree.url}}" alt="small_img" />
+                                    {% endif %}
                                 </div>
                             </div>
                             <div class="row">
@@ -75,13 +84,19 @@
                                                 <a class="button secondary url owl_nav" href="#zero"><img src="{{product.photo.url}}" alt="nav_img"></a>
                                             </div>
                                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-3 cc_ps_tabs">
+                                                {% if product.photoOne %}
                                                 <a class="button secondary url owl_nav" href="#one"><img src="{{product.photoOne.url}}" alt="nav_img"></a>
+                                                {% endif %}
                                             </div>
                                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-3 cc_ps_tabs">
+                                                {% if product.photoTwo %}
                                                 <a class="button secondary url owl_nav" href="#two"><img src="{{product.photoTwo.url}}" alt="nav_img"></a>
+                                                {% endif %}
                                             </div>
                                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-3 cc_ps_tabs">
+                                                {% if product.photoThree %}
                                                 <a class="button secondary url owl_nav" href="#three"><img src="{{product.photoThree.url}}" alt="nav_img"></a>
+                                                {% endif %}
                                             </div>
 
                                         </div>
@@ -97,18 +112,15 @@
                             <div class="btc_shop_product_price_wrapper">
                                 <ul>
                                     <li>₹{{product.price}}</li>
-                                    <li><del>₹250</del></li>
+                                    {% if product.mrp %}
+                                    <li><del>{{product.mrp}}</del></li>
+                                    {% endif %}
                                 </ul>
                                 <a href="#"><i class="fa fa-share-alt"></i></a>
                             </div>
                             <h1>{{product.name}}</h1>
                             <div class="btc_shop_sin_pro_icon_wrapper eeeree">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <p>10 Reviews <span><a href="#">Add Your Review</a></span></p>
+                                
                                 <h5>{{product.details}}</h5>
 
                             </div>
@@ -126,11 +138,7 @@
                                             <input type="hidden" name="product_id" />
                                         </div>
                                     </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                        <div class="sw_price_rang_txt">
-                                            <p>product ID :<span> #20177494  </span></p>
-                                        </div>
-                                    </div>
+                                    
                                 </div>
                             </div>
 
@@ -185,37 +193,8 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 accordion_one">
                     <div class="panel-group" id="accordionFourLeft">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordion_oneLeft" href="#collapseFiveLeftone" aria-expanded="false">
-                                description about product
-                              </a>
-                                </h4>
-                            </div>
-                            <div id="collapseFiveLeftone" class="panel-collapse collapse in" aria-expanded="false" role="tablist">
-                                <div class="panel-body">
-                                    <div class="img-accordion">
-                                        <img src="{% static 'images/accr_shop_img.jpg' %}" alt="">
-                                    </div>
-                                    <div class="text-accordion">
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit risus nisl, nec facilisis ante iaculis fringillc facilisis ante iaculis fringilla. Integer mattis risusadipiscing elit. Phasellus hendrerit risus nisl, nec facilisis ante iaculis
-                                            fri ngilla. Integer mattis risus vel dapibus rhoncus. Duis ut nulla et metus vehicula facilisis a. Integer mattis risusadipiscing elit. Phasellus hendrerit risus nisl, nec facilisis ante iaculis fri ngilla.
-                                            Integer mattis risus vel dapibus rhoncus. Duis ut nulla et metus vehicula facilisis non eu quam. vel dapibus rhoncus. Duis ut nulla et metus vehicula facilisis non eu quam.
-                                        </p>
-                                        <ul class="accordian_list_item">
-                                            <li><i class="fa fa-long-arrow-right"></i> Lorem quis bibendum auctor, nisi elit consequat ipsum.</li>
-                                            <li><i class="fa fa-long-arrow-right"></i> Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin.</li>
-                                            <li><i class="fa fa-long-arrow-right"></i> Lorem quis bibendum auctor, nisi elit consequat ipsum.</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!-- end of panel-body -->
-                            </div>
-                        </div>
-                        <!-- /.panel-default -->
-
+                        
+                        {% if product.addDetails %}
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
@@ -229,225 +208,16 @@
 
                                     <div class="text-accordion">
                                         <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit risus nisl, nec facilisis ante iaculis fringilla. Integer mattis risus vel dapibus rhoncus. Duis ut nulla et metus vehicula facilisis non eu quam facilisis ante iaculis fringilla.
-                                            Integer mattis risus vel dapibus rhoncus. Duis ut nulla.
+                                            {{product.addDetails}}
                                         </p>
-                                        <ul class="accordian_list_item">
-                                            <li><i class="fa fa-long-arrow-right"></i> Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin.</li>
-                                            <li><i class="fa fa-long-arrow-right"></i> Lorem quis bibendum auctor, nisi elit consequat ipsum.</li>
-                                        </ul>
+                                        
                                     </div>
                                 </div>
                                 <!-- end of panel-body -->
                             </div>
                         </div>
-
-                        <!-- /.panel-default -->
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion_oneLeft" href="#collapseFiveLeftfour" aria-expanded="false">
-                               product tags 
-                              </a>
-                                </h4>
-                            </div>
-                            <div id="collapseFiveLeftfour" class="panel-collapse collapse" aria-expanded="false" role="tablist">
-                                <div class="panel-body">
-
-                                    <div class="text-accordion">
-                                        <div class="tag_cloud_wrapper">
-                                            <ul>
-                                                <li>
-                                                    <a href="#">Business</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">Corporate</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">Services</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">Customer</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">Money</a>
-                                                </li>
-                                                <li class="active">
-                                                    <a href="#">Portfolio</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">Psd</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">Joomla</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">Skills</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">Partners</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">Wordpress</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">Html</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">Psd</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">Joomla</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">Skills</a>
-                                                </li>
-
-                                                <li>
-                                                    <a href="#">Joomla</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">Skills</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- end of panel-body -->
-                            </div>
-                        </div>
-                        <!-- /.panel-default -->
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordion_oneLeft" href="#collapseFiveLeftfive" aria-expanded="false">
-                               coustmer rivews (02)
-                              </a>
-                                </h4>
-                            </div>
-                            <div id="collapseFiveLeftfive" class="panel-collapse collapse in" aria-expanded="false" role="tablist">
-
-                                <div class="panel-body">
-
-                                    <div class="col-lg-6 col-md-6 col-sm-12">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="btc_shop_single_prod_right_section shop_product_single_head">
-                                                    <h1>add your comment</h1>
-                                                    <img src="{% static 'images/heading_line.png' %}" alt="title">
-                                                    <div class="btc_shop_sin_pro_icon_wrapper">
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star-o"></i>
-                                                        <i class="fa fa-star-o"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="text-accordion contact-section contact_text_shop">
-                                            <div class="holder_3 holder">
-
-                                                <form action="#">
-                                                    <div class="row">
-                                                        <div class="col-md-12">
-                                                            <input type="text" placeholder="Name*" class="require">
-                                                        </div>
-                                                        <div class="col-md-12">
-                                                            <input type="text" placeholder="Email*" class="require" data-valid="email" data-error="Email should be valid.">
-                                                        </div>
-                                                        <div class="col-md-12">
-                                                            <input type="text" placeholder="subject">
-                                                        </div>
-
-                                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-
-                                                            <div class="cntct_2_btn_wrapper shop_btn_wraper cntct_2_btn_inner">
-                                                                <button type="button" class=" waves-effect waves-light waves-ripple">send</button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                </form>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                    <div class="col-lg-6 col-md-6 col-sm-12">
-
-                                        <div class="btc_shop_single_prod_right_section shop_product_single_head">
-                                            <h1>product rating</h1>
-                                            <img src="{% static 'images/heading_line.png' %}" alt="title">
-                                            <h4>4.5 <span>overall rating</span></h4>
-                                        </div>
-                                        <div class="text-accordion shop_pdt_form">
-                                            <div class="progress_section">
-                                                <div class="progress-wrapper">
-
-                                                    <div class="progress-item">
-                                                        <span class="progress-title">4 star</span>
-                                                        <span class="progress-percent pull-right"> 92%</span>
-                                                        <div class="progress">
-                                                            <div class="progress-bar progress-bar-success progress-bar-dealy" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100">
-
-                                                            </div>
-
-                                                        </div>
-                                                        <!-- /.progress -->
-
-                                                    </div>
-                                                    <!-- /.progress-item -->
-
-                                                    <div class="progress-item">
-                                                        <span class="progress-title">3 star </span>
-                                                        <span class="progress-percent pull-right"> 55%</span>
-                                                        <div class="progress">
-                                                            <div class="progress-bar progress-bar-danger progress-bar-dealy" role="progressbar" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100">
-
-                                                            </div>
-
-                                                        </div>
-                                                        <!-- /.progress -->
-
-                                                    </div>
-                                                    <!-- /.progress-item -->
-
-                                                    <div class="progress-item">
-                                                        <span class="progress-title">2 star</span>
-                                                        <span class="progress-percent pull-right"> 45%</span>
-                                                        <div class="progress">
-                                                            <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">
-
-                                                            </div>
-
-                                                        </div>
-                                                        <!-- /.progress -->
-
-                                                    </div>
-                                                    <!-- /.progress-item -->
-                                                    <div class="progress-item">
-                                                        <span class="progress-title">1 star</span>
-                                                        <span class="progress-percent pull-right"> 25%</span>
-                                                        <div class="progress">
-                                                            <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-
-                                                            </div>
-
-                                                        </div>
-                                                        <!-- /.progress -->
-
-                                                    </div>
-                                                </div>
-                                                <!-- /.progress-wrapper -->
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <!-- end of panel-body -->
-                            </div>
-                        </div>
+                        {% endif %}
+                        
 
                         <!--end of /.panel-group-->
                     </div>
@@ -471,27 +241,22 @@
                 <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 sw_spectrm_padding">
                     <div class="best_product_slider_wrapper">
                         <div class="owl-carousel owl-theme">
+
+                            {% for similiarproduct in similiarproduct %}
                             <div class="item">
                                 <div class="sw_product_box_wrapper sw_shop_sider_pder">
                                     <div class="sw_product_indx_img_wrapper">
 
-                                        <img src="{% static 'images/prdct_4.png' %}" alt="shop_img" class="img-responsive" />
+                                        <a href="{{similiarproduct.get_absolute_url}}"><img src="{{similiarproduct.photo.crop.250x250}}" alt="shop_img" class="img-responsive" /> </a>
                                     </div>
 
                                     <div class="sw_product_indx_img_cont_wrapper sw_product_indx_img_cont_wrapper_2">
-                                        <div class="sw_pdct_img">
-                                            <img src="{% static 'images/line.png' %}" alt="img" />
-                                        </div>
-                                        <h5>₹ 156</h5>
-                                        <h1><a href="#">SolarWorld 280</a></h1>
+                                       
+                                        <h5>₹ {{similiarproduct.price}}</h5>
+                                        <h1> <a href="{{similiarproduct.get_absolute_url}}">{{similiarproduct.name}}</a></h1>
+                                        <br>
 
-                                        <div class="cc_li_cont_wrapper">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                        </div>
+                                        
                                         <div class="cc_li_img_overlay">
                                             <div class="cc_li_img_text">
                                                 <ul>
@@ -505,142 +270,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="item">
-                                <div class="sw_product_box_wrapper sw_shop_sider_pder">
-                                    <div class="sw_product_indx_img_wrapper">
+                            {% endfor %}
 
-                                        <img src="{% static 'images/prdct_1.jpg' %}" alt="shop_img" class="img-responsive" />
-                                    </div>
-
-                                    <div class="sw_product_indx_img_cont_wrapper sw_product_indx_img_cont_wrapper_2">
-                                        <div class="sw_pdct_img">
-                                            <img src="{% static 'images/line.png' %}" alt="img" />
-                                        </div>
-                                        <h5>₹ 156</h5>
-                                        <h1><a href="#">canadian solar 280</a></h1>
-
-                                        <div class="cc_li_cont_wrapper">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                        </div>
-                                        <div class="cc_li_img_overlay">
-                                            <div class="cc_li_img_text">
-                                                <ul>
-                                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-
-                                                    <li><a href="#"><i class="fa fa-expand"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="sw_product_box_wrapper sw_shop_sider_pder">
-                                    <div class="sw_product_indx_img_wrapper">
-
-                                        <img src="{% static 'images/prdct_2.jpg' %}" alt="shop_img" class="img-responsive" />
-                                    </div>
-
-                                    <div class="sw_product_indx_img_cont_wrapper sw_product_indx_img_cont_wrapper_2">
-                                        <div class="sw_pdct_img">
-                                            <img src="{% static 'images/line.png' %}" alt="img" />
-                                        </div>
-                                        <h5>₹ 156</h5>
-                                        <h1><a href="#">AIR sun 280</a></h1>
-
-                                        <div class="cc_li_cont_wrapper">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                        </div>
-                                        <div class="cc_li_img_overlay">
-                                            <div class="cc_li_img_text">
-                                                <ul>
-                                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-
-                                                    <li><a href="#"><i class="fa fa-expand"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="sw_product_box_wrapper sw_shop_sider_pder">
-                                    <div class="sw_product_indx_img_wrapper">
-
-                                        <img src="{% static 'images/prdct_6.png' %}" alt="shop_img" class="img-responsive" />
-                                    </div>
-
-                                    <div class="sw_product_indx_img_cont_wrapper sw_product_indx_img_cont_wrapper_2">
-                                        <div class="sw_pdct_img">
-                                            <img src="{% static 'images/line.png' %}" alt="img" />
-                                        </div>
-                                        <h5>₹ 156</h5>
-                                        <h1><a href="#">SolarWorld 280</a></h1>
-
-                                        <div class="cc_li_cont_wrapper">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                        </div>
-                                        <div class="cc_li_img_overlay">
-                                            <div class="cc_li_img_text">
-                                                <ul>
-                                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-
-                                                    <li><a href="#"><i class="fa fa-expand"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="sw_product_box_wrapper sw_shop_sider_pder">
-                                    <div class="sw_product_indx_img_wrapper">
-
-                                        <img src="{% static 'images/prdct_4.png' %}" alt="shop_img" class="img-responsive" />
-                                    </div>
-
-                                    <div class="sw_product_indx_img_cont_wrapper sw_product_indx_img_cont_wrapper_2">
-                                        <div class="sw_pdct_img">
-                                            <img src="{% static 'images/line.png' %}" alt="img" />
-                                        </div>
-                                        <h5>₹ 156</h5>
-                                        <h1><a href="#">SolarWorld 280</a></h1>
-
-                                        <div class="cc_li_cont_wrapper">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                        </div>
-                                        <div class="cc_li_img_overlay">
-                                            <div class="cc_li_img_text">
-                                                <ul>
-                                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-
-                                                    <li><a href="#"><i class="fa fa-expand"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>

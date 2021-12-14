@@ -117,14 +117,12 @@
                                                 <div class="sw_product_box_wrapper sw_shop_sider_pder">
                                                     <div class="sw_product_indx_img_wrapper">
 
-                                                        <img src="{{product.photo.crop.250x200}}" alt="shop_img" class="img-responsive" />
+                                                      <a href="{{product.get_absolute_url}}">  <img src="{{product.photo.crop.250x200}}" alt="shop_img" class="img-responsive" /> </a>
                                                     </div>
 
                                                     <div class="sw_product_indx_img_cont_wrapper sw_product_indx_img_cont_wrapper_2">
-                                                        <div class="sw_pdct_img">
-                                                            <img src="{% static 'images/line.png' %}" alt="img" />
-                                                        </div>
-                                                        <h5>{{product.price}}</h5>
+                                                        
+                                                        <h5>₹ {{product.price}}</h5>
                                                         <h1><a href="{{product.get_absolute_url}}">{{product.name}}</a></h1>
 
                                                         <!-- <div class="cc_li_cont_wrapper">
