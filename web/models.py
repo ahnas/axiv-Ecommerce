@@ -8,11 +8,13 @@ from django.urls import reverse
 
 class Slider(models.Model):
     order = models.IntegerField(unique=True)
-    name = models.CharField(max_length=120)
+    firstline = models.CharField(max_length=120,blank=True,null=True)
+    secondline = models.CharField(max_length=120,blank=True,null=True)
+    thirdline = models.CharField(max_length=120,blank=True,null=True)
     photo = VersatileImageField(upload_to="Slider/")
 
     def __str__(self):
-        return str(self.name)
+        return str(self.firstline)
 
 class ProductCategory(models.Model):
     name = models.CharField(max_length=128)

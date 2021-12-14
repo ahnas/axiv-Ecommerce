@@ -8,19 +8,6 @@ from .forms import ContactForm
 
 def index(request):
     slider = Slider.objects.all()
-
-
-    class slide:
-        def __init__(self,id,order,name,photo) :
-            self.id = id
-            self.order = order
-            self.photo = photo
-            self.name = name.split(' ')
-    sliders = []
-    for s in slider:
-        sliders.append(slide(s.id,s.order,s.name,s.photo))
-        
-
     blog = Blog.objects.filter().order_by('-id')[:3]
     product = Product.objects.filter(is_dashboard = True)
     partner = Partner.objects.all()
@@ -30,7 +17,7 @@ def index(request):
         "product":product, 
         "partner":partner,
         "testimonial":testimonial,
-        "sliders":sliders,
+        "slider":slider,
         "blog":blog,
     }
     return render(request, 'index.html',context)
@@ -90,11 +77,15 @@ def blog(request):
     return render(request, 'blog.html',context) 
 
 def blogsingle(request,slug):
+    similiarblog = Blog.objects.all().exclude(slug = slug)
     blog = get_object_or_404(Blog, slug=slug)
     context = {
         "is_blogsingle" : True,
         "blog":blog,
+        "similiarblog":similiarblog,
     }
+    for i in similiarblog:
+        print(i)
     return render(request, 'blogsingle.html',context)
 
 def contact(request):

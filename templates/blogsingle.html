@@ -106,23 +106,25 @@
                         <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 sw_spectrm_padding">
                             <div class="blog_single_slider_wrapper">
                                 <div class="owl-carousel owl-theme">
+
+                                    {% for similiarblog in similiarblog %}
                                     <div class="item">
                                         <div class="btc_blog_indx_box_wrapper btc_blog_padder">
                                             <div class="btc_blog_indx_img_wrapper">
-                                                <img src="{% static 'images/news_3.jpg' %}" alt="blog_img">
+                                                <img src="{{similiarblog.photo.crop.370x280}}" alt="blog_img">
                                                 <div class="btc_blog_indx_date_wrapper">
                                                     <a href="#!" class="waves-effect waves-light waves-ripple"><i class="fa fa-long-arrow-right"></i></a>
                                                 </div>
                                             </div>
                                             <div class="btc_blog_indx_cont_wrapper">
-                                                <p>june 16,2019</p>
-                                                <h5>Electricity is on track for what about decarbonising heat?</h5>
+                                                <p>{{similiarblog.date}}</p>
+                                                <h5>{{similiarblog.name}}</h5>
 
                                             </div>
                                             
                                         </div>
                                     </div>
-
+                                    {% endfor %}
                                     
                                 </div>
 
