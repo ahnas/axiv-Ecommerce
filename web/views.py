@@ -139,3 +139,10 @@ def contact(request):
             "form":form,
         }
     return render(request, 'contact.html',context)
+
+def cart(request):
+    context = {
+            "is_cart" : True,
+            
+        }
+    return render(request, 'cart.html',context)

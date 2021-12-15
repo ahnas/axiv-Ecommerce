@@ -6905,6 +6905,7 @@ a.level {
         font-weight: 700;
     }
     nav>ul>li>a {
+        text-decoration: none;
         color: inherit;
         float: left;
         font-weight: 500;
@@ -7116,7 +7117,7 @@ a.level {
         -o-box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.06);
         -ms-box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.06);
         box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.06);
-        z-index: 1000;
+        z-index: 1001;
         left: 0;
         right: 0;
         top: 0;

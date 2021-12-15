@@ -83,7 +83,7 @@
                          
                                     $('#list').change(function() {
                                         var cls = $(this).val()
-                                        if(cls=='Select Category')
+                                        if(cls=='Select Product Category')
                                             {
                                                 $("#list > option").each(function() {
                                                     $('.'+this.value).fadeIn()
@@ -124,24 +124,17 @@
                                                         
                                                         <h5>₹ {{product.price}}</h5>
                                                         <h1><a href="{{product.get_absolute_url}}">{{product.name}}</a></h1>
-
-                                                        <!-- <div class="cc_li_cont_wrapper">
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star"></i>
-                                                            <i class="fa fa-star-o"></i>
-                                                            <i class="fa fa-star-o"></i>
-                                                        </div> -->
-                                                        <!-- <div class="cc_li_img_overlay">
+                                                        <br>
+                                                         
+                                                         <div class="cc_li_img_overlay">
                                                             <div class="cc_li_img_text">
                                                                 <ul>
-                                                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                                                    <li onclick="a()"><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
                                                                     <li><a href="#"><i class="fa fa-heart"></i></a></li>
-
                                                                     <li><a href="#"><i class="fa fa-expand"></i></a></li>
                                                                 </ul>
                                                             </div>
-                                                        </div> -->
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -456,4 +449,12 @@
 
     </div>
     <!-- sw our newsletter section end-->
+
+    <script>
+        function a(){
+            alert ("HE")
+        }
+    </script>
+
+
     {% endblock %}
