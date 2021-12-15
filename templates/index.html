@@ -47,7 +47,7 @@
                                 <li><a href="{% url 'web:contact' %}" title="">Contact us</a></li>
         
                                 <li class="caret_btn">
-                                    <a href="{% url 'web:cart' %}"><i class="fa fa-shopping-basket"></i><span>2</span></a>
+                                    <a href="{% url 'web:cart' %}"><i class="fa fa-shopping-basket"></i><span id="cartlen">0</span></a>
                                     
                                 </li>
         
@@ -989,4 +989,13 @@
     </div>
     <!-- sw partners section end-->
 
+    <script
+        src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous">
+    </script>
+    <script src="{% static 'js/addToCart.js' %}"></script>
+    <script src="{% static 'js/headerloader.js' %}"></script>
+    
+    
     {% endblock %}

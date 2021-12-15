@@ -34,7 +34,7 @@
 <body>
    
 
-    <div class="transparent-menu header-area hidden-menu-bar stick">
+    <div class="transparent-menu header-area hidden-menu-bar stick menu_fixed animated fadeIn">
 
         <div class="container-fluid p-cus">
 
@@ -71,7 +71,7 @@
 								 
                                 </li>
                             <li class="caret_btn">
-                                <a href="{% url 'web:cart' %}"><i class="fa fa-shopping-basket"></i><span>2</span></a>
+                                <a href="{% url 'web:cart' %}"><i class="fa fa-shopping-basket"></i><span id="cartlen">0</span></a>
                                 <!-- <ul>
                                     <li>
                                         <div class="cc_cart_wrapper1 menu-button">
@@ -155,7 +155,7 @@
                                                
                                                 <li><a href="{% url 'web:contact' %}"> contact us</a></li>
                                             <li class="caret_btn">
-                                                <a href="#"><i class="fa fa-shopping-basket"></i><span>2</span></a>
+                                                <a href="#"><i class="fa fa-shopping-basket"></i><span id="cartlen">2</span></a>
                                                 <!-- <ul>
                                                     <li>
                                                         <div class="cc_cart_wrapper1 menu-button">
@@ -257,6 +257,12 @@
     <script src="{% static 'js/mapbos.js' %}"></script>
 
 
+
+    
+    <script src="{% static 'js/addToCart.js' %}"></script>
+    <script src="{% static 'js/headerloader.js' %}"></script>
+    
+    {% block javascript %} {% endblock javascript %}
 
     
 
