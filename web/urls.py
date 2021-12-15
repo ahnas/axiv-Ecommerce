@@ -13,6 +13,7 @@ urlpatterns = [
     path('uproject/', views.uproject,name="uproject"), 
     path('blog/', views.blog,name="blog"), 
     path('blogsingle/<str:slug>/', views.blogsingle,name="blogsingle"),
-    path('contact/', views.contact,name="contact"),
+    path('contact/', views.contact,name="contact"), 
     path('cart/', views.cart,name="cart"),
+    path('checkout/', views.checkout,name="checkout"),
 ]

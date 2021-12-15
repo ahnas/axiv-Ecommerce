@@ -7,6 +7,10 @@ from .models import CompletedProject, Partner, ProductCategory,Product,Blog, Pro
 from .forms import ContactForm,ServiceEnquiryForm
 
 def index(request):
+    if request.session.session_key == None:
+        request.session.create() 
+        request.session['axiva']='initilise'
+    
     projectcategory = ProjectCategory.objects.all()
     project =CompletedProject.objects.all()
     slider = Slider.objects.all()
@@ -27,6 +31,10 @@ def index(request):
     return render(request, 'index.html',context)
 
 def about(request): 
+    if request.session.session_key == None:
+        request.session.create() 
+        request.session['axiva']='initilise'
+
     director = Director.objects.all()
     context = {
         "is_about" : True,
@@ -59,6 +67,10 @@ def service(request):
     return render(request, 'service.html',context)
 
 def product(request):
+    if request.session.session_key == None:
+        request.session.create() 
+        request.session['axiva']='initilise'
+
     productcategory = ProductCategory.objects.all()
     product = Product.objects.all()
     context = {
@@ -69,6 +81,10 @@ def product(request):
     return render(request, 'product.html',context)
 
 def productsingle(request,slug):
+    if request.session.session_key == None:
+        request.session.create() 
+        request.session['axiva']='initilise'
+        
     category =  Product.objects.get(slug = slug)
     getCategory = category.productcategory.id
     similiarproduct = Product.objects.filter(productcategory_id = getCategory).exclude(slug = slug)
@@ -140,9 +156,19 @@ def contact(request):
         }
     return render(request, 'contact.html',context)
 
-def cart(request):
+
+
+def cart(request): 
     context = {
-            "is_cart" : True,
-            
+            "is_cart" : True,   
         }
     return render(request, 'cart.html',context)
+
+
+def checkout(request): 
+    
+    context = {
+            "is_checkout" : True,   
+            
+        }
+    return render(request, 'checkout.html',context)

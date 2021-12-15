@@ -1,6 +1,6 @@
 {% extends 'base2.html' %}
 {% load static %}
-{% block title %}Product{% endblock %}
+{% block title %}Products{% endblock %}
 
 {% block content %}
     <!-- page_title_section start -->
@@ -128,10 +128,11 @@
                                                          
                                                          <div class="cc_li_img_overlay">
                                                             <div class="cc_li_img_text">
-                                                                <ul>
-                                                                    <li onclick="a()"><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                                                    <li><a href="#"><i class="fa fa-expand"></i></a></li>
+                                                                <ul> 
+                                                                    <form method="POST">
+                                                                        {% csrf_token %}
+                                                                    <li onclick="btnCart({{product.id}},this)"><a><i class="fa fa-shopping-cart"></i></a></li> 
+                                                                     </form>
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -450,11 +451,11 @@
     </div>
     <!-- sw our newsletter section end-->
 
-    <script>
-        function a(){
-            alert ("HE")
-        }
-    </script>
+    
+    {% block javascript %} 
 
+    <script src="{% static 'js/addToCart.js' %}"></script>
+
+    {% endblock javascript %}
 
     {% endblock %}
