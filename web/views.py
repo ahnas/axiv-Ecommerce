@@ -163,10 +163,23 @@ def contact(request):
 
 def cart(request): 
     sessionID = request.session.session_key
-    cartItems = Cart.objects.filter(session_key = sessionID)
+    cartItem = Cart.objects.filter(session_key = sessionID)
+    class cart:
+        def __init__(self,product,quantity,price):
+            self.product=product
+            self.quantity=quantity
+            self.price=price
+    cartItems=[]
+    totalprice=0
+    if Cart.objects.filter(session_key = sessionID).exists():
+        for item in cartItem:
+            totalprice+=int(item.quantity)*int(item.product.price)
+            cartItems.append(cart(item.product,item.quantity,int(item.quantity)*int(item.product.price)))
+            
     context = {
             "is_cart" : True,   
             "cartItems":cartItems,
+            "totalprice":totalprice
         }
     return render(request, 'cart.html',context)
 

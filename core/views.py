@@ -40,7 +40,6 @@ def headerloader(request):
 
 def updatecart(request): 
     sessionID = request.session.session_key
-    cartItems = Cart.objects.filter(session_key = sessionID)
     
     productId = request.POST['productID']
     qty = request.POST['qty']
@@ -49,5 +48,14 @@ def updatecart(request):
         instance = Cart.objects.get(session_key = sessionID,product_id= productId )
         instance.quantity = qty
         instance.save()
+    subtotal = 0
+    cartItems = Cart.objects.filter(session_key = sessionID)
+    for cartItem in cartItems:subtotal += cartItem.quantity*cartItem.product.price
+    productPrice = int(instance.quantity)*int(instance.product.price)
+    context={
+        "productPrice":productPrice,
+        "subtotal":subtotal
 
-    return JsonResponse({'success':'yes'})
+    }
+
+    return JsonResponse(context)

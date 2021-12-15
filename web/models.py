@@ -29,7 +29,7 @@ class Product(models.Model):
     name = models.CharField(max_length=128)
     brochure = models.FileField(upload_to ='brochure/')
     slug = models.SlugField(unique=True)
-    price = models.CharField(max_length=128)
+    price = models.BigIntegerField(max_length=128)
 
     mrp = models.CharField(blank=True,null=True,max_length=128)
 
