@@ -59,3 +59,17 @@ def updatecart(request):
     }
 
     return JsonResponse(context)
+
+
+def deleteCart(request):
+    sessionID = request.session.session_key
+    pid = request.POST['productID']
+
+    checkCart = Cart.objects.filter(session_key = sessionID,product_id = pid )
+    if checkCart.exists():
+        Cart.objects.get(session_key = sessionID,product_id = pid ).delete()
+    subtotal = 0
+    cartItems = Cart.objects.filter(session_key = sessionID)
+    for cartItem in cartItems:subtotal += cartItem.quantity*cartItem.product.price
+    return JsonResponse({"Message":"success","subtotal":subtotal})
+
