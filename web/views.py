@@ -1,8 +1,11 @@
 from django.shortcuts import render,get_object_or_404
 from django.http import HttpResponse
+from django.http.response import JsonResponse
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
-import json 
+import json
+
+from core.models import Cart 
 from .models import CompletedProject, Partner, ProductCategory,Product,Blog, Project, ProjectCategory,Testimonial,Slider,Director
 from .forms import ContactForm,ServiceEnquiryForm
 
@@ -159,16 +162,17 @@ def contact(request):
 
 
 def cart(request): 
+    sessionID = request.session.session_key
+    cartItems = Cart.objects.filter(session_key = sessionID)
     context = {
             "is_cart" : True,   
+            "cartItems":cartItems,
         }
     return render(request, 'cart.html',context)
 
 
+
+
 def checkout(request): 
     
-    context = {
-            "is_checkout" : True,   
-            
-        }
-    return render(request, 'checkout.html',context)
+    return render(request, 'checkout.html')

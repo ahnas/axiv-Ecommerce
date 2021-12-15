@@ -6,5 +6,7 @@ app_name = 'core'
 urlpatterns = [  
     path('addToCart/', views.addToCart,name="addToCart"), 
     path('headerloader/', views.headerloader,name="headerloader"), 
+    path('updatecart/', views.updatecart,name="updatecart"),
+
 ]
     

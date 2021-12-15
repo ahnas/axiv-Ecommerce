@@ -1,7 +1,8 @@
+import django
 from django.http.response import JsonResponse
 from django.shortcuts import render
 from .models import Cart
-
+from django.forms.models import model_to_dict
 # Create your views here.
 
 def addToCart(request):
@@ -35,3 +36,18 @@ def headerloader(request):
             "cartLength" : cartLength,
         }
     return JsonResponse(context)
+
+
+def updatecart(request): 
+    sessionID = request.session.session_key
+    cartItems = Cart.objects.filter(session_key = sessionID)
+    
+    productId = request.POST['productID']
+    qty = request.POST['qty']
+
+    if Cart.objects.filter(session_key = sessionID,product_id= productId ).exists():
+        instance = Cart.objects.get(session_key = sessionID,product_id= productId )
+        instance.quantity = qty
+        instance.save()
+
+    return JsonResponse({'success':'yes'})
