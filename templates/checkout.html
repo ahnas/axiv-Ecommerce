@@ -279,7 +279,7 @@
 
                             <div class="mb-2">
                                 <span class="text-secondary-d1 text-105">Thank you for your business</span>
-                                <a href="" class="btn btn-info btn-bold px-4 float-right mt-3 mt-lg-0">Send to Whatsapp</a>
+                                <a href="{{messagestring}}" onclick="checkout()" class="btn btn-info btn-bold px-4 float-right mt-3 mt-lg-0">Send to Whatsapp</a>
                             </div>
                         </div>
                     </div>
@@ -343,6 +343,24 @@
 </div>
 
 {% block javascript %}
+
+<script>
+    function checkout() {
+    alert('d')
+    $.ajax({
+
+        url: 'http://127.0.0.1:8000/confirmcheckout/',
+        type: 'GET',
+
+
+        success: function (response) {
+            $("#cartlen").html(response['cartLength'])
+
+        },
+    });
+}
+
+</script>
 
 {% endblock javascript %}
 

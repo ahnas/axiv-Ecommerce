@@ -4,7 +4,7 @@ from django.http.response import JsonResponse
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
 import json
-
+import datetime
 from core.models import Cart, Order, CheckOuted
 from .models import CompletedProject, Partner, ProductCategory, Product, Blog, Project, ProjectCategory, Testimonial, Slider, Director
 from .forms import ContactForm, ServiceEnquiryForm, OrderForm
@@ -206,16 +206,24 @@ def checkout(request):
         name = request.POST.get('name')
         address = request.POST.get('address')
         number = request.POST.get('number')
-
-        orderSave = Order()
-        orderSave.name = name
-        orderSave.address = address
-        orderSave.number = number
-        orderSave.session_key = request.session.session_key
-        orderSave.save()
-
-        orderID = orderSave.id
-        date = orderSave.date
+        if Order.objects.filter(session_key = request.session.session_key).exists():
+            getOrder = Order.objects.get(session_key = request.session.session_key)
+            getOrder.name = name
+            getOrder.address = address
+            getOrder.number = number
+            getOrder.date = datetime.datetime.now()
+            getOrder.save()
+            orderID = getOrder.id
+            date = getOrder.date
+        else:
+            orderSave = Order()
+            orderSave.name = name
+            orderSave.address = address
+            orderSave.number = number
+            orderSave.session_key = request.session.session_key
+            orderSave.save()
+            orderID = orderSave.id
+            date = orderSave.date
         cartitems = Cart.objects.filter(
             session_key=request.session.session_key)
         cartitems1 = Cart.objects.filter(
@@ -236,24 +244,18 @@ def checkout(request):
                 cartItems.append(cart(cnt, item.product, item.quantity,
                                       int(item.quantity)*int(item.product.price)))
                 cnt += 1
-        try:
-            print('Entr#'*12,len(cartItems))
 
-            # messagestring = 'https://wa.me/9660590099210?text=Name :'+name+'%0aAddress :'+address+'%0aPhone :'+phone +\
-            #     "%0a-----Order Details------"
-            
+            messagestring = 'https://wa.me/+919562540226?text=Name :'+name+'%0aAddress :'+address+'%0aPhone :'+number +\
+                "%0a-----Order Details------"
+
             for cartItem in cartItems:
-                print(cartItem.product)
+                messagestring += "%0aProduct-Id:"+str(cartItem.product.id)+"%0aName:"+str(cartItem.product.name)+"%0aQty:"+str(
+                    cartItem.quantity)+"%0aPrice:"+str(cartItem.product.price)+"%0aTotal :"+str(cartItem.price)+"%0a-----------------------------"
+            messagestring += "%0a-----------------------------%0a\
+            Grand Total :"+str(totalprice)+"%0a--------------------------------"       
 
-            #     messagestring += "%0aProduct-Id:"+str(i['id'])+"%0aName:"+str(i['name'])+"%0aQty:"+str(
-            #         i['quantity'])+"%0aPrice:"+str(i['price'])+"%0aTotal :"+str(i['sub_total'])+"%0a-----------------------------"
-            # messagestring += "%0a-----------------------------%0a\
-            # Grand Total :"+str(grandtotal)+"%0a--------------------------------"
-            # del request.session['cartdata']
+        
 
-        except:
-
-            pass
         userDetails = {
             'name':  name,
             'address':  address,
@@ -262,12 +264,11 @@ def checkout(request):
             'date': date,
         }
 
-        return render(request, 'checkout.html', {"totalprice": totalprice, "cartitems": cartItems, "form": form, "invoice": True, "userDetails": userDetails})
+        return render(request, 'checkout.html', {"messagestring":messagestring,"totalprice": totalprice, "cartitems": cartItems, "form": form, "invoice": True, "userDetails": userDetails})
     return render(request, 'checkout.html', {"form": form, "invoice": False})
 
 
 def confirmcheckout(request):
-
     cartitems = Cart.objects.filter(session_key=request.session.session_key)
     for items in cartitems:
         checkout = CheckOuted()
