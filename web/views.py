@@ -237,6 +237,7 @@ def checkout(request):
                 self.price = price
         cartItems = []
         totalprice = 0
+        messagestring=''
         if Cart.objects.filter(session_key=request.session.session_key).exists():
             cnt = 1
             for item in cartitems1:
