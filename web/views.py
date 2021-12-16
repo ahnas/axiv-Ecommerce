@@ -205,6 +205,7 @@ def checkout(request):
     form = OrderForm(request.POST)
     if request.method == 'POST':
         name = request.POST.get('name')
+        print(name)
         address = request.POST.get('address')
         number = request.POST.get('number')
         if Order.objects.filter(session_key = request.session.session_key).exists():
