@@ -9,7 +9,6 @@ from core.models import Cart, Order, CheckOuted
 from .models import CompletedProject, Partner, ProductCategory, Product, Blog, Project, ProjectCategory, Testimonial, Slider, Director
 from .forms import ContactForm, ServiceEnquiryForm, OrderForm
 
-
 def index(request):
     if request.session.session_key == None:
         request.session.create()
@@ -200,6 +199,8 @@ def cart(request):
     return render(request, 'cart.html', context)
 
 
+
+
 def checkout(request):
     form = OrderForm(request.POST)
     if request.method == 'POST':
@@ -282,3 +283,4 @@ def confirmcheckout(request):
 
     Cart.objects.filter(session_key=request.session.session_key).delete()
     return JsonResponse({"success": "yes"})
+

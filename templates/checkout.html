@@ -3,6 +3,7 @@
 {% block title %}Checkout{% endblock %}
 
 {% block content %}
+
 <style>
 
     .mt-3{
@@ -292,57 +293,48 @@
                 <div class="sw_left_heading_wraper sw_dark_heading_wraper">
                     <h1>Fill Out Details</h1>
                     <img src="{% static 'images/hd_line_dark.png' %}" alt="title">
-                    <p>Donec quis magna sit amet risus vulputate maximus eget eget arcu. Praesent sed molestie tortor.
-                    </p>
+                    <p>Donec quis magna sit amet risus vulputate maximus eget eget arcu. Praesent sed molestie tortor. </p>
                 </div>
                 <div class="row">
 
-                    <form name="clientAddressDetailsForm" action="" method="post">
-
+                    <form action="" method="post" class="ajax">
                         {% csrf_token %}
                         <div class="cont_main_section">
-
+                            
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <div class="contect_form1">
-                                    {{form.name}}
-
+                                    <input type="text" placeholder="Name">
                                 </div>
-                            </div>
+                            </div> 
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <div class="contect_form1">
-                                    {{form.number}}
-
+                                    <input type="text" placeholder="Phone Number">
                                 </div>
-                            </div>
+                            </div>   
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <div class="contect_form4">
-
-                                    {{form.address}}
-
+                                    <textarea rows="5" placeholder="Address"></textarea>
                                 </div>
-                            </div>
-
+                            </div>     
+                            
 
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <div class="response"></div>
                                 <div class="cntct_2_btn_wrapper">
-                                    <button type="submit" class="submitForm waves-effect waves-light waves-ripple">send
-                                        order</button>
+                                    <button type="" class="submitForm waves-effect waves-light waves-ripple">send</button>
                                 </div>
                             </div>
-
+                            
                         </div>
                     </form>
-
+                    
                 </div>
             </div>
         </div>
-        {% endif %}
     </div>
 
 </div>
-
-{% block javascript %}
+      {% block javascript %}
 
 <script>
     function checkout() {
@@ -361,8 +353,4 @@
 }
 
 </script>
-
-{% endblock javascript %}
-
-
 {% endblock %}
