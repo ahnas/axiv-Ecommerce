@@ -1572,7 +1572,9 @@ nav ul li.active {
     display: inline-block;
     padding-left: 30px;
 }
-
+.chose_icon_img_list  img{
+    width: 70px;
+}
 .chose_icon_img_list {
     float: left;
     margin-top: 10px;
@@ -1586,6 +1588,7 @@ nav ul li.active {
 .chose_icon_wrapper_list {
     text-align: center;
     padding-top: 38px;
+    height: 165px;
     float: left;
     width: 100%;
     -webkit-transition: all .5s;
