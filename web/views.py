@@ -5,9 +5,9 @@ from django.urls import reverse
 from django.contrib.auth.decorators import login_required
 import json
 
-from core.models import Cart,Order,CheckOuted
+from core.models import Cart 
 from .models import CompletedProject, Partner, ProductCategory,Product,Blog, Project, ProjectCategory,Testimonial,Slider,Director
-from .forms import ContactForm,ServiceEnquiryForm,OrderForm
+from .forms import ContactForm,ServiceEnquiryForm
 
 def index(request):
     if request.session.session_key == None:
@@ -186,48 +186,6 @@ def cart(request):
 
 
 
-def checkout(request):
-    form = OrderForm(request.POST)
-    if request.method == 'POST':
-        name = request.POST.get('name')
-        address = request.POST.get('address')
-        number = request.POST.get('number')
-
-        orderSave = Order()
-        orderSave.name = name
-        orderSave.address = address
-        orderSave.number = number
-        orderSave.session_key = request.session.session_key
-        orderSave.save()
-
-        orderID = orderSave.id
-        date = orderSave.date
-        cartitems = Cart.objects.filter(session_key = request.session.session_key)
-
-        userDetails = {
-            'name' :  name,
-            'address' :  address,
-            'number' :  number,
-            'orderID' :  orderID,
-            'date':date,
-        }
-        
-        return render(request, 'checkout.html',{"cartitems":cartitems,"form":form,"invoice":True,"userDetails":userDetails})
-    return render(request, 'checkout.html',{"form":form,"invoice":False})
-
-
-
-def confirmcheckout(request):
+def checkout(request): 
     
-    cartitems = Cart.objects.filter(session_key = request.session.session_key)
-    for items in cartitems:
-        checkout=CheckOuted()
-        checkout.date=items.date
-        checkout.session_key=items.session_key
-        checkout.product=items.product
-        checkout.quantity=items.quantity
-        checkout.status='open'
-        checkout.save()
-    
-    Cart.objects.filter(session_key = request.session.session_key).delete()
-    return JsonResponse({"success":"yes"})
+    return render(request, 'checkout.html')
