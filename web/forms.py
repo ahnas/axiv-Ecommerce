@@ -1,6 +1,7 @@
 from django import forms
 from django.db.models import fields
 from .models import Contact,ServiceEnquiry
+from core.models import Order
 from django.forms.widgets import SelectMultiple, TextInput, Textarea, EmailInput, CheckboxInput,URLInput, Select, NumberInput, RadioSelect, FileInput
 
 
@@ -31,4 +32,26 @@ class ServiceEnquiryForm(forms.ModelForm):
             'jobFunction': TextInput(attrs={'class': 'form-control', 'placeholder': 'job Function'}),
             'corporateLevel': TextInput(attrs={'class': 'form-control', 'placeholder': 'corporate Level'}),
             'natureOfInquiry': TextInput(attrs={'class': 'form-control', 'placeholder': 'nature Of Inquiry'}),
+        }
+
+
+class ContactForm(forms.ModelForm):
+    class Meta:
+        model = Contact
+        fields = '__all__'
+        widgets = {
+            'name': TextInput(attrs={'class': 'required form-control', 'placeholder': 'Your Name'}),
+            'email': TextInput(attrs={'class': 'required form-control', 'placeholder': 'Your Email Address'}),
+            'subject': TextInput(attrs={'class': 'required form-control', 'placeholder': 'Subject'}),
+            'message': Textarea(attrs={'class': 'required form-control', 'placeholder': 'Type Your Message'}),
+        }
+
+class OrderForm(forms.ModelForm):
+    class Meta:
+        model = Order
+        fields = '__all__'
+        widgets = {
+            'name': TextInput(attrs={'class': 'required form-control', 'placeholder': 'Your Name'}),
+            'number': TextInput(attrs={'class': 'required form-control', 'placeholder': 'Your number'}),
+            'address': Textarea(attrs={'class': 'required form-control', 'placeholder': 'Type Your address'}),
         }
