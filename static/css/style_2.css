@@ -1791,6 +1791,10 @@ nav ul li.active {
     -o-transition: all .5s;
     transition: all .5s;
 }
+.chose_icon_img_list  img{
+    width: 70px;
+}
+
 
 .chose_icon_wrapper_list h4 a {
     color: #005f69;
@@ -6694,7 +6698,7 @@ button:focus {
     font-size: 13px;
     font-weight: 400;
     margin-bottom: 10px;
-    color: ##111111;
+    color: #111111;
 }
 
 .sidebar_shop_right_2 {
@@ -7270,7 +7274,7 @@ nav {
     float: left;
     font-family: 'Roboto', sans-serif;
     background: transparent;
-    positio: relative;
+    position: relative;
     bottom: 15px;
     left: 60px;
 }
