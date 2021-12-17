@@ -54,5 +54,25 @@
     </div>
 
 </div>
+<<<<<<< Updated upstream
+=======
+      {% block javascript %}
+
+<script>
+    function checkout() {
+    
+    $.ajax({
+
+        url: 'https://www.axivauniverse.com/confirmcheckout/',
+        type: 'GET',
+
+
+        success: function (response) {
+            $("#cartlen").html(response['cartLength'])
+
+        },
+    });
+}
+>>>>>>> Stashed changes
 
 {% endblock %}
