@@ -21,7 +21,26 @@ def index(request):
     product = Product.objects.filter(is_dashboard=True)
     partner = Partner.objects.all()
     testimonial = Testimonial.objects.all()
+
+    form = ContactForm(request.POST or None)
+    if request.method == 'POST':
+        if form.is_valid():
+            form.save()
+            response_data = {
+                "status": "true",
+                "title": "Successfully Submitted",
+                "message": "Message successfully updated"
+            }
+        else:
+            print(form.errors)
+            response_data = {
+                "status": "false",
+                "title": "Form validation error",
+            }
+        return HttpResponse(json.dumps(response_data), content_type='application/javascript')
+
     context = {
+        "form":form,
         "is_index": True,
         "product": product,
         "partner": partner,

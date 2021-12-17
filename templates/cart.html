@@ -291,7 +291,7 @@
           </div>
           <div class="col-2">
             <p id="{{cartItems.product.id}}total">₹{{cartItems.price}}</p>
-            <div> <i onclick="deleteprod({{cartItems.product.id}})" style="font-size: 22px;" class="fa fa-trash"></i></div>
+            <div> <i onclick="deleteprod('{{cartItems.product.id}}')" style="font-size: 22px;" class="fa fa-trash"></i></div>
           </div>
           <hr>
         </div>
@@ -423,6 +423,7 @@
        $('#'+productID+'main').fadeOut()
        $("#subtotal").html('₹'+response['subtotal'])
         $("#total").html('₹'+response['subtotal'])
+        $("[id=cartlen]").html(response['cartLength'])
       },
     });
 

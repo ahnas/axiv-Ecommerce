@@ -8,6 +8,7 @@ urlpatterns = [
     path('headerloader/', views.headerloader,name="headerloader"), 
     path('updatecart/', views.updatecart,name="updatecart"),
     path('deleteCart/', views.deleteCart,name="deleteCart"),
+    path('addOrUpdate/', views.addOrUpdate,name="addOrUpdate"),
 
 ]
     

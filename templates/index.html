@@ -120,57 +120,8 @@
                                                 <li><a href="{% url 'web:blog' %}" title="">blog</a></li>
         
                                                 <li><a href="{% url 'web:contact' %}"> contact us</a> </li>
-                                                <li class="caret_btn">
-                                                    <a href="#"><i class="fa fa-shopping-basket"></i><span>2</span></a>
-                                                    <!-- <ul>
-                                                        <li>
-                                                            <div class="cc_cart_wrapper1 menu-button">
-                                                                <div class="cc_cart_img_wrapper">
-                                                                    <img src="{% static 'images/cart_1.png' %}" alt="cart_img" />
-                                                                </div>
-                                                                <div class="cc_cart_cont_wrapper">
-                                                                    <h4><a href="#">put a title here</a></h4>
-                                                                    <p>1 <span> ₹145 </span> </p>
-                                                                    <h5><i class="fa fa-times"></i></h5>
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="cc_cart_wrapper1 menu-button">
-                                                                <div class="cc_cart_img_wrapper">
-                                                                    <img src="{% static 'images/cart_2.png' %}" alt="cart_img" />
-                                                                </div>
-                                                                <div class="cc_cart_cont_wrapper">
-                                                                    <h4><a href="#">put a title here</a></h4>
-                                                                    <p>1 <span> ₹145 </span></p>
-                                                                    <h5><i class="fa fa-times"></i></h5>
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="cc_cart_wrapper1 menu-button">
-                                                                <div class="cc_cart_img_wrapper">
-                                                                    <img src="{% static 'images/cart_3.png' %}" alt="cart_img" />
-                                                                </div>
-                                                                <div class="cc_cart_cont_wrapper">
-                                                                    <h4><a href="#">put a title here</a></h4>
-                                                                    <p>1 <span> ₹145 </span></p>
-                                                                    <h5><i class="fa fa-times"></i></h5>
-                                                                </div>
-                                                            </div>
-                                                            <div class="btm_cart_wrapper">
-                                                                <h5>₹450.00</h5>
-                                                                <p>3 items</p>
-                                                            </div>
-                                                            <div class="cart_checkout_btn">
-        
-                                                                <a href="#!" class="waves-effect waves-light waves-ripple">checkout</a>
-        
-                                                            </div>
-                                                        </li>
-        
-                                                    </ul> -->
-                                                </li>
+
+                                                
         
                                             </ul>
                                         </nav>
@@ -263,73 +214,74 @@
         </div>
     </div>
     <!-- sw slider section end-->
-    <!-- sw spectrum section start-->
-    <div data-scroll='1' class="full_width">
-        <div class="sw_spectrum_wrapper">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
-                        <div class="sw_left_heading_wraper">
-                            <h1>We Cover the Whole Spectrum</h1>
-                            <img src="{% static 'images/heading_line.png' %}" alt="title">
-                        </div>
+
+
+
+    <!--sw best product wrapper start-->
+    <div class="sw_best_product_wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+                    <div class="sw_left_heading_wraper">
+                        <h1>Our Best Rated Products</h1>
+                        <img src="{% static 'images/heading_line.png' %}" alt="title">
                     </div>
+                </div>
 
-                    <!-- slider start -->
-                    <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 sw_spectrm_padding">
-                        <div class="spectrum_slider_wrapper">
-                            <div class="owl-carousel owl-theme">
+                <!-- slider start -->
+                <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 sw_spectrm_padding">
+                    <div class="best_product_slider_wrapper">
+                        <div class="owl-carousel owl-theme">
+                            {% for product in product %}
+                            <div class="item">
+                                <div class="sw_product_box_wrapper">
+                                    <div class="sw_product_indx_img_wrapper">
+                                        <a href="{{product.get_absolute_url}}">
+                                        <img src="{{product.photo.crop.250x200}}" alt="shop_img" class="img-responsive" />
+                                            </a>
+                                    </div>
 
-                                
-                                <div class="item">
-                                    <div class="spectrum_slider_cntnt">
-                                        <div class="spectrum_slider_shadow">
-                                            <img src="{% static 'images/spec_2.png' %}" alt="title">
-                                            <h2><a href="#">Alternative Energy</a></h2>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="spectrum_slider_cntnt">
-                                        <div class="spectrum_slider_shadow">
-                                            <img src="{% static 'images/sp1.png' %}" alt="title">
-                                            <h2><a href="#">Axiva Lightings</a></h2>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="spectrum_slider_cntnt">
-                                        <div class="spectrum_slider_shadow">
-                                            <img src="{% static 'images/sp2.png' %}" alt="title">
-                                            <h2><a href="#">Axiva Protection</a></h2>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="spectrum_slider_cntnt">
-                                        <div class="spectrum_slider_shadow">
-                                            <img src="{% static 'images/sp3.png' %}" alt="title">
-                                            <h2><a href="#">Electrical appliances</a></h2>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="spectrum_slider_cntnt">
-                                        <div class="spectrum_slider_shadow">
-                                            <img src="{% static 'images/sp4.png' %}" alt="title">
-                                            <h2><a href="#">Security System</a></h2>
-                                        </div>
-                                    </div>
-                                </div>
+                                    <div class="sw_product_indx_img_cont_wrapper">
+                                        
+                                        <h5>₹ {{product.price}}</h5>
+                                        <h1><a href="{{product.get_absolute_url}}">{{product.name}}</a></h1>
 
+                                        <!-- <div class="cc_li_cont_wrapper">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star-o"></i>
+                                            <i class="fa fa-star-o"></i>
+                                        </div> -->
+                                        <!-- <div class="cc_li_img_overlay">
+                                            <div class="cc_li_img_text">
+                                                <ul>
+                                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
+
+                                                    <li><a href="#"><i class="fa fa-expand"></i></a></li>
+                                                </ul>
+                                            </div>
+                                        </div> -->
+                                    </div>
+                                </div>
                             </div>
+                            {% endfor %}
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!--sw spectrum wrapper end-->
+    <!--sw best product wrapper end-->
+
+
+
+
+
+    
+
+
     <!--sw discover wrapper start-->
     <div class="sw_discver_wrapper">
         <div class="discover_overlay"></div>
@@ -551,64 +503,75 @@
     </div>
 
     <!--sw testimonial wrapper end-->
-    <!--sw best product wrapper start-->
-    <div class="sw_best_product_wrapper">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
-                    <div class="sw_left_heading_wraper">
-                        <h1>Our Best Rated Products</h1>
-                        <img src="{% static 'images/heading_line.png' %}" alt="title">
+
+    <!-- sw spectrum section start-->
+    <div data-scroll='1' class="full_width">
+        <div class="sw_spectrum_wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+                        <div class="sw_left_heading_wraper">
+                            <h1>We Cover the Whole Spectrum</h1>
+                            <img src="{% static 'images/heading_line.png' %}" alt="title">
+                        </div>
                     </div>
-                </div>
 
-                <!-- slider start -->
-                <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 sw_spectrm_padding">
-                    <div class="best_product_slider_wrapper">
-                        <div class="owl-carousel owl-theme">
-                            {% for product in product %}
-                            <div class="item">
-                                <div class="sw_product_box_wrapper">
-                                    <div class="sw_product_indx_img_wrapper">
+                    <!-- slider start -->
+                    <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 sw_spectrm_padding">
+                        <div class="spectrum_slider_wrapper">
+                            <div class="owl-carousel owl-theme">
 
-                                        <img src="{{product.photo.crop.250x200}}" alt="shop_img" class="img-responsive" />
-                                    </div>
-
-                                    <div class="sw_product_indx_img_cont_wrapper">
-                                        <div class="sw_pdct_img">
-                                            <img src="{% static 'images/line.png' %}" alt="img" />
+                                
+                                <div class="item">
+                                    <div class="spectrum_slider_cntnt">
+                                        <div class="spectrum_slider_shadow">
+                                            <img src="{% static 'images/spec_2.png' %}" alt="title">
+                                            <h2><a href="#">Alternative Energy</a></h2>
                                         </div>
-                                        <h5>₹ {{product.price}}</h5>
-                                        <h1><a href="{{product.get_absolute_url}}">{{product.name}}</a></h1>
-
-                                        <!-- <div class="cc_li_cont_wrapper">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                        </div> -->
-                                        <!-- <div class="cc_li_img_overlay">
-                                            <div class="cc_li_img_text">
-                                                <ul>
-                                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-
-                                                    <li><a href="#"><i class="fa fa-expand"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div> -->
                                     </div>
                                 </div>
+                                <div class="item">
+                                    <div class="spectrum_slider_cntnt">
+                                        <div class="spectrum_slider_shadow">
+                                            <img src="{% static 'images/sp1.png' %}" alt="title">
+                                            <h2><a href="#">Axiva Lightings</a></h2>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="spectrum_slider_cntnt">
+                                        <div class="spectrum_slider_shadow">
+                                            <img src="{% static 'images/sp2.png' %}" alt="title">
+                                            <h2><a href="#">Axiva Protection</a></h2>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="spectrum_slider_cntnt">
+                                        <div class="spectrum_slider_shadow">
+                                            <img src="{% static 'images/sp3.png' %}" alt="title">
+                                            <h2><a href="#">Electrical appliances</a></h2>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="spectrum_slider_cntnt">
+                                        <div class="spectrum_slider_shadow">
+                                            <img src="{% static 'images/sp4.png' %}" alt="title">
+                                            <h2><a href="#">Security System</a></h2>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
-                            {% endfor %}
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!--sw best product wrapper end-->
+    <!--sw spectrum wrapper end-->
+
     <!--sw leads wrapper start-->
     <div class="sw_leads_wrapper">
         <div class="discover_overlay"></div>
@@ -714,33 +677,34 @@
                         <p>Our experts are kindly waiting to serve you excellent services. Stay in touch with us. </p>
                     </div>
                     <div class="row">
-                        <form>
+                        <form class="ajax" action="" method="POST">
+                            {% csrf_token %}
                             <div class="cont_main_section">
 
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                     <div class="contect_form1">
-                                        <input type="text" name="full_name" placeholder="Name*" class="require">
+                                        {{form.name}}
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                     <div class="contect_form1">
-                                        <input type="email" name="email" placeholder="Email*" class="require" data-valid="email" data-error="Email should be valid.">
+                                       {{form.email}}
                                     </div>
                                 </div>
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <div class="contect_form1">
-                                        <input type="text" name="subject" placeholder="Subject">
+                                        {{form.subject}}
                                     </div>
                                 </div>
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <div class="contect_form4">
-                                        <textarea rows="5" name="message" placeholder="Message" class="require"></textarea>
+                                        {{form.message}}
                                     </div>
                                 </div>
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <div class="response"></div>
                                     <div class="cntct_2_btn_wrapper">
-                                        <button type="button" class="submitForm waves-effect waves-light waves-ripple">send</button>
+                                        <button type="submit" class="submitForm waves-effect waves-light waves-ripple">send</button>
                                     </div>
                                 </div>
                             </div>
@@ -805,8 +769,7 @@
                         <h6>Get the latest News & Offers..</h6>
 
                         <div class="prs_newsletter_field">
-                            <input type="text" placeholder="Email*">
-                            <button type="submit" class="waves-effect waves-light waves-ripple">Submit</button>
+                            <a href="/contact/" class="a-btn waves-effect waves-light waves-ripple">Contact Us</a>
                         </div>
                         <p>True environmental protection lies in loving the mountains, the oceans and in cher
                             <br> all creation.
@@ -864,6 +827,82 @@
     </script>
     <script src="{% static 'js/addToCart.js' %}"></script>
     <script src="{% static 'js/headerloader.js' %}"></script>
-    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9.15.3/dist/sweetalert2.all.min.js"></script>
+    <script>
+        $(document).on('submit', 'form.ajax', function(e) {
+            e.preventDefault();
+            var $this = $(this);
+            var data = new FormData(this);
+            var action_url = $this.attr('action');
+            var reset = $this.hasClass('reset');
+            var reload = $this.hasClass('reload');
+            var redirect = $this.hasClass('redirect');
+            var redirect_url = $this.attr('data-redirect');
+
+            $.ajax({
+                url: action_url,
+                type: 'POST',
+                data: data,
+                cache: false,
+                contentType: false,
+                processData: false,
+                dataType: "json",
+
+                success: function(data) {
+
+                    var status = data.status;
+                    var title = data.title;
+                    var message = data.message;
+                    var pk = data.pk;
+
+                    if (status == "true") {
+                        if (title) {
+                            title = title;
+                        } else {
+                            title = "Success";
+                        }
+
+                        Swal.fire({
+                            title: title,
+                            html: message,
+                            icon: 'success',
+                        }).then(function() {
+                            if (redirect) {
+                                window.location.href = redirect_url;
+                            }
+                            if (reload) {
+                                window.location.reload();
+                            }
+                            if (reset) {
+                                window.location.reset();
+                            }
+                        });
+
+                    } else {
+                        if (title) {
+                            title = title;
+                        } else {
+                            title = "An Error Occurred";
+                        }
+                        Swal.fire({
+                            title: title,
+                            html: message,
+                            icon: "error"
+                        });
+
+                    }
+                },
+                error: function(data) {
+                    var title = "An error occurred";
+                    var message = "something went wrong";
+                    Swal.fire({
+                        title: title,
+                        html: message,
+                        icon: "error"
+                    });
+                }
+            });
+        });
+    </script>
     
     {% endblock %}
