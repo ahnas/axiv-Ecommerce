@@ -1,10 +1,11 @@
 from django.contrib import admin
-from .models import ProductCategory,Product,Blog,Contact,Partner,Testimonial,Project,Slider,Director,ServiceEnquiry,CompletedProject,ProjectCategory
+from .models import ProductCategory,Product,Blog,Contact,Partner,Testimonial,Project,Slider,Director,ServiceEnquiry,CompletedProject,ProjectCategory,Certification
 
 # Register your models here.
 
 
 admin.site.register(ProductCategory)
+admin.site.register(Certification)
 admin.site.register(Contact)
 admin.site.register(Partner)
 admin.site.register(Testimonial)

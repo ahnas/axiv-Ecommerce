@@ -162,3 +162,16 @@ class CompletedProject(models.Model):
 
     def __str__(self):
         return str(self.name)
+
+
+
+class Certification(models.Model):
+    name = models.CharField(max_length=120)
+    photo = VersatileImageField(upload_to="Partner/")
+
+    class Meta:
+        verbose_name = ('Certification')
+        verbose_name_plural = ('Certifications')
+
+    def __str__(self):
+        return str(self.name)

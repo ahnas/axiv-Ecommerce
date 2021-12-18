@@ -277,7 +277,36 @@
 
 
 
+    <!-- sw partners section start-->
+    <div class="sw_partners_wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+                    <div class="sw_left_heading_wraper">
+                        <h1>Certification</h1>
+                        <img src="{% static 'images/heading_line.png' %}" alt="title">
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 sw_spectrm_padding">
+                    <div class="partners_slider_wrapper">
+                        <div class="owl-carousel owl-theme">
 
+                            {% for certification in certification %}
+                            <div class="item">
+                                <div class="lr_prt_img_wrapper">
+                                    <img src="{{certification.photo.url}}" alt="certification_img">
+                                    <h2 style="text-transform: uppercase;">{{certification.name}}</h2>
+                                </div>
+                            </div>
+                            {% endfor %}
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- sw partners section end-->
 
     
 
