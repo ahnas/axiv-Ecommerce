@@ -387,7 +387,7 @@ textarea:focus {
     left: 0;
     right: 0;
     z-index: 100;
-    background: #005f69;
+    background: #001f4e;
     box-shadow: 0 3px 10px 0 rgba(0, 0, 0, .2);
 }
 
@@ -3038,7 +3038,7 @@ Close Portfolio page style
 }
 
 .sw_our_news_txt p {
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255);
     padding-top: 20px;
     float: left;
 }
