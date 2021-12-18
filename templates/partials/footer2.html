@@ -1,10 +1,12 @@
 {% load static %}
 
+<a href="{% url 'web:cart' %}" id="cartmob" class="caret_bt d-nonee cart">
+    <i class="fa fa-shopping-basket"></i><span id="cartlen" class="sm-car">0</span>    
+</a>
+
 <a href="tel:+919562540226" class="d-nonee call">
     <img src="{% static 'images/phone.png' %}" style="width: 100%;" alt="Call">
 </a>
-
-
 
 <a href="https://wa.me/+919562540226" class="d-nonee whatsapp" target="_blank">
     <img src="{% static 'images/whatsapp.png' %}" style="width: 100%;" alt="whatsapp">
@@ -108,23 +110,51 @@
 
 <style>
 
-.call {
-  position: fixed;
-    height: 45px;
-    width: 49px;
-    bottom: 125px;
-    right: 14px;
-    z-index: 100;
-    object-fit: contain;
-}
-
-.whatsapp {
-  position: fixed;
-  height: 45px;
-  width: 43px;
-  bottom: 70px;
-  right: 16px;
-  z-index: 100;
-  object-fit: contain;
-}
-</style>
+    
+    .sm-car {
+        width: 20px;
+        height: 20px;
+        color: #ffffff;
+        background: #ff3232;
+        border-radius: 100%;
+        font-size: 10px;
+        float: left;
+        line-height: 20px;
+        text-align: center;
+        position: absolute;
+        left: 18px;
+        bottom: 15px;
+    }
+        .cart {
+        display: none;
+        font-size: 30px;
+        position: fixed;
+        height: 45px;
+        width: 49px;
+        bottom: 180px;
+        right: 8px;
+        z-index: 100;
+        object-fit: contain;
+        line-height: 2;
+        }
+    
+        .call {
+        position: fixed;
+        height: 45px;
+        width: 49px;
+        bottom: 125px;
+        right: 14px;
+        z-index: 100;
+        object-fit: contain;
+    }
+    
+    .whatsapp {
+      position: fixed;
+      height: 45px;
+      width: 43px;
+      bottom: 70px;
+      right: 16px;
+      z-index: 100;
+      object-fit: contain;
+    }
+    </style>

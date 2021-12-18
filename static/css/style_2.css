@@ -36,7 +36,7 @@ html {
     line-height: 26px;
     font-weight: 400;
     font-size: 16px;
-    color: #6b84ad;
+    color: #172b4b;
     overflow-x: hidden;
     background: #fff !important;
 }
@@ -55,7 +55,7 @@ a {
 
 a:hover,
 a:focus {
-    color: #005f69;
+    color: #000000;
     text-decoration: none;
 }
 
@@ -1768,6 +1768,7 @@ nav ul li.active {
     width: calc(100% - 80px);
     display: inline-block;
     padding-left: 30px;
+    height: 160px;
 }
 
 .chose_icon_img_list {
@@ -1790,6 +1791,7 @@ nav ul li.active {
     -ms-transition: all .5s;
     -o-transition: all .5s;
     transition: all .5s;
+    height: 160px;
 }
 .chose_icon_img_list  img{
     width: 70px;
@@ -2508,7 +2510,7 @@ nav ul li.active {
     display: inline-block;
 }
 
-.disc_btn li a {
+.disc_btn li a , .a-btn{
     width: 155px;
     height: 50px;
     float: left;
@@ -2526,6 +2528,10 @@ nav ul li.active {
     -ms-transition: all 0.5s;
     -moz-transition: all 0.5s;
     transition: all 0.5s;
+}
+.a-btn{
+    background: #005f69;
+    color: #fff;
 }
 
 .disc_btn li a:hover {
@@ -6001,7 +6007,7 @@ textarea:focus.materialize-textarea {
 
 .cc_li_img_text li a {
     float: left;
-    width: 33.33%;
+    width: 100%;
     height: 50px;
     font-size: 20px;
     line-height: 50px;
@@ -7400,3 +7406,9 @@ nav ul li:nth-child(9)>ul {
         border-radius: 50px;
 
   }
+
+  .a-btnn{
+      cursor: pointer;
+      color: white !important;
+    background-color: #005f69 !important;
+    }

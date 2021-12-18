@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    
     $.ajax({
 
         url: 'http://127.0.0.1:8000/core/headerloader/',
@@ -6,7 +7,16 @@ $(document).ready(function(){
         
         
         success: function (response) {
-            $("#cartlen").html(response['cartLength'])
+            $("[id=cartlen]").html(response['cartLength'])
+
+            if (response['cartLength'] >0  ){
+                if ($(window).width() < 767){
+
+                    $('#cartmob').fadeIn()
+                    $("[id=cartlen]").html(response['cartLength'])
+                    
+                }
+            }
    
         },
     });

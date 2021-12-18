@@ -1,6 +1,8 @@
 import django
 from django.http.response import JsonResponse
 from django.shortcuts import render
+
+from web.views import cart
 from .models import Cart
 from django.forms.models import model_to_dict
 # Create your views here.
@@ -71,5 +73,30 @@ def deleteCart(request):
     subtotal = 0
     cartItems = Cart.objects.filter(session_key = sessionID)
     for cartItem in cartItems:subtotal += cartItem.quantity*cartItem.product.price
-    return JsonResponse({"Message":"success","subtotal":subtotal})
+    
+    return JsonResponse({"Message":"success","subtotal":subtotal,"cartLength":cartItems.count()})
 
+def addOrUpdate(request): 
+    sessionID = request.session.session_key
+    productId = request.POST['productID']
+    qty = request.POST['quantitySIN']
+
+    if Cart.objects.filter(session_key = sessionID,product_id= productId ).exists():
+        instance = Cart.objects.get(session_key = sessionID,product_id= productId )
+        instance.quantity = qty
+        instance.save()
+    else :
+        
+        saveCart = Cart()
+        saveCart.session_key = sessionID
+        saveCart.product_id = productId
+        saveCart.quantity = qty
+        saveCart.save()
+
+    cart_len = Cart.objects.filter(session_key = sessionID).count()
+
+    context={
+        "cartLength":cart_len
+    }
+
+    return JsonResponse(context)

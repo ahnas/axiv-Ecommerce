@@ -2491,7 +2491,7 @@ nav ul li.active {
     box-shadow: none;
 }
 
-.cntct_2_btn_wrapper button {
+.cntct_2_btn_wrapper button , .a-btn{
     width: 170px;
     height: 50px;
     float: left;
