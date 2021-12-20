@@ -229,21 +229,21 @@
 
         <div class="container">
             <div class="row">
+
                 <div class="col-md-7 col-lg-7 col-sm-12 col-xs-12">
                     <div class="sw_nl_heading_wrapper sw_our_news_txt">
-                        <i class="flaticon-rocket"></i>
-                        <h2>Subscribe Our Newsletter</h2>
-                        <h6>Get the latest News & Offers..</h6>
-
-                        <div class="prs_newsletter_field">
-                            <input type="text" placeholder="Email*">
+                        <i class="flaticon-idea"></i>
+                        <h2>Write Your Feedback</h2>
+                         <div class="prs_newsletter_fieldd">
+                            <form action="{% url 'web:feedback' %}" method="post" class="ajax">
+                                {% csrf_token %}
+                                {{feedback_form.message}}
                             <button type="submit" class="waves-effect waves-light waves-ripple">Submit</button>
+                        </form>
                         </div>
-                        <p>True environmental protection lies in loving the mountains, the oceans and in cher
-                            <br> all creation.</p>
-
                     </div>
                 </div>
+
                 <div class="col-md-5 col-lg-5 col-sm-12 col-xs-12">
                     <div class="sw_letter_img_wrapper">
                         <img src="{% static 'images/abt_ltr_img.png' %}" alt="img">
@@ -259,83 +259,7 @@
 
     {% block javascript %}
     
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9.15.3/dist/sweetalert2.all.min.js"></script>
-    <script>
-        $(document).on('submit', 'form.ajax', function(e) {
-            e.preventDefault();
-            var $this = $(this);
-            var data = new FormData(this);
-            var action_url = $this.attr('action');
-            var reset = $this.hasClass('reset');
-            var reload = $this.hasClass('reload');
-            var redirect = $this.hasClass('redirect');
-            var redirect_url = $this.attr('data-redirect');
-
-            $.ajax({
-                url: action_url,
-                type: 'POST',
-                data: data,
-                cache: false,
-                contentType: false,
-                processData: false,
-                dataType: "json",
-
-                success: function(data) {
-
-                    var status = data.status;
-                    var title = data.title;
-                    var message = data.message;
-                    var pk = data.pk;
-
-                    if (status == "true") {
-                        if (title) {
-                            title = title;
-                        } else {
-                            title = "Success";
-                        }
-
-                        Swal.fire({
-                            title: title,
-                            html: message,
-                            icon: 'success',
-                        }).then(function() {
-                            if (redirect) {
-                                window.location.href = redirect_url;
-                            }
-                            if (reload) {
-                                window.location.reload();
-                            }
-                            if (reset) {
-                                window.location.reset();
-                            }
-                        });
-
-                    } else {
-                        if (title) {
-                            title = title;
-                        } else {
-                            title = "An Error Occurred";
-                        }
-                        Swal.fire({
-                            title: title,
-                            html: message,
-                            icon: "error"
-                        });
-
-                    }
-                },
-                error: function(data) {
-                    var title = "An error occurred";
-                    var message = "something went wrong";
-                    Swal.fire({
-                        title: title,
-                        html: message,
-                        icon: "error"
-                    });
-                }
-            });
-        });
-    </script>
-{% endblock javascript %}
+    
+    {% endblock javascript %}
 
 {% endblock %}

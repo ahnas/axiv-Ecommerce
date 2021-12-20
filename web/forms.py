@@ -1,7 +1,7 @@
 from django import forms
 from django.db.models import fields
 from core.models import Order
-from .models import Contact,ServiceEnquiry
+from .models import Contact,ServiceEnquiry,Email,Feedback
 from django.forms.widgets import SelectMultiple, TextInput, Textarea, EmailInput, CheckboxInput,URLInput, Select, NumberInput, RadioSelect, FileInput
 
 
@@ -34,16 +34,29 @@ class ServiceEnquiryForm(forms.ModelForm):
             'natureOfInquiry': TextInput(attrs={'class': 'form-control', 'placeholder': 'nature Of Inquiry'}),
         }
     
-class ContactForm(forms.ModelForm):
+class EmailForm(forms.ModelForm):
     class Meta:
-        model = Contact
+        model = Email
         fields = '__all__'
         widgets = {
-            'name': TextInput(attrs={'class': 'required form-control', 'placeholder': 'Your Name'}),
-            'email': TextInput(attrs={'class': 'required form-control', 'placeholder': 'Your Email Address'}),
-            'subject': TextInput(attrs={'class': 'required form-control', 'placeholder': 'Subject'}),
-            'message': Textarea(attrs={'class': 'required form-control', 'placeholder': 'Type Your Message'}),
+            
+            'email': EmailInput(attrs={'class': 'required form-control', 'placeholder': 'Your Email Address'}),
+            
         }
+
+
+
+class FeedbackForm(forms.ModelForm):
+    class Meta:
+        model = Feedback
+        fields = '__all__'
+        widgets = {
+            
+            'message': Textarea(attrs={'class': 'required form-control', 'placeholder': 'Feed Back','rows':'7'}),
+
+        }
+
+
 
 class OrderForm(forms.ModelForm):
     class Meta:

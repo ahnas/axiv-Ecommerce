@@ -175,3 +175,31 @@ class Certification(models.Model):
 
     def __str__(self):
         return str(self.name)
+
+
+class Email(models.Model):
+    email = models.EmailField()
+    
+    def __str__(self):
+        return str(self.email)
+
+
+class Service(models.Model):
+    name = models.CharField(max_length=120)
+    photo = VersatileImageField(upload_to="Partner/")
+    details = models.TextField()
+
+    class Meta:
+        verbose_name = ('Service')
+        verbose_name_plural = ('Services')
+
+    def __str__(self):
+        return str(self.name)
+
+
+class Feedback(models.Model):
+    name = models.CharField(max_length=120,blank=True,null=True)
+    message = models.TextField()
+    
+    def __str__(self):
+        return str(self.name)

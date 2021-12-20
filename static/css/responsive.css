@@ -318,6 +318,9 @@
     .d-nonee{
         display: block;
     }
+    .d-no{
+        display: none;    
+    }
 
     .sm-btnn{
         background-color: #0e6774 !important;

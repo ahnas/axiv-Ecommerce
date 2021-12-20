@@ -46,83 +46,22 @@
     <div class="sw_iner_service_wrapper sw_iner_service_wrapper_2">
         <div class="container">
             <div class="row">
+
                 <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6">
+                    {% for service in service %}
                     <div class="gb_icon_wrapper">
                         <div class="gb_icon_img">
-                            <img src="{% static 'images/spec_1.png' %}" alt="title">
+                            <img src="{{service.photo.crop.60x60}}" alt="title">
                         </div>
                         <div class="gb_icon_content">
-                            <h4><a href="#">Solar as a <br>
-Service</a></h4>
+                            <h4><a href="#">{{service.name}}</a></h4>
 
                         </div>
-                        <p>Sed do eiusmod tempor incididunt utre et dolore magna aliqua. Ut enimnim am, quis nostrud exercitation ullamco oris nisi ut aliquip ex ea commodo.</p>
+                        <p>{{service.details}}</p>
                     </div>
+                    {% endfor %}
                 </div>
-                <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6">
-                    <div class="gb_icon_wrapper">
-                        <div class="gb_icon_img">
-                            <img src="{% static 'images/spec_2.png' %}" alt="title">
-                        </div>
-                        <div class="gb_icon_content">
-                            <h4><a href="#">Solar PV <br>
-Systems</a></h4>
-
-                        </div>
-                        <p>Sed do eiusmod tempor incididunt utre et dolore magna aliqua. Ut enimnim am, quis nostrud exercitation ullamco oris nisi ut aliquip ex ea commodo.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6">
-                    <div class="gb_icon_wrapper">
-                        <div class="gb_icon_img">
-                            <img src="{% static 'images/spec_3.png' %}" alt="title">
-                        </div>
-                        <div class="gb_icon_content">
-                            <h4><a href="#">Wind Generators<br>
-Systems</a></h4>
-
-                        </div>
-                        <p>Sed do eiusmod tempor incididunt utre et dolore magna aliqua. Ut enimnim am, quis nostrud exercitation ullamco oris nisi ut aliquip ex ea commodo.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6">
-                    <div class="gb_icon_wrapper">
-                        <div class="gb_icon_img">
-                            <img src="{% static 'images/spec_4.png' %}" alt="title">
-                        </div>
-                        <div class="gb_icon_content">
-                            <h4><a href="#">Other Alternative<br>
-Energy</a></h4>
-
-                        </div>
-                        <p>Sed do eiusmod tempor incididunt utre et dolore magna aliqua. Ut enimnim am, quis nostrud exercitation ullamco oris nisi ut aliquip ex ea commodo.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6">
-                    <div class="gb_icon_wrapper">
-                        <div class="gb_icon_img">
-                            <img src="{% static 'images/spec_5.png' %}" alt="title">
-                        </div>
-                        <div class="gb_icon_content">
-                            <h4><a href="#">Commercial <br>
-Systems</a></h4>
-
-                        </div>
-                        <p>Sed do eiusmod tempor incididunt utre et dolore magna aliqua. Ut enimnim am, quis nostrud exercitation ullamco oris nisi ut aliquip ex ea commodo.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6">
-                    <div class="gb_icon_wrapper">
-                        <div class="gb_icon_img">
-                            <img src="{% static 'images/spec_6.png' %}" alt="title">
-                        </div>
-                        <div class="gb_icon_content">
-                            <h4><a href="#">recyling <br> rubbish</a></h4>
-
-                        </div>
-                        <p>Sed do eiusmod tempor incididunt utre et dolore magna aliqua. Ut enimnim am, quis nostrud exercitation ullamco oris nisi ut aliquip ex ea commodo.</p>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </div>
@@ -186,9 +125,7 @@ Systems</a></h4>
                 </div>
                 <div class="col-md-5 col-md-offset-1 col-lg-5 col-lg-offset-1 col-sm-12 col-xs-12 clm_img">
                     <div class="sw_right_img_wrapper">
-                        <div class="sw_disc_img_overlay"></div>
-                        <img src="{% static 'images/disc_lft_bg.jpg' %}" alt="About" class="img-responsive sw_right_img_div">
-
+                        
                         <div class="sw_disc_img_btm">
                             <img src="{% static 'images/disc_lft.jpg' %}" alt="About" class="img-responsive">
                         </div>
@@ -357,17 +294,15 @@ Systems</a></h4>
             <div class="row">
                 <div class="col-md-7 col-lg-7 col-sm-12 col-xs-12">
                     <div class="sw_nl_heading_wrapper sw_our_news_txt">
-                        <i class="flaticon-rocket"></i>
-                        <h2>Subscribe Our Newsletter</h2>
-                        <h6>Get the latest News & Offers..</h6>
-
-                        <div class="prs_newsletter_field">
-                            <a href="/contact/" class="a-btn waves-effect waves-light waves-ripple">Contact Us</a>
-
+                        <i class="flaticon-idea"></i>
+                        <h2>Write Your Feedback</h2>
+                         <div class="prs_newsletter_fieldd">
+                            <form action="{% url 'web:feedback' %}" method="post" class="ajax">
+                                {% csrf_token %}
+                                {{feedback_form.message}}
+                            <button type="submit" class="waves-effect waves-light waves-ripple">Submit</button>
+                        </form>
                         </div>
-                        <p>True environmental protection lies in loving the mountains, the oceans and in cher
-                            <br> all creation.</p>
-
                     </div>
                 </div>
                 <div class="col-md-5 col-lg-5 col-sm-12 col-xs-12">
@@ -387,43 +322,23 @@ Systems</a></h4>
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
                     <div class="sw_left_heading_wraper">
-                        <h1>Our Partners</h1>
+                        <h1>sister concerns</h1>
                         <img src="{% static 'images/heading_line.png' %}" alt="title">
                     </div>
                 </div>
                 <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 sw_spectrm_padding">
                     <div class="partners_slider_wrapper">
                         <div class="owl-carousel owl-theme">
+
+                            {% for partner in partner %}
                             <div class="item">
                                 <div class="lr_prt_img_wrapper">
-                                    <img src="{% static 'images/partner_1.png' %}" alt="partner_img">
+                                    <img src="{{partner.photo.url}}" alt="partner_img">
+                                    <h5>{{partner.name}}</h5>
                                 </div>
                             </div>
-                            <div class="item">
-                                <div class="lr_prt_img_wrapper">
-                                    <img src="{% static 'images/partner_2.png' %}" alt="partner_img">
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="lr_prt_img_wrapper">
-                                    <img src="{% static 'images/partner_3.png' %}" alt="partner_img">
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="lr_prt_img_wrapper">
-                                    <img src="{% static 'images/partner_4.png' %}" alt="partner_img">
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="lr_prt_img_wrapper">
-                                    <img src="{% static 'images/partner_5.png' %}" alt="partner_img">
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="lr_prt_img_wrapper">
-                                    <img src="{% static 'images/partner_2.png' %}" alt="partner_img">
-                                </div>
-                            </div>
+                            {% endfor %}
+                            
                         </div>
                     </div>
                 </div>

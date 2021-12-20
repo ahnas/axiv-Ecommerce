@@ -1,6 +1,8 @@
 from django.urls import path
 from . import views
 
+from web.views import SearchResultsView
+
 app_name = 'web'
 
 urlpatterns = [ 
@@ -16,7 +18,12 @@ urlpatterns = [
     path('contact/', views.contact,name="contact"), 
     path('cart/', views.cart,name="cart"),
     path('checkout/', views.checkout,name="checkout"),
-    path('confirmcheckout/', views.confirmcheckout,name="confirmcheckout"),
+    path('confirmcheckout/', views.confirmcheckout,name="confirmcheckout"),  
+    
+    path('subscriber/', views.subscriber,name="subscriber"),
+    path('feedback/', views.feedback,name="feedback"),
+
+    path('search', SearchResultsView.as_view(), name='search_results'),
 
 
 ]
