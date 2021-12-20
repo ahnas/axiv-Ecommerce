@@ -13,7 +13,7 @@ class Slider(models.Model):
     firstline = models.CharField(max_length=120,blank=True,null=True)
     secondline = models.CharField(max_length=120,blank=True,null=True)
     thirdline = models.CharField(max_length=120,blank=True,null=True)
-    photo = VersatileImageField(upload_to="Slider/")
+    photo = VersatileImageField(upload_to="Slider/",blank=True,null=True)
 
     def __str__(self):
         return str(self.firstline)
@@ -159,6 +159,19 @@ class CompletedProject(models.Model):
     subname = models.CharField(max_length=120)
     photo = VersatileImageField(upload_to="CompletedProject/")
 
+
+    def __str__(self):
+        return str(self.name)
+
+
+
+class Certification(models.Model):
+    name = models.CharField(max_length=120)
+    photo = VersatileImageField(upload_to="Partner/")
+
+    class Meta:
+        verbose_name = ('Certification')
+        verbose_name_plural = ('Certifications')
 
     def __str__(self):
         return str(self.name)

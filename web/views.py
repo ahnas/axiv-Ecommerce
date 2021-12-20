@@ -6,7 +6,7 @@ from django.contrib.auth.decorators import login_required
 import json
 import datetime
 from core.models import Cart, Order, CheckOuted
-from .models import CompletedProject, Partner, ProductCategory, Product, Blog, Project, ProjectCategory, Testimonial, Slider, Director
+from .models import CompletedProject, Partner, ProductCategory, Product, Blog, Project, ProjectCategory, Testimonial, Slider, Director,Certification
 from .forms import ContactForm, ServiceEnquiryForm, OrderForm
 
 def index(request):
@@ -21,6 +21,7 @@ def index(request):
     product = Product.objects.filter(is_dashboard=True)
     partner = Partner.objects.all()
     testimonial = Testimonial.objects.all()
+    certification = Certification.objects.all()
 
     form = ContactForm(request.POST or None)
     if request.method == 'POST':
@@ -49,6 +50,7 @@ def index(request):
         "blog": blog,
         "projectcategory": projectcategory,
         "project": project,
+        "certification":certification,
     }
     return render(request, 'index.html', context)
 

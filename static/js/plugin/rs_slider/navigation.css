@@ -2252,7 +2252,7 @@ website:    http://www.themepunch.com
 
 
 .uranus .tp-bullet-inner {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255);
   -webkit-transition: background-color 0.3s ease, -webkit-transform 0.3s ease;
   transition: background-color 0.3s ease, transform 0.3s ease;
   top: 0;
