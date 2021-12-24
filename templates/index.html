@@ -452,7 +452,7 @@
                                 </li>
 
                                 {% for projectcategory in projectcategory %}
-                                <li class="button galery_hover_div waves-effect waves-light waves-ripple" data-filter=".{{projectcategory.name}}">
+                                <li class="button galery_hover_div waves-effect waves-light waves-ripple" data-filter=".{{projectcategory.name|slugify}}">
                                     {{projectcategory.name}}
                                 </li>
                                 {% endfor %}
@@ -463,7 +463,7 @@
 
                     <div class="grid galler_2_btm_section">
                         {% for project in project %}
-                        <div class="grid-item {{project.category}}">
+                        <div class="grid-item {{project.category|slugify}}">
                             <div class="gallery-list img-effect zoom-slow">
                                 <div class="sp_img_box_overlay"></div>
                                 <div class="over">
@@ -471,7 +471,7 @@
                                     <img src="{{project.photo.crop.275x210}}" alt="" class="img-responsive" />
 
                                     <div class="tab_img_overlay">
-                                        <a href="{{project.photo.url}}" class="venobox info" data-title="{{project.name}}" data-gall="gall12">
+                                        <a href="{{project.photo.url}}" class="venobox info" data-title="{{project.name|slugify}}" data-gall="gall12">
                                             <i class="fa fa-arrows-alt"></i> </a>
                                         <h1>{{project.name}}</h1>
                                         <p>({{project.subname}})</p>
@@ -848,7 +848,7 @@
 
                 <div class="col-md-5 col-lg-5 col-sm-12 col-xs-12">
                     <div class="sw_letter_img_wrapper wow  zoomIn animated" data-wow-duration="1.3s" style="visibility: visible; animation-duration: 1.3s; animation-name: zoomIn;">
-                        <img src="{% static 'images/btm_news_bg.png' %}" alt="img">
+                        <!-- <img width="100%" src="{% static 'images/btm_news_bg.jpg' %}" alt="img"> -->
 
                     </div>
                 </div>
