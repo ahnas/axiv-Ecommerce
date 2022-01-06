@@ -218,6 +218,50 @@
         </div>
     </div>
     <!-- sw leads section end-->
+
+
+    <!--sw Direct msg-->
+    <div class="sw_best_product_wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+                    <div class="sw_left_heading_wraper">
+                        <h1>Director Message</h1>
+                        <img src="{% static 'images/heading_line.png' %}" alt="title">
+                    </div>
+                </div>
+
+                <!-- slider start -->
+                <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12 dir-msg">
+
+                    <h2>MD's Message</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores inventore culpa rem? Cupiditate, voluptate, consequatur voluptatibus quod quam optio explicabo iure accusamus molestias perspiciatis hic, possimus dolorem facere aliquam temporibus?</p>
+                    <h3>Director Name</h3>
+                    <h4>lorem ruid (Address)</h4>
+                    visit : <a href="#">www.axia.com</a>
+                    <p class="nameea">/axiapower</p>
+                    <ul style="display: flex;">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                    <img width="100%" src="{% static 'images/director.png' %}" alt="img">
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--Director-->
+
+
+
     <!--sw best product wrapper start-->
     <div class="sw_best_product_wrapper">
         <div class="container">
@@ -272,6 +316,7 @@
         </div>
     </div>
     <!--sw best product wrapper end-->
+
     <!--sw newsletter wrapper start-->
     <div class="sw_news_letter_wrapper">
         <div class="container">
@@ -309,20 +354,21 @@
 
         <div class="container">
             <div class="row">
+
                 <div class="col-md-7 col-lg-7 col-sm-12 col-xs-12">
                     <div class="sw_nl_heading_wrapper sw_our_news_txt">
-                        <i class="flaticon-rocket"></i>
-                        <h2>Subscribe Our Newsletter</h2>
-                        <h6>Get the latest News & Offers..</h6>
-
-                        <div class="prs_newsletter_field">
-                            <a href="/contact/" class="a-btn waves-effect waves-light waves-ripple">Contact Us</a>
+                        <i class="flaticon-idea"></i>
+                        <h2>Write Your Feedback</h2>
+                         <div class="prs_newsletter_fieldd">
+                            <form action="{% url 'web:feedback' %}" method="post" class="ajax">
+                                {% csrf_token %}
+                                {{feedback_form.message}}
+                            <button type="submit" class="waves-effect waves-light waves-ripple">Submit</button>
+                        </form>
                         </div>
-                        <p>True environmental protection lies in loving the mountains, the oceans and in cher
-                            <br> all creation.</p>
-
                     </div>
                 </div>
+
                 <div class="col-md-5 col-lg-5 col-sm-12 col-xs-12">
                     <div class="sw_letter_img_wrapper">
                         <img src="{% static 'images/abt_ltr_img.png' %}" alt="img">

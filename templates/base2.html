@@ -4,7 +4,7 @@
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
 <head>
     <meta charset="utf-8" />
-    <title>AxivaUniverse | {% block title %}{% endblock %}</title>
+    <title>AxiaUniverse | {% block title %}{% endblock %}</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta name="description" content="smart pest" />
     <meta name="keywords" content="solar system /sun & wind" />
@@ -36,9 +36,41 @@
 
     <div class="transparent-menu header-area hidden-menu-bar stick menu_fixed animated fadeIn">
 
-        <div class="container-fluid p-cus">
+        <div class="topbar d-no">
+            <div class="container-fluid container-fluidd">
 
-            <div class="bt_main_menu_wrapper">
+                <div class="row pt-10">       
+                <div class="col-lg-4 socia heig part">
+                    
+                    <ul style="display: flex;">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                    </ul>
+
+                </div>
+                <div class="col-lg-4 help heig part">
+
+                  HELPLINE : <a href="tel:919961476767">99 61 47 67 67</a>
+
+                </div>
+                <div class="col-lg-4 socia fontt-21 heig">
+
+                    <a href="mailto:info@axiauniverse.com"><i class="fa fa-envelope"></i>info@axiauniverse.com</a> <br>
+                    <a href="mailto:md@axiauniverse.com"><i class="fa fa-envelope"></i>md@axiauniverse.com</a> 
+
+                </div>
+            </div>
+            </div> 
+        </div>
+
+        <div class="container-fluid p-cus">
+            
+        <div class="bt_main_menu_wrapper">
 
                 <div class="main-menu-wrapper clear-fix blink">
                     <div class="logo float-left">
@@ -211,6 +243,84 @@
     
     <script src="{% static 'js/addToCart.js' %}"></script>
     <script src="{% static 'js/headerloader.js' %}"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9.15.3/dist/sweetalert2.all.min.js"></script>
+    <script>
+        $(document).on('submit', 'form.ajax', function(e) {
+            e.preventDefault();
+            var $this = $(this);
+            var data = new FormData(this);
+            var action_url = $this.attr('action');
+            var reset = $this.hasClass('reset');
+            var reload = $this.hasClass('reload');
+            var redirect = $this.hasClass('redirect');
+            var redirect_url = $this.attr('data-redirect');
+
+            $.ajax({
+                url: action_url,
+                type: 'POST',
+                data: data,
+                cache: false,
+                contentType: false,
+                processData: false,
+                dataType: "json",
+
+                success: function(data) {
+
+                    var status = data.status;
+                    var title = data.title;
+                    var message = data.message;
+                    var pk = data.pk;
+
+                    if (status == "true") {
+                        if (title) {
+                            title = title;
+                        } else {
+                            title = "Success";
+                        }
+
+                        Swal.fire({
+                            title: title,
+                            html: message,
+                            icon: 'success',
+                        }).then(function() {
+                            if (redirect) {
+                                window.location.href = redirect_url;
+                            }
+                            if (reload) {
+                                window.location.reload();
+                            }
+                            if (reset) {
+                                window.location.reset();
+                            }
+                        });
+
+                    } else {
+                        if (title) {
+                            title = title;
+                        } else {
+                            title = "An Error Occurred";
+                        }
+                        Swal.fire({
+                            title: title,
+                            html: message,
+                            icon: "error"
+                        });
+
+                    }
+                },
+                error: function(data) {
+                    var title = "An error occurred";
+                    var message = "something went wrong";
+                    Swal.fire({
+                        title: title,
+                        html: message,
+                        icon: "error"
+                    });
+                }
+            });
+        });
+    </script>
     
     {% block javascript %} {% endblock javascript %}
 

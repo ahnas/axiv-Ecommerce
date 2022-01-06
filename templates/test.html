@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+    <!-- <style>
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50%;
+        }
+
+        .search {
+            margin-bottom: 30px;
+        }
+
+        .items {}
+
+        [data-filter-item] {
+            padding: 15px;
+            background-color: #ccc;
+            border: 1px solid #fff;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style> -->
+
+
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="search">
+            <input type="text" placeholder="search" data-search />
+        </div>
+        <div class="items">
+            <div data-filter-item data-filter-name="apple">Apple</div>
+            <div data-filter-item data-filter-name="google">Google</div>
+            <div data-filter-item data-filter-name="microsoft">Microsoft</div>
+            <div data-filter-item data-filter-name="hp">HP</div>
+            <div data-filter-item data-filter-name="dell">Dell</div>
+            <div data-filter-item data-filter-name="samsung">Samsung</div>
+        </div>
+    </div>
+
+    <script>
+
+        /*
+
+    How to use:
+    1)	Copy this jQuery to your project
+    2)	Add [data-search] to search input
+    3)	Add [data-filter-item] to the items that should be filtered
+    4)	Add [data-filter-name="SEARCH TERM"] to the filter-items
+
+*/
+
+        $('[data-search]').on('keyup', function () {
+            var searchVal = $(this).val();
+            var filterItems = $('[data-filter-item]');
+
+            if (searchVal != '') {
+                filterItems.addClass('hidden');
+                $('[data-filter-item][data-filter-name*="' + searchVal.toLowerCase() + '"]').removeClass('hidden');
+            } else {
+                filterItems.removeClass('hidden');
+            }
+        });
+
+
+    </script>
+
+
+</body>
+
+</html>

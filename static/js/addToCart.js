@@ -13,7 +13,7 @@ function btnCart(productId, thisProp) {
 
     $.ajax({
 
-        url: 'http://127.0.0.1:8000/core/addToCart/',
+        url: 'https://www.axivauniverse.com/core/addToCart/',
         type: 'POST',
         data: data,
         beforeSend: function () {
@@ -27,6 +27,12 @@ function btnCart(productId, thisProp) {
                 $(thisProp).html('Already Carted')
             } else {
                 $(thisProp).html('Carted')
+            }
+            if (response['cartLength'] >0  ){
+                if ($(window).width() < 767){
+                    $('#cartmob').fadeIn()
+                    $("[id=cartlen]").html(response['cartLength'])
+                }
             }
             
         },
@@ -44,7 +50,7 @@ function btnCartTwo(productId, thisProp) {
         'quantitySIN':quantitySIN
     }
     $.ajax({
-        url: 'http://127.0.0.1:8000/core/addOrUpdate/',
+        url: 'https://www.axivauniverse.com/core/addOrUpdate/',
         type: 'POST',
         data: data,
         beforeSend: function () {
@@ -54,6 +60,12 @@ function btnCartTwo(productId, thisProp) {
             $("[id=cartlen]").html(response['cartLength'])
             $(thisProp).prop('disabled', false);
                 $(thisProp).html('Cart Updated')
+            if (response['cartLength'] >0  ){
+                if ($(window).width() < 767){
+                    $('#cartmob').fadeIn()
+                    $("[id=cartlen]").html(response['cartLength'])
+                }
+            }
         },
     });
 };

@@ -55,8 +55,11 @@
                             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 
                                 <div class="prs_newsletter_field p-0">
-                                    <input type="text" placeholder="Product Search">
+                                    <form action="/search" method="get">
+                                        {% csrf_token %}
+                                    <input type="text" class="form-control" name="search" id="search exampleInputPassword1" placeholder="Search a Product">
                                     <button type="submit" class="waves-effect waves-light waves-ripple">Search</button>
+                                </form>
                                 </div>
 
                             </div>
@@ -428,24 +431,24 @@
 
         <div class="container">
             <div class="row">
+
                 <div class="col-md-7 col-lg-7 col-sm-12 col-xs-12">
                     <div class="sw_nl_heading_wrapper sw_our_news_txt">
-                        <i class="flaticon-rocket"></i>
-                        <h2>Subscribe Our Newsletter</h2>
-                        <h6>Get the latest News & Offers..</h6>
-
-                        <div class="prs_newsletter_field">
-                            <a href="/contact/" class="a-btn waves-effect waves-light waves-ripple">Contact Us</a>
-
+                        <i class="flaticon-idea"></i>
+                        <h2>Write Your Feedback</h2>
+                         <div class="prs_newsletter_fieldd">
+                            <form action="{% url 'web:feedback' %}" method="post" class="ajax">
+                                {% csrf_token %}
+                                {{feedback_form.message}}
+                            <button type="submit" class="waves-effect waves-light waves-ripple">Submit</button>
+                        </form>
                         </div>
-                        <p>True environmental protection lies in loving the mountains, the oceans and in cher
-                            <br> all creation.</p>
-
                     </div>
                 </div>
+
                 <div class="col-md-5 col-lg-5 col-sm-12 col-xs-12">
                     <div class="sw_letter_img_wrapper">
-                        <img src="{% static 'images/abt_ltr_img.png' %}" alt="img">
+                        <!-- <img src="{% static 'images/abt_ltr_img.pn' %}" alt="img"> -->
 
                     </div>
                 </div>

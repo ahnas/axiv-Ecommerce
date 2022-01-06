@@ -145,8 +145,9 @@
         z-index: 100;
         position: relative;
         float: left;
-        width: 150px;
-        top: 3px;
+        width: 120px;
+        top: 15px;
+        padding-left: 0px !important;
     }
     .circle {
         margin-top: 20px;
@@ -317,6 +318,9 @@
 
     .d-nonee{
         display: block;
+    }
+    .d-no{
+        display: none;    
     }
 
     .sm-btnn{
@@ -679,7 +683,7 @@
 @media (min-width: 321px) and (max-width: 480px) {
     
     .sm-bott{
-        top: -60px !important;
+        top: 100px !important;
         
     }
     .sec_off_img {

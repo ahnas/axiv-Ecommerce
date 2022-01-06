@@ -1,0 +1,12 @@
+{% load static %}
+
+<div class="prs_newsletter_field">
+    <form class="ajax" action="{% url 'web:subscriber' %}" method="post">
+        {% csrf_token %}
+        {{email_form.email}}
+    <button type="submit" class="waves-effect waves-light waves-ripple">Subscribe</button>
+ </form>
+</div>
+
+
+

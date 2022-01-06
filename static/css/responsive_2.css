@@ -457,6 +457,10 @@
 
 @media (max-width: 767px) {
 
+    .d-no{
+        display: none;    
+    }
+
     .d-nonee{
         display: block;
     }

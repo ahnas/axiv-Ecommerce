@@ -1,13 +1,28 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
-from django.http.response import JsonResponse
+from django.http.response import Http404, JsonResponse
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
 import json
 import datetime
 from core.models import Cart, Order, CheckOuted
-from .models import CompletedProject, Partner, ProductCategory, Product, Blog, Project, ProjectCategory, Testimonial, Slider, Director,Certification
-from .forms import ContactForm, ServiceEnquiryForm, OrderForm
+from .models import CompletedProject, Partner, ProductCategory, Product, Blog, Project, ProjectCategory, Service, Testimonial, Slider, Director,Certification
+from .forms import ContactForm, ServiceEnquiryForm, OrderForm,EmailForm,FeedbackForm
+
+
+from django.views.generic import ListView
+from django.db.models import Q
+
+
+class SearchResultsView(ListView):
+    model = Product
+    template_name = 'product.html'
+    context_object_name = 'product'
+
+    def get_queryset(self):
+        query = self.request.GET.get('search')
+        product = Product.objects.filter(Q(name__icontains=query))
+        return product
 
 def index(request):
     if request.session.session_key == None:
@@ -70,6 +85,8 @@ def about(request):
 
 def service(request):
     form = ServiceEnquiryForm(request.POST or None)
+    partner = Partner.objects.all()
+    service = Service.objects.all()
     if request.method == 'POST':
         if form.is_valid():
             form.save()
@@ -89,6 +106,8 @@ def service(request):
         context = {
             "is_service": True,
             "form": form,
+            'service':service,
+            'partner':partner,
         }
     return render(request, 'service.html', context)
 
@@ -305,4 +324,45 @@ def confirmcheckout(request):
 
     Cart.objects.filter(session_key=request.session.session_key).delete()
     return JsonResponse({"success": "yes"})
+
+def subscriber(request):
+    form = EmailForm(request.POST or None)
+    if request.method == 'POST':
+        if form.is_valid():
+            form.save()
+            response_data = {
+                "status": "true",
+                "title": "Email Submitted",
+                
+            }
+        else:
+            print(form.errors)
+            response_data = {
+                "status": "false",
+                "title": "Form validation error",
+            }
+        return HttpResponse(json.dumps(response_data), content_type='application/javascript')
+    else:
+        raise Http404("Poll does not exist")
+
+
+def feedback(request):
+    form = FeedbackForm(request.POST or None)
+    if request.method == 'POST':
+        if form.is_valid():
+            form.save()
+            response_data = {
+                "status": "true",
+                "title": "Feedback Submitted",
+                
+            }
+        else:
+            print(form.errors)
+            response_data = {
+                "status": "false",
+                "title": "Form validation error",
+            }
+        return HttpResponse(json.dumps(response_data), content_type='application/javascript')
+    else:
+        raise Http404("Poll does not exist")
 
