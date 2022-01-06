@@ -9,7 +9,7 @@ from django.forms.models import model_to_dict
 
 def addToCart(request):
     sessionID = request.session.session_key
-    pid = request.POST.get('product_id', False)
+    pid = request.POST['product_id']
 
     checkCart = Cart.objects.filter(session_key = sessionID,product_id = pid )
     if checkCart.exists():

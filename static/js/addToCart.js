@@ -13,7 +13,7 @@ function btnCart(productId, thisProp) {
 
     $.ajax({
 
-        url: 'http://127.0.0.1:8000/core/addToCart/',
+        url: 'https://www.axivauniverse.com/core/addToCart/',
         type: 'POST',
         data: data,
         beforeSend: function () {
@@ -50,7 +50,7 @@ function btnCartTwo(productId, thisProp) {
         'quantitySIN':quantitySIN
     }
     $.ajax({
-        url: 'http://127.0.0.1:8000/core/addOrUpdate/',
+        url: 'https://www.axivauniverse.com/core/addOrUpdate/',
         type: 'POST',
         data: data,
         beforeSend: function () {

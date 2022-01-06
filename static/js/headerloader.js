@@ -2,7 +2,7 @@ $(document).ready(function(){
     
     $.ajax({
 
-        url: 'http://127.0.0.1:8000/core/headerloader/',
+        url: 'https://www.axivauniverse.com/core/headerloader/',
         type: 'GET',
         
         
